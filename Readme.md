@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
-* Студент: [Евгения Стецюра](https://up.htmlacademy.ru/htmlcss/28/user/1334129).
-* Наставник: `Неизвестно`.
+- Студент: [Евгения Стецюра](https://up.htmlacademy.ru/htmlcss/28/user/1334129).
+- Наставник: [Юлия Антонова](https://htmlacademy.ru/profile/id39082).
 
 ---
 
