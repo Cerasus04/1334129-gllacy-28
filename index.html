@@ -61,6 +61,102 @@
     <a href="tel:88124502525">8 812 450-25-25</a>
   </header>
   <main>
+    <h1 class="visually-hidden">Магазин по продаже мороженного</h1>
+    <section class="promo">
+      <h2 class="visually-hidden">Промо предложения</h2>
+      <ul class="promo-wrapper">
+        <li class="promo-wrapper-item">
+          <img src="https://via.placeholder.com/150x100" alt="">
+          <h3 class="text-promo-1">Крем-брюле и пломбир с малиновым джемом</h3>
+          <a class="promo-button" href="#">Давайте оба!</a>
+        </li>
+        <li class="promo-wrapper-item">
+          <img src="https://via.placeholder.com/150x100" alt="">
+          <h3 class="text-promo-2">Шоколадный пломбир и лимонный сорбет</h3>
+          <a class="promo-button" href="#">Давайте оба!</a>
+        </li>
+        <li class="promo-wrapper-item">
+          <img src="https://via.placeholder.com/150x100" alt="">
+          <h3 class="text-promo-3">Пломбир с помадкой и клубничный щербет</h3>
+          <a class="promo-button" href="#">Давайте оба!</a>
+        </li>
+      </ul>
+      <ul class="controls-wrapper">
+        <li class="controls-wrapper-item">
+          <button type="button">Показать слайд 1</button>
+        </li>
+        <li class="controls-wrapper-item">
+          <button type="button">Показать слайд 2</button>
+        </li>
+        <li class="controls-wrapper-item">
+          <button type="button">Показать слайд 3</button>
+        </li>
+      </ul>
+      </div>
+    </section>
+    <section class="banners">
+      <h2 class="visually-hidden">Акции</h2>
+      <ul class="banners-list">
+        <li class="banners-list-item">
+          <h3>Малинка даром!</h3>
+          <p>
+            При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ
+            банку маринового варенья бесплатно.
+          </p>
+          <a class="banners-button" href="#">Хочу варенье!</a>
+        </li>
+        <li class="banners-list-item">
+          <h3>Шоколадки даром!</h3>
+          <p>
+            При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
+            шоколадной присыпки совершенно бесплатно.
+          </p>
+          <a class="banners-button" href="#">Хочу шоколадки!</a>
+        </li>
+      </ul>
+    </section>
+    <section class="hits">
+      <h2 class="visually-hidden">Хиты месяца</h2>
+      <ul class="hits-list">
+        <li class="hits-list-item">
+          <!--хит добавлю псевдоэлементом.Только кому, картинке или ссылке hits-card?-->
+          <a class="hits-card" href="#">
+            <img src="https://via.placeholder.com/150x100" alt="">
+          </a>
+          <p class="hits-price">310 ₽<span class="unit">/кг</span></p>
+          <a class="hits-name" href="#">
+            <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+          </a>
+        </li>
+        <li class="hits-list-item">
+          <a class="hits-card" href="#">
+            <img src="https://via.placeholder.com/150x100" alt="">
+          </a>
+          <p class="hits-price"><span class="price">380 ₽</span>/кг</p>
+          <a class="hits-name" href="#">
+            <h3>Сливочно-кофейное с кусочками шоколада</h3>
+          </a>
+        </li>
+        <li class="hits-list-item">
+          <a class="hits-card" href="#">
+            <img src="https://via.placeholder.com/150x100" alt="">
+          </a>
+          <p class="hits-price"><span class="price">355 ₽</span>/кг</p>
+          <a class="hits-name" href="#">
+            <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
+          </a>
+        </li>
+        <li class="hits-list-item">
+          <a class="hits-card" href="#">
+            <img src="https://via.placeholder.com/150x100" alt="">
+          </a>
+          <p class="hits-price"><span class="price">415 ₽</span>/кг</p>
+          <a class="hits-name" href="#">
+            <h3>Сливочное крем-брюле с карамельной подливкой</h3>
+          </a>
+        </li>
+      </ul>
+    </section>
     <section class="advantages">
       <h2>
         Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого
@@ -109,6 +205,32 @@
         <form action="#" class="feedback-form"></form>
       </section>
     </div>
+    <section class="contacts">
+      <h2 class="visually-hidden">Контактные данные</h2>
+      <img src="https://via.placeholder.com/150x100" alt="Карта города">
+      <dl class="contact-list">
+        <dt>Адрес главного офиса и офлайн-магазина:</dt>
+        <dd>ул. Большая Конюшенная, 19/8, Санкт-Петербург</dd>
+        <dt>Для заказов по телефону:</dt>
+        <dd>8 812 450-25-25</dd>
+        <dt class="visually-hidden">Время работы</dt>
+        <dd>(с 10 до 20 ежедневно)</dd>
+      </dl>
+      <a class="feedback-form" href="#">Форма обратной связи</a>
+      <!--это я так набросала, можешь не смотреть, постараюсь сама править после лекции
+         <form action="#" method="post">
+        <p>Мы обязательно Вам ответим!</p>
+          <label for="#name-feedback"></label>
+            <input type="text" id="name-feedback" name="name" placeholder="Имя Фамилия" value="user-name">
+
+          <label for="email-feedback"></label>
+            <input type="email" id="email-feedback" name="email" placeholder="email@example.com" value="email">
+
+          <label for="#feedback"></label>
+            <textarea id="feedback" name="comments" cols="30" rows="4">В свободной форме</textarea>
+          <button class="">Отправить</button>
+        </form> -->
+    </section>
   </main>
   <footer class="main-footer">
     <section class="footer-social">
