@@ -47,14 +47,55 @@
       <li class="user-panel-item">
         <a href="blank.html" class="user-link" aria-label="Перейти на страницу поиска"><span
             class="user-link-icon"></span></a>
+        <div class="user-tooltip">
+          <form action="https://echo.htmlacademy.ru" class="search" method="post">
+            <label for="#field-search" class="visually-hidden">Поиск</label>
+            <input type="search" id="field-search" name="search" placeholder="Что ищем?">
+          </form>
+        </div>
       </li>
       <li class="user-panel-item">
         <a href="blank.html" class="user-link" aria-label="Перейти на страницу логина или показать окно логина"><span
             class="user-link-icon"></span>Вход</a>
+        <div class="user-tooltip">
+          <form action="https://echo.htmlacademy.ru" class="enter" method="post">
+            <label for="#login-email" class="visually-hidden">Почта</label>
+            <input type="email" id="login-email" name="email" placeholder="Электронная почта">
+            <label for="#enter-password" class="visually-hidden">Пароль</label>
+            <input type="password" id="enter-password" name="password" placeholder="******">
+            <button class="enter-button">Войти</button>
+            <p>
+              <a href="#">Забыли пароль?</a>
+              <br>
+              <!--так или через стили?-->
+              <a href="#">Новая регистрация</a>
+            </p>
+          </form>
+        </div>
       </li>
       <li class="user-panel-item">
         <a href="blank.html" class="user-link" aria-label="Перейти на страницу корзины или показать окно корзины"><span
             class="user-link-icon"></span>2 товара</a>
+        <div class="user-tooltip">
+          <table>
+            <tr>
+              <th><button class="close-button">Закрыть</button></th>
+              <th><img src="img/choice1.jpg" width="33" height="33" alt="Мороженное"></th>
+              <th>Пломбир с апельсиновым джемом</th>
+              <th>1,5 кг × <span class="price-calc">200 руб.</span></th>
+              <th>300 руб.</th>
+            </tr>
+            <tr>
+              <th><button class="close-button">Закрыть</button></th>
+              <th><img src="img/choice2.jpg" width="33" height="33" alt="Мороженное"></th>
+              <th>Клубничный пломбир с присыпкой из белого шоколада</th>
+              <th>1,5 кг × <span class="price-calc">300 руб.</span></th>
+              <th>450 руб.</th>
+            </tr>
+          </table>
+          <p class="total">Итого: 750 руб.</p>
+          <button class="checkout">Оформить заказ</button>
+        </div>
       </li>
     </ul>
     <p>с 10 до 20, ежедневно</p>
