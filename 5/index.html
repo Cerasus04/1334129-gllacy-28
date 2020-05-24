@@ -44,14 +44,13 @@
         </li>
       </ul>
     </nav>
-    <!--после поля О компании нажимаешь таб и фокус исчезает со страницы, никакой элемент не обведен. при повторном нажатии таб, фокус попадает в input type="search" id="field-search" name="search" placeholder="Что ищем?"-->
     <ul class="user-panel">
       <li class="user-panel-item">
         <a href="blank.html" class="user-link" aria-label="Перейти на страницу поиска"><span
             class="user-link-icon"></span></a>
         <div class="user-tooltip">
           <form action="https://echo.htmlacademy.ru" class="search" method="post">
-            <label for="#field-search" class="visually-hidden">Поиск</label>
+            <label for="field-search" class="visually-hidden">Поиск</label>
             <input type="search" id="field-search" name="search" placeholder="Что ищем?">
           </form>
         </div>
@@ -61,24 +60,21 @@
             class="user-link-icon"></span>Вход</a>
         <div class="user-tooltip">
           <form action="https://echo.htmlacademy.ru" class="enter" method="post">
-            <label for="#login-email" class="visually-hidden">Почта</label>
+            <label for="login-email" class="visually-hidden">Почта</label>
             <input type="email" id="login-email" name="email" placeholder="Электронная почта">
-            <label for="#enter-password" class="visually-hidden">Пароль</label>
+            <label for="enter-password" class="visually-hidden">Пароль</label>
             <input type="password" id="enter-password" name="password" placeholder="******">
-            <button class="enter-button">Войти</button>
-            <p>
+            <button class="button enter-button">Войти</button>
+            <div class="enter-help">
               <a href="#">Забыли пароль?</a>
-              <br>
-              <!--так или через стили?-->
               <a href="#">Новая регистрация</a>
-            </p>
+            </div>
           </form>
         </div>
       </li>
       <li class="user-panel-item">
         <a href="blank.html" class="user-link" aria-label="Перейти на страницу корзины или показать окно корзины"><span
             class="user-link-icon"></span>Пусто</a>
-        <!--будет ли здесь div? формы-то нет....-->
       </li>
     </ul>
     <p>с 10 до 20, ежедневно</p>
@@ -92,28 +88,28 @@
         <li class="promo-wrapper-item">
           <img src="img/slide_1.png" width="647" height="584" alt="Мороженное крем-брюле и пломбир с малиновым джемом">
           <h3 class="text-promo">Крем-брюле и пломбир с малиновым джемом</h3>
-          <a class="promo-button" href="#">Давайте оба!</a>
+          <a class="promo-button button" href="#">Давайте оба!</a>
         </li>
         <li class="promo-wrapper-item">
           <img src="img/slide_2.png" width="647" height="584" alt="Мороженное шоколадный пломбир и лимонный сорбет">
           <h3 class="text-promo">Шоколадный пломбир и лимонный сорбет</h3>
-          <a class="promo-button" href="#">Давайте оба!</a>
+          <a class="promo-button button" href="#">Давайте оба!</a>
         </li>
         <li class="promo-wrapper-item">
           <img src="img/slide_3.png" width="647" height="584" alt="Мороженное пломбир с помадкой и клубничный щербет">
           <h3 class="text-promo">Пломбир с помадкой и клубничный щербет</h3>
-          <a class="promo-button" href="#">Давайте оба!</a>
+          <a class="promo-button button" href="#">Давайте оба!</a>
         </li>
       </ul>
       <ul class="controls-wrapper">
         <li class="controls-wrapper-item">
-          <button type="button">Показать слайд 1</button>
+          <button type="control">Показать слайд 1</button>
         </li>
         <li class="controls-wrapper-item">
-          <button type="button">Показать слайд 2</button>
+          <button type="control">Показать слайд 2</button>
         </li>
         <li class="controls-wrapper-item">
-          <button type="button">Показать слайд 3</button>
+          <button type="control">Показать слайд 3</button>
         </li>
       </ul>
     </section>
@@ -126,7 +122,7 @@
             При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ
             банку маринового варенья бесплатно.
           </p>
-          <a class="banners-button" href="#">Хочу варенье!</a>
+          <a class="banners-button button" href="#">Хочу варенье!</a>
         </li>
         <li class="banners-list-item">
           <h3>Шоколадки даром!</h3>
@@ -134,7 +130,7 @@
             При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
             шоколадной присыпки совершенно бесплатно.
           </p>
-          <a class="banners-button" href="#">Хочу шоколадки!</a>
+          <a class="banners-button button" href="#">Хочу шоколадки!</a>
         </li>
       </ul>
     </section>
@@ -150,7 +146,7 @@
           <a class="product-name" href="#">
             <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
           </a>
-          <a class="quick-view" href="#">Быстрый просмотр</a>
+          <a class="quick-view button" href="#">Быстрый просмотр</a>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -160,7 +156,7 @@
           <a class="product-name" href="#">
             <h3>Сливочно-кофейное с кусочками шоколада</h3>
           </a>
-          <a class="quick-view" href="#">Быстрый просмотр</a>
+          <a class="quick-view button" href="#">Быстрый просмотр</a>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -170,7 +166,7 @@
           <a class="product-name" href="#">
             <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
           </a>
-          <a class="quick-view" href="#">Быстрый просмотр</a>
+          <a class="quick-view button" href="#">Быстрый просмотр</a>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -180,7 +176,7 @@
           <a class="product-image" href="#">
             <h3>Сливочное крем-брюле с карамельной подливкой</h3>
           </a>
-          <a class="quick-view" href="#">Быстрый просмотр</a>
+          <a class="quick-view button" href="#">Быстрый просмотр</a>
         </li>
       </ul>
     </section>
@@ -230,9 +226,9 @@
           всякой ненужной ерунды. Честно =)
         </p>
         <form action="https://echo.htmlacademy.ru" class="mailing-form" method="post">
-          <label for="#email-mailing" class="visually-hidden">Почта для получения рассылки</label>
+          <label for="email-mailing" class="visually-hidden">Почта для получения рассылки</label>
           <input type="email" id="email-mailing" name="email" placeholder="Электронная почта">
-          <button class="mailing-button">Отправить</button>
+          <button class="mailing-button button">Отправить</button>
         </form>
       </section>
     </div>
@@ -248,16 +244,6 @@
         <dd>(с 10 до 20 ежедневно)</dd>
       </dl>
       <a class="feedback" href="#">Форма обратной связи</a>
-      <form action="https://echo.htmlacademy.ru" class="feedback-form" method="post">
-        <p>Мы обязательно Вам ответим!</p>
-        <label for="#name-feedback" class="visually-hidden">Имя</label>
-        <input type="text" id="name-feedback" name="name" placeholder="Как Вас зовут?">
-        <label for="email-feedback" class="visually-hidden">Электронная почта</label>
-        <input type="email" id="email-feedback" name="email" placeholder="Ваша почта для ответа">
-        <label for="#review" class="visually-hidden">Оставьте комментарий</label>
-        <textarea id="review" name="comments" cols="30" rows="4">Напишите что-нибудь</textarea>
-        <button class="review-button">Отправить</button>
-      </form>
     </section>
   </main>
   <footer class="main-footer">
@@ -305,6 +291,18 @@
         © 2019</p>
     </section>
   </footer>
+  <div class="modal-block">
+    <form action="https://echo.htmlacademy.ru" class="feedback-form" method="post">
+      <p>Мы обязательно Вам ответим!</p>
+      <label for="name-feedback" class="visually-hidden">Имя</label>
+      <input type="text" id="name-feedback" name="name" placeholder="Как Вас зовут?">
+      <label for="email-feedback" class="visually-hidden">Электронная почта</label>
+      <input type="email" id="email-feedback" name="email" placeholder="Ваша почта для ответа?">
+      <label for="review" class="visually-hidden">Оставьте комментарий</label>
+      <textarea id="review" name="comments" cols="30" rows="4">Напишите что-нибудь</textarea>
+      <button class="review-button button">Отправить</button>
+    </form>
+  </div>
 </body>
 
 </html>
