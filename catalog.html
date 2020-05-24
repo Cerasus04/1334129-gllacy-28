@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link href=".css" rel="stylesheet"> -->
   <title>HTML Academy: Глейси</title>
+  <base href="https://htmlacademy-htmlcss.github.io/1334129-gllacy-28/5/">
 </head>
 
 <body>
@@ -49,7 +50,19 @@
             class="user-link-icon"></span></a>
         <div class="user-tooltip">
           <form action="https://echo.htmlacademy.ru" class="search" method="post">
-            <label for="#field-search" class="visually-hidden">Поиск</label>
+            <label for="field-search" class="visually-hidden">Поиск</label>
+            <input type="search" id="field-search" name="search" placeholder="Что ищем?">
+          </form>
+        </div>
+      </li>
+    </ul>
+    <ul class="user-panel">
+      <li class="user-panel-item">
+        <a href="blank.html" class="user-link" aria-label="Перейти на страницу поиска"><span
+            class="user-link-icon"></span></a>
+        <div class="user-tooltip">
+          <form action="https://echo.htmlacademy.ru" class="search" method="post">
+            <label for="field-search" class="visually-hidden">Поиск</label>
             <input type="search" id="field-search" name="search" placeholder="Что ищем?">
           </form>
         </div>
@@ -59,17 +72,15 @@
             class="user-link-icon"></span>Вход</a>
         <div class="user-tooltip">
           <form action="https://echo.htmlacademy.ru" class="enter" method="post">
-            <label for="#login-email" class="visually-hidden">Почта</label>
+            <label for="login-email" class="visually-hidden">Почта</label>
             <input type="email" id="login-email" name="email" placeholder="Электронная почта">
-            <label for="#enter-password" class="visually-hidden">Пароль</label>
+            <label for="enter-password" class="visually-hidden">Пароль</label>
             <input type="password" id="enter-password" name="password" placeholder="******">
-            <button class="enter-button">Войти</button>
-            <p>
+            <button class="enter-button button">Войти</button>
+            <div class="enter-help">
               <a href="#">Забыли пароль?</a>
-              <br>
-              <!--так или через стили?-->
               <a href="#">Новая регистрация</a>
-            </p>
+            </div>
           </form>
         </div>
       </li>
@@ -79,22 +90,22 @@
         <div class="user-tooltip">
           <table>
             <tr>
-              <th><button class="close-button">Закрыть</button></th>
-              <th><img src="img/choice1.jpg" width="33" height="33" alt="Мороженное"></th>
-              <th>Пломбир с апельсиновым джемом</th>
-              <th>1,5 кг × <span class="price-calc">200 руб.</span></th>
-              <th>300 руб.</th>
+              <td><button class="close-button">Закрыть</button></td>
+              <td><img src="img/choice1.jpg" width="33" height="33" alt="Мороженное"></td>
+              <td>Пломбир с апельсиновым джемом</td>
+              <td>1,5 кг × <span class="price-calc">200 руб.</span></td>
+              <td>300 руб.</td>
             </tr>
             <tr>
-              <th><button class="close-button">Закрыть</button></th>
-              <th><img src="img/choice2.jpg" width="33" height="33" alt="Мороженное"></th>
-              <th>Клубничный пломбир с присыпкой из белого шоколада</th>
-              <th>1,5 кг × <span class="price-calc">300 руб.</span></th>
-              <th>450 руб.</th>
+              <td><button class="close-button">Закрыть</button></td>
+              <td><img src="img/choice2.jpg" width="33" height="33" alt="Мороженное"></td>
+              <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+              <td>1,5 кг × <span class="price-calc">300 руб.</span></td>
+              <td>450 руб.</td>
             </tr>
           </table>
           <p class="total">Итого: 750 руб.</p>
-          <button class="checkout">Оформить заказ</button>
+          <a class="checkout">Оформить заказ</a>
         </div>
       </li>
     </ul>
@@ -126,7 +137,7 @@
           <a class="product-name" href="#">
             <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
           </a>
-          <a class="quick-view" href="#">Быстрый просмотр</a>
+          <a class="quick-view button" href="#">Быстрый просмотр</a>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -136,7 +147,7 @@
           <a class="product-name" href="#">
             <h3>Сливочно-кофейное с кусочками шоколада</h3>
           </a>
-          <a class="quick-view" href="#">Быстрый просмотр</a>
+          <a class="quick-view button" href="#">Быстрый просмотр</a>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -146,7 +157,7 @@
           <a class="product-name" href="#">
             <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
           </a>
-          <a class="quick-view" href="#">Быстрый просмотр</a>
+          <a class="quick-view button" href="#">Быстрый просмотр</a>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -156,7 +167,7 @@
           <a class="product-image" href="#">
             <h3>Сливочное крем-брюле с карамельной подливкой</h3>
           </a>
-          <a class="quick-view" href="#">Быстрый просмотр</a>
+          <a class="quick-view button" href="#">Быстрый просмотр</a>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -166,7 +177,7 @@
           <a class="product-image" href="#">
             <h3>Сливочное с брусничным джемом </h3>
           </a>
-          <a class="quick-view" href="#">Быстрый просмотр</a>
+          <a class="quick-view button" href="#">Быстрый просмотр</a>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -176,7 +187,7 @@
           <a class="product-image" href="#">
             <h3>Сливочно-черничное с цельными ягодами черники </h3>
           </a>
-          <a class="quick-view" href="#">Быстрый просмотр</a>
+          <a class="quick-view button" href="#">Быстрый просмотр</a>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -186,7 +197,7 @@
           <a class="product-image" href="#">
             <h3>Сливочно-лимонное с карамельной присыпкой</h3>
           </a>
-          <a class="quick-view" href="#">Быстрый просмотр</a>
+          <a class="quick-view button" href="#">Быстрый просмотр</a>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -196,7 +207,7 @@
           <a class="product-image" href="#">
             <h3>Сливочное с шоколадной стружкой</h3>
           </a>
-          <a class="quick-view" href="#">Быстрый просмотр</a>
+          <a class="quick-view button" href="#">Быстрый просмотр</a>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -207,7 +218,7 @@
           <a class="product-image" href="#">
             <h3>Сливочно-ванильное с кусочками шоколада</h3>
           </a>
-          <a class="quick-view" href="#">Быстрый просмотр</a>
+          <a class="quick-view button" href="#">Быстрый просмотр</a>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -217,7 +228,7 @@
           <a class="product-image" href="#">
             <h3>Сливочноe с ментоловым сиропом</h3>
           </a>
-          <a class="quick-view" href="#">Быстрый просмотр</a>
+          <a class="quick-view button" href="#">Быстрый просмотр</a>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -227,7 +238,7 @@
           <a class="product-image" href="#">
             <h3>Сливочное с кусочками черного шоколада</h3>
           </a>
-          <a class="quick-view" href="#">Быстрый просмотр</a>
+          <a class="quick-view button" href="#">Быстрый просмотр</a>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -237,7 +248,7 @@
           <a class="product-image" href="#">
             <h3>Сливочное с мятным сиропом</h3>
           </a>
-          <a class="quick-view" href="#">Быстрый просмотр</a>
+          <a class="quick-view button" href="#">Быстрый просмотр</a>
         </li>
       </ul>
     </section>
