@@ -23,7 +23,7 @@
               <a href="#">Новинки</a>
             </li>
             <li class="sub-menu-item">
-              <a href="catalog.html">Сливочное</a>
+              <a>Сливочное</a>
             </li>
             <li class="sub-menu-item">
               <a href="#">Щербеты</a>
@@ -115,11 +115,8 @@
     <h1>Сливочное мороженное</h1>
     <section class="filters">
       <form action="https://echo.htmlacademy.ru" method="get">
-        <!--Раскрывающийся список-->
-        <legend>Сортировка</legend>
-        <!--Вероятно, что Сортировка и есть label, но если сделать его legend, то будет одинаковое оформление с радиокнопками и чекбоксами...-->
-        <label for="sorting" class="visually-hidden">Как отсортировать?</label>
-        <select name="sorting" id="sorting" size="4">
+        <label for="sorting">Сортировка</label>
+        <select name="sorting" id="sorting">
           <option value="popularity" selected="selected">по популярности</option>
           <option value="inexpensive">сначала недорогие</option>
           <option value="expensive">сначала дорогие</option>
@@ -127,8 +124,12 @@
         </select>
         <div class="range-slider">
           <!--ползунок-->
-          <p>Цена 100 руб. - 500 руб.</p>
-          <!--р ли это?-->
+          <legend>Цена</legend>
+          <label for="min-price" class="visually-hidden">цена от</label>
+          <input type="text" name="min-price" value="100 руб. -">
+          <!--не знаю,так ли  поняла тебя. Какой-то зверь получился прям. Куда девать дефис между ценами?-->
+          <label for="max-price" class="visually-hidden">цена до</label>
+          <input type="text" name="max-price" value="500 руб.">
           <div class="range-slider-progress">
             <div class="rang-slider-bar"></div>
             <button class="range-slider-toggle" type="button" aria-label="set min value">min</button>
@@ -136,7 +137,6 @@
           </div>
         </div>
         <legend>Жирность</legend>
-        <!--радиокнопки-->
         <ul>
           <li>
             <input type="radio" name="fat-content" value="0" id="filter-fat-0">
@@ -156,7 +156,6 @@
           </li>
         </ul>
         <legend>Наполнители</legend>
-        <!--множественный выбор, чекбоксы-->
         <ul>
           <li>
             <input type="checkbox" name="chocolate" id="filter-chocolate">
