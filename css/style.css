@@ -1,0 +1,292 @@
+:root {
+    --basic-white:#ffffff;
+    --basic-sg-black:#323232;
+    --basic-wet-asphalt:#5A5A5A;
+    --basic-text-dec:rgba(50, 50, 50, 0.2);
+
+    --basic-bg:#849D8F;
+    --basic-circe1:rgba(215, 242, 227, 0.75);
+    --basic-bg2:#8996A6;
+    --basic-circe2:rgba(218, 228, 239, 0.75);
+    --basic-bg3:#9D8B84;
+    --basic-circe3:rgba(239, 224, 218, 0.75);
+    --sub-bg:#FBDED7;
+    --pop-bg:#F8F7F4;
+    --menu-bg:#D07058;
+
+
+    --a-bg:rgba(255, 255, 255, 0.2);
+    --a-hov:#FFBC9E;
+    --social-bg:rgba(255, 255, 255, 0.8);
+    --button-shadow:rgba(172, 16, 0, 0.64);
+    --button-bg-hov:#AC1000;
+    --button-bg-actv:#942718;
+    --button-text-shadow:rgba(160,32,11,0.76);
+    --price-text-shadow:rgba(49, 50, 53, 0.5);
+
+}
+
+body {
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    color: var(--basic-white);
+    background-color: var(--basic-bg);
+  }
+
+  a {
+    text-decoration: none; /* подчеркивание у ссылок 1px solid var(--basic-text-dec); */
+    color: var(--basic-white);  /*это считается ошибкой критерия Д25.Нет глобальных стилей тегов?*/
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+
+  .button {
+    font: inherit;
+    text-align: center;
+    color: var(--basic-white);
+    text-shadow: 0px 2px 5px var(--button-text-shadow);
+    vertical-align: middle;
+    background-image:linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+    border:none;
+    border-radius:70px;
+    box-shadow: 0px 2px 2px var(--button-shadow);
+  }
+
+  .button:hover,
+  .button:focus {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2),  rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+    box-shadow: 0px 2px 2px var(--button-bg-hov);
+    border-radius: 50px;
+  }
+
+  .button:active {
+    background-color: linear-gradient(0deg, rgba(0, 0, 0, 0.7),  rgba(0, 0, 0, 0.7)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+    box-shadow: inset 0px 2px 2px var(--button-bg-actv);
+    border-radius: 50px;
+  }
+
+.site-navigation-item,
+.sub-menu-item,
+.user-panel-item,
+.promo-wrapper-item,
+.controls-wrapper-item,
+.banners-list-item,
+.products-list-item,
+.advantages-list-item,
+.social-list-item,
+.footer-nav-list-item,
+.breadcrumbs-item,
+.radio-item,
+.checkbox-item {
+  list-style: none;
+}
+
+.sub-menu,
+.user-tooltip,
+.modal-block {
+  display:none;
+}
+/*header*/
+
+.site-navigation {
+  font-weight: 700;
+}
+
+.site-navigation-item a,
+.sub-menu-item a,
+.social-list-item a,
+.footer-nav-list-item a,
+.breadcrumbs-item a,
+.academy,
+.product-name h3{
+  border-bottom: 1px solid var(--a-bg);
+}
+
+
+.social-list-item a:hover,
+.social-list-item a:active,
+.social-list-item a:focus,
+.footer-nav-list-item a:hover,
+.footer-nav-list-item a:active,
+.footer-nav-list-item a:focus,
+.breadcrumbs-item a:hover,
+.breadcrumbs-item a:active,
+.breadcrumbs-item a:focus,
+.academy:hover,
+.academy:active,
+.academy:focus,
+.product-name:hover h3,
+.product-name:active h3,
+.product-name:focus h3 {
+  color:var(--a-hov);
+}
+
+
+
+.user-panel {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.work-time {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+  .tel-header {
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.user-link {
+  background-color: var(--a-bg);
+}
+/*
+.slide1 {
+  background: var(--basic-circe1);
+  filter:blur(250px);
+}
+
+.slide2 {
+  background: var(--basic-circe2);
+  filter:blur(250px);
+}
+
+.slide3 {
+  background: var(--basic-circe3);
+  filter:blur(250px);
+} */
+
+/*section advantages*/
+
+
+
+.advantages {
+  background-image: url("../img/pattern.jpg");
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.advantages h2 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  color:var(--basic-sg-black);
+}
+
+.advantages-list-item {
+  line-height: 22px;
+  color:var(--basic-sg-black);
+}
+
+/*div content-row*/
+
+.blog-post{
+  background-image: url("../img/blog.jpg");
+  background-position:left;
+  background-repeat: no-repeat;
+}
+
+.blog-post h3{
+  line-height: 22px;
+  font-weight: 500;
+  color:var(--basic-sg-black);
+}
+
+.blog-post a{
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color:var(--basic-sg-black);
+  text-decoration: underline;
+
+}
+.mailing-desc {
+  line-height: 22px;
+  color:var(--basic-wet-asphalt);
+  /* border-image-source: url("../img/bg-post.svg"); и slice или просто вставлять полную картинку */
+}
+
+
+.mailing {
+  background-image: url("../img/bg-post.svg");
+  background-position:right;
+  background-repeat: no-repeat;
+
+}
+.mailing p{
+  background-color: var(--pop-bg);
+
+}
+
+.breadcrumbs-item {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.catalog {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+.product-price {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  text-shadow: 0px 1px 3px var(--price-text-shadow);
+}
+
+.product-price .unit {
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.product-name h3 {
+  line-height: 22px;
+  font-weight: 500;
+}
+/*footer*/
+
+
+.social-list-item{
+  background-color:var(--social-bg);
+  width:32px;
+  height:32px;
+}
+.footer-nav-list-item {
+  font-size: 13px;
+
+
+}
+.copyright{
+  font-size: 12px;
+
+}
+
+
+
+
+
+

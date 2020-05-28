@@ -5,6 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Глейси</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <base href="https://htmlacademy-htmlcss.github.io/1334129-gllacy-28/5/">
 </head>
 
@@ -46,7 +49,7 @@
     <ul class="user-panel">
       <li class="user-panel-item">
         <a href="blank.html" class="user-link" aria-label="Перейти на страницу поиска"><span
-            class="user-link-icon"></span></a>
+            class="user-link-icon"></span><img src="img/loupe.svg" width="16" height="16" alt="Лупа"></a>
         <div class="user-tooltip">
           <form action="https://echo.htmlacademy.ru" class="search" method="post">
             <label for="field-search" class="visually-hidden">Поиск</label>
@@ -56,7 +59,7 @@
       </li>
       <li class="user-panel-item">
         <a href="blank.html" class="user-link" aria-label="Перейти на страницу логина или показать окно логина"><span
-            class="user-link-icon"></span>Вход</a>
+            class="user-link-icon"></span><img src="img/entrance.svg" width="20" height="19" alt="Значек входа">Вход</a>
         <div class="user-tooltip">
           <form action="https://echo.htmlacademy.ru" class="enter" method="post">
             <label for="login-email" class="visually-hidden">Почта</label>
@@ -73,11 +76,12 @@
       </li>
       <li class="user-panel-item">
         <a href="blank.html" class="user-link" aria-label="Перейти на страницу корзины или показать окно корзины"><span
-            class="user-link-icon"></span>Пусто</a>
+            class="user-link-icon"></span><img src="img/basket.svg" width="21" height="20"
+            alt="Значек корзины">Пусто</a>
       </li>
     </ul>
-    <p>с 10 до 20, ежедневно</p>
-    <a href="tel:88124502525">8 812 450-25-25</a>
+    <p class="work-time">с 10 до 20, ежедневно</p>
+    <a href="tel:88124502525" class="tel-header">8 812 450-25-25</a>
   </header>
   <main>
     <h1 class="visually-hidden">Магазин по продаже мороженного</h1>
@@ -85,16 +89,19 @@
       <h2 class="visually-hidden">Промо предложения</h2>
       <ul class="promo-wrapper">
         <li class="promo-wrapper-item">
+          <div class="slide1"></div>
           <img src="img/slide_1.png" width="647" height="584" alt="Мороженное крем-брюле и пломбир с малиновым джемом">
           <h3 class="text-promo">Крем-брюле и пломбир с малиновым джемом</h3>
           <a class="promo-button button" href="#">Давайте оба!</a>
         </li>
         <li class="promo-wrapper-item">
+          <div class="slide2"></div>
           <img src="img/slide_2.png" width="647" height="584" alt="Мороженное шоколадный пломбир и лимонный сорбет">
           <h3 class="text-promo">Шоколадный пломбир и лимонный сорбет</h3>
           <a class="promo-button button" href="#">Давайте оба!</a>
         </li>
         <li class="promo-wrapper-item">
+          <div class="slide3"></div>
           <img src="img/slide_3.png" width="647" height="584" alt="Мороженное пломбир с помадкой и клубничный щербет">
           <h3 class="text-promo">Пломбир с помадкой и клубничный щербет</h3>
           <a class="promo-button button" href="#">Давайте оба!</a>
@@ -172,7 +179,7 @@
             <img src="img/card_4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
           </a>
           <p class="product-price">415 ₽<span class="unit">/кг</span></p>
-          <a class="product-image" href="#">
+          <a class="product-name" href="#">
             <h3>Сливочное крем-брюле с карамельной подливкой</h3>
           </a>
           <a class="quick-view button" href="#">Быстрый просмотр</a>
@@ -250,16 +257,16 @@
       <h2 class="visually-hidden">Социальные сети</h2>
       <ul class="social-list">
         <li class="social-list-item">
-          <a href="#" target="_blank">Facebook</a>
+          <a href="#" class="visually-hidden fb" target="_blank">Facebook</a>
         </li>
         <li class="social-list-item">
-          <a href="#" target="_blank">Вконтакте</a>
+          <a href="#" class="visually-hidden vk" target="_blank">Вконтакте</a>
         </li>
         <li class="social-list-item">
-          <a href="#" target="_blank">Instagram</a>
+          <a href="#" class="visually-hidden inst" target="_blank">Instagram</a>
         </li>
         <li class="social-list-item">
-          <a href="#" target="_blank">Twitter</a>
+          <a href="#" class="visually-hidden twit" target="_blank">Twitter</a>
         </li>
       </ul>
     </section>

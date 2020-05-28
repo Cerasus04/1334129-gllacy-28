@@ -5,6 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Глейси</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <base href="https://htmlacademy-htmlcss.github.io/1334129-gllacy-28/5/">
 </head>
 
@@ -45,8 +48,8 @@
     </nav>
     <ul class="user-panel">
       <li class="user-panel-item">
-        <a href="blank.html" class="user-link" aria-label="Перейти на страницу поиска"><span
-            class="user-link-icon"></span></a>
+        <a href="blank.html" class="user-link" aria-label="Перейти на страницу поиска"></span><img src="img/loupe.svg"
+            width="16" height="16" alt="Лупа"><span class="user-link-icon"></a>
         <div class="user-tooltip">
           <form action="https://echo.htmlacademy.ru" class="search" method="post">
             <label for="field-search" class="visually-hidden">Поиск</label>
@@ -56,7 +59,7 @@
       </li>
       <li class="user-panel-item">
         <a href="blank.html" class="user-link" aria-label="Перейти на страницу логина или показать окно логина"><span
-            class="user-link-icon"></span>Вход</a>
+            class="user-link-icon"></span><img src="img/entrance.svg" width="20" height="19" alt="Значек входа">Вход</a>
         <div class="user-tooltip">
           <form action="https://echo.htmlacademy.ru" class="enter" method="post">
             <label for="login-email" class="visually-hidden">Почта</label>
@@ -73,7 +76,8 @@
       </li>
       <li class="user-panel-item">
         <a href="blank.html" class="user-link" aria-label="Перейти на страницу корзины или показать окно корзины"><span
-            class="user-link-icon"></span>2 товара</a>
+            class="user-link-icon"></span><img src="img/basket-red.svg" width="21" height="20"
+            alt="Значек корзины с товаром">2 товара</a>
         <div class="user-tooltip">
           <table>
             <tr>
@@ -96,8 +100,8 @@
         </div>
       </li>
     </ul>
-    <p>с 10 до 20, ежедневно</p>
-    <a href="tel:88124502525">8 812 450-25-25</a>
+    <p class="work-time">с 10 до 20, ежедневно</p>
+    <a href="tel:88124502525" class="tel-header">8 812 450-25-25</a>
   </header>
   <main>
     <ul class="breadcrumbs">
@@ -111,7 +115,7 @@
         <a>Сливочное</a>
       </li>
     </ul>
-    <h1>Сливочное мороженное</h1>
+    <h1 class="catalog">Сливочное мороженное</h1>
     <section class="filters">
       <form action="https://echo.htmlacademy.ru" method="get">
         <label for="sorting">Сортировка</label>
@@ -226,7 +230,7 @@
             <img src="img/card_4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
           </a>
           <p class="product-price">415 ₽<span class="unit">/кг</span></p>
-          <a class="product-image" href="#">
+          <a class="product-name" href="#">
             <h3>Сливочное крем-брюле с карамельной подливкой</h3>
           </a>
           <a class="quick-view button" href="#">Быстрый просмотр</a>
@@ -236,7 +240,7 @@
             <img src="img/card_5.jpg" width="267" height="267" alt="Сливочное с брусничным джемом">
           </a>
           <p class="product-price">325 ₽<span class="unit">/кг</span></p>
-          <a class="product-image" href="#">
+          <a class="product-name" href="#">
             <h3>Сливочное с брусничным джемом </h3>
           </a>
           <a class="quick-view button" href="#">Быстрый просмотр</a>
@@ -246,7 +250,7 @@
             <img src="img/card_6.jpg" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники ">
           </a>
           <p class="product-price">410 ₽<span class="unit">/кг</span></p>
-          <a class="product-image" href="#">
+          <a class="product-name" href="#">
             <h3>Сливочно-черничное с цельными ягодами черники </h3>
           </a>
           <a class="quick-view button" href="#">Быстрый просмотр</a>
@@ -256,7 +260,7 @@
             <img src="img/card_7.jpg" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
           </a>
           <p class="product-price">315 ₽<span class="unit">/кг</span></p>
-          <a class="product-image" href="#">
+          <a class="product-name" href="#">
             <h3>Сливочно-лимонное с карамельной присыпкой</h3>
           </a>
           <a class="quick-view button" href="#">Быстрый просмотр</a>
@@ -266,7 +270,7 @@
             <img src="img/card_8.jpg" width="267" height="267" alt="Сливочное с шоколадной стружкой">
           </a>
           <p class="product-price">320 ₽<span class="unit">/кг</span></p>
-          <a class="product-image" href="#">
+          <a class="product-name" href="#">
             <h3>Сливочное с шоколадной стружкой</h3>
           </a>
           <a class="quick-view button" href="#">Быстрый просмотр</a>
@@ -277,7 +281,7 @@
             ">
           </a>
           <p class="product-price">440 ₽<span class="unit">/кг</span></p>
-          <a class="product-image" href="#">
+          <a class="product-name" href="#">
             <h3>Сливочно-ванильное с кусочками шоколада</h3>
           </a>
           <a class="quick-view button" href="#">Быстрый просмотр</a>
@@ -287,7 +291,7 @@
             <img src="img/card_10.jpg" width="267" height="267" alt="Сливочноe с ментоловым сиропом">
           </a>
           <p class="product-price">435 ₽<span class="unit">/кг</span></p>
-          <a class="product-image" href="#">
+          <a class="product-name" href="#">
             <h3>Сливочноe с ментоловым сиропом</h3>
           </a>
           <a class="quick-view button" href="#">Быстрый просмотр</a>
@@ -297,7 +301,7 @@
             <img src="img/card_11.jpg" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
           </a>
           <p class="product-price">355 ₽<span class="unit">/кг</span></p>
-          <a class="product-image" href="#">
+          <a class="product-name" href="#">
             <h3>Сливочное с кусочками черного шоколада</h3>
           </a>
           <a class="quick-view button" href="#">Быстрый просмотр</a>
@@ -307,7 +311,7 @@
             <img src="img/card_12.jpg" width="267" height="267" alt="Сливочное с мятным сиропом">
           </a>
           <p class="product-price">420 ₽<span class="unit">/кг</span></p>
-          <a class="product-image" href="#">
+          <a class="product-name" href="#">
             <h3>Сливочное с мятным сиропом</h3>
           </a>
           <a class="quick-view button" href="#">Быстрый просмотр</a>
@@ -329,16 +333,16 @@
       <h2 class="visually-hidden">Социальные сети</h2>
       <ul class="social-list">
         <li class="social-list-item">
-          <a href="#" target="_blank">Facebook</a>
+          <a href="#" class="visually-hidden fb" target="_blank">Facebook</a>
         </li>
         <li class="social-list-item">
-          <a href="#" target="_blank">Вконтакте</a>
+          <a href="#" class="visually-hidden vk" target="_blank">Вконтакте</a>
         </li>
         <li class="social-list-item">
-          <a href="#" target="_blank">Instagram</a>
+          <a href="#" class="visually-hidden inst" target="_blank">Instagram</a>
         </li>
         <li class="social-list-item">
-          <a href="#" target="_blank">Twitter</a>
+          <a href="#" class="visually-hidden twit" target="_blank">Twitter</a>
         </li>
       </ul>
     </section>
