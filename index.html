@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <base href="https://htmlacademy-htmlcss.github.io/1334129-gllacy-28/5/">
+
 </head>
 
 <body>
@@ -19,36 +19,36 @@
       </a>
       <ul class="site-navigation">
         <li class="site-navigation-item">
-          <a href="#">Каталог</a>
+          <a class="nav-link" href="#">Каталог</a>
           <ul class="sub-menu">
             <li class="sub-menu-item">
-              <a href="#">Новинки</a>
+              <a class="sub-nav-link" href="#">Новинки</a>
             </li>
             <li class="sub-menu-item">
-              <a href="catalog.html">Сливочное</a>
+              <a class="sub-nav-link" href="catalog.html">Сливочное</a>
             </li>
             <li class="sub-menu-item">
-              <a href="#">Щербеты</a>
+              <a class="sub-nav-link" href="#">Щербеты</a>
             </li>
             <li class="sub-menu-item">
-              <a href="#">Фруктовый лед</a>
+              <a class="sub-nav-link" href="#">Фруктовый лед</a>
             </li>
             <li class="sub-menu-item">
-              <a href="#">Мелорин</a>
+              <a class="sub-nav-link" href="#">Мелорин</a>
             </li>
           </ul>
         </li>
         <li class="site-navigation-item">
-          <a href="blank.html">Доставка и оплата</a>
+          <a class="nav-link" href="blank.html">Доставка и оплата</a>
         </li>
         <li class="site-navigation-item">
-          <a href="blank.html">О компании</a>
+          <a class="nav-link" href="blank.html">О компании</a>
         </li>
       </ul>
     </nav>
     <ul class="user-panel">
       <li class="user-panel-item">
-        <a href="blank.html" class="user-link" aria-label="Перейти на страницу поиска"><span
+        <a class="user-link nav-link" href="blank.html" aria-label="Перейти на страницу поиска"><span
             class="user-link-icon"></span><img src="img/loupe.svg" width="16" height="16" alt="Лупа"></a>
         <div class="user-tooltip">
           <form action="https://echo.htmlacademy.ru" class="search" method="post">
@@ -58,8 +58,9 @@
         </div>
       </li>
       <li class="user-panel-item">
-        <a href="blank.html" class="user-link" aria-label="Перейти на страницу логина или показать окно логина"><span
-            class="user-link-icon"></span><img src="img/entrance.svg" width="20" height="19" alt="Значек входа">Вход</a>
+        <a class="user-link nav-link" href="blank.html"
+          aria-label="Перейти на страницу логина или показать окно логина"><span class="user-link-icon"></span><img
+            src="img/entrance.svg" width="20" height="19" alt="Значек входа">Вход</a>
         <div class="user-tooltip">
           <form action="https://echo.htmlacademy.ru" class="enter" method="post">
             <label for="login-email" class="visually-hidden">Почта</label>
@@ -75,13 +76,13 @@
         </div>
       </li>
       <li class="user-panel-item">
-        <a href="blank.html" class="user-link" aria-label="Перейти на страницу корзины или показать окно корзины"><span
-            class="user-link-icon"></span><img src="img/basket.svg" width="21" height="20"
-            alt="Значек корзины">Пусто</a>
+        <a class="user-link nav-link" href="blank.html"
+          aria-label="Перейти на страницу корзины или показать окно корзины"><span class="user-link-icon"></span><img
+            src="img/basket.svg" width="21" height="20" alt="Значек корзины">Пусто</a>
       </li>
     </ul>
     <p class="work-time">с 10 до 20, ежедневно</p>
-    <a href="tel:88124502525" class="tel-header">8 812 450-25-25</a>
+    <a class="tel-header" href="tel:88124502525">8 812 450-25-25</a>
   </header>
   <main>
     <h1 class="visually-hidden">Магазин по продаже мороженного</h1>
@@ -89,19 +90,16 @@
       <h2 class="visually-hidden">Промо предложения</h2>
       <ul class="promo-wrapper">
         <li class="promo-wrapper-item">
-          <div class="slide1"></div>
           <img src="img/slide_1.png" width="647" height="584" alt="Мороженное крем-брюле и пломбир с малиновым джемом">
           <h3 class="text-promo">Крем-брюле и пломбир с малиновым джемом</h3>
           <a class="promo-button button" href="#">Давайте оба!</a>
         </li>
         <li class="promo-wrapper-item">
-          <div class="slide2"></div>
           <img src="img/slide_2.png" width="647" height="584" alt="Мороженное шоколадный пломбир и лимонный сорбет">
           <h3 class="text-promo">Шоколадный пломбир и лимонный сорбет</h3>
           <a class="promo-button button" href="#">Давайте оба!</a>
         </li>
         <li class="promo-wrapper-item">
-          <div class="slide3"></div>
           <img src="img/slide_3.png" width="647" height="584" alt="Мороженное пломбир с помадкой и клубничный щербет">
           <h3 class="text-promo">Пломбир с помадкой и клубничный щербет</h3>
           <a class="promo-button button" href="#">Давайте оба!</a>
@@ -149,7 +147,7 @@
               alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
           </a>
           <p class="product-price">310 ₽<span class="unit">/кг</span></p>
-          <a class="product-name" href="#">
+          <a class="product-name link" href="#">
             <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
           </a>
           <a class="quick-view button" href="#">Быстрый просмотр</a>
@@ -159,7 +157,7 @@
             <img src="img/card_2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
           </a>
           <p class="product-price">380 ₽<span class="unit">/кг</span></p>
-          <a class="product-name" href="#">
+          <a class="product-name link" href="#">
             <h3>Сливочно-кофейное с кусочками шоколада</h3>
           </a>
           <a class="quick-view button" href="#">Быстрый просмотр</a>
@@ -169,7 +167,7 @@
             <img src="img/card_3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
           </a>
           <p class="product-price">355 ₽<span class="unit">/кг</span></p>
-          <a class="product-name" href="#">
+          <a class="product-name link" href="#">
             <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
           </a>
           <a class="quick-view button" href="#">Быстрый просмотр</a>
@@ -179,7 +177,7 @@
             <img src="img/card_4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
           </a>
           <p class="product-price">415 ₽<span class="unit">/кг</span></p>
-          <a class="product-name" href="#">
+          <a class="product-name link" href="#">
             <h3>Сливочное крем-брюле с карамельной подливкой</h3>
           </a>
           <a class="quick-view button" href="#">Быстрый просмотр</a>
@@ -225,17 +223,19 @@
         </article>
       </section>
       <section class="mailing content-column">
-        <h2 class="visually-hidden">Подписка на наши обновления</h2>
-        <p class="mailing-desc">
-          Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего
-          самого вкусного, что у нас происходит. Обещаем не спамить и не слать
-          всякой ненужной ерунды. Честно =)
-        </p>
-        <form action="https://echo.htmlacademy.ru" class="mailing-form" method="post">
-          <label for="email-mailing" class="visually-hidden">Почта для получения рассылки</label>
-          <input type="email" id="email-mailing" name="email" placeholder="Электронная почта">
-          <button class="mailing-button button">Отправить</button>
-        </form>
+        <div class="subscribe-block">
+          <h2 class="visually-hidden">Подписка на наши обновления</h2>
+          <p class="mailing-desc">
+            Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего
+            самого вкусного, что у нас происходит. Обещаем не спамить и не слать
+            всякой ненужной ерунды. Честно =)
+          </p>
+          <form action="https://echo.htmlacademy.ru" class="mailing-form" method="post">
+            <label for="email-mailing" class="visually-hidden">Почта для получения рассылки</label>
+            <input type="email" id="email-mailing" name="email" placeholder="Электронная почта">
+            <button class="mailing-button button">Отправить</button>
+          </form>
+        </div>
       </section>
     </div>
     <section class="contacts">
@@ -256,17 +256,17 @@
     <section class="footer-social">
       <h2 class="visually-hidden">Социальные сети</h2>
       <ul class="social-list">
-        <li class="social-list-item">
-          <a href="#" class="visually-hidden fb" target="_blank">Facebook</a>
+        <li class="social-list-item link">
+          <a class="fb" href="#" arial-label="Facebook" target="_blank"></a>
         </li>
-        <li class="social-list-item">
-          <a href="#" class="visually-hidden vk" target="_blank">Вконтакте</a>
+        <li class="social-list-item link">
+          <a class="vk" href="#" arial-label="Вконтакте" target="_blank"></a>
         </li>
-        <li class="social-list-item">
-          <a href="#" class="visually-hidden inst" target="_blank">Instagram</a>
+        <li class="social-list-item link">
+          <a class="inst" href="#" arial-label="Instagram" target="_blank"></a>
         </li>
-        <li class="social-list-item">
-          <a href="#" class="visually-hidden twit" target="_blank">Twitter</a>
+        <li class="social-list-item link">
+          <a class="twit" href="#" arial-label="Twitter" target="_blank"></a>
         </li>
       </ul>
     </section>
@@ -274,16 +274,16 @@
       <h2 class="visually-hidden">Дополнительная информация</h2>
       <ul class="footer-nav-list">
         <li class="footer-nav-list-item">
-          <a href="#">Для поставщиков</a>
+          <a class="link" href="#">Для поставщиков</a>
         </li>
         <li class="footer-nav-list-item">
-          <a href="#">О производстве</a>
+          <a class="link" href="#">О производстве</a>
         </li>
         <li class="footer-nav-list-item">
-          <a href="#">Наши документы</a>
+          <a class="link" href="#">Наши документы</a>
         </li>
         <li class="footer-nav-list-item">
-          <a href="#">Экологические стандарты</a>
+          <a class="link" href="#">Экологические стандарты</a>
         </li>
       </ul>
     </section>
@@ -292,7 +292,7 @@
       <a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
         <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип Академии">
       </a>
-      <p class="copyright">Сделано в <a class="academy" href="https://htmlacademy.ru/intensive/htmlcss"
+      <p class="copyright">Сделано в <a class="academy link" href="https://htmlacademy.ru/intensive/htmlcss"
           target="_blank">HTML Academy</a>
         © 2019</p>
     </section>
