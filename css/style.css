@@ -84,8 +84,8 @@ img {
 .social-list-item,
 .footer-nav-list-item,
 .breadcrumbs-item,
-.radio-item,
-.checkbox-item {
+.radio-list,
+.checkbox-list {
   list-style: none;
 }
 
@@ -178,6 +178,45 @@ img {
 
 /*section promo*/
 
+.text-promo {
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+}
+
+.promo-button {
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 700;
+}
+
+/*section banners*/
+
+.banners-list-item h3 {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+.banners-list-item p {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.banners-button {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+/*section hits*/
+
+.quick-view {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 /*section advantages*/
 
 .advantages {
@@ -194,7 +233,6 @@ img {
 }
 
 .advantages-list-item {
-
   color:var(--basic-sg-black);
 }
 
@@ -207,7 +245,6 @@ img {
 }
 
 .blog-post h3 {
-
   font-weight: 500;
   color:var(--basic-sg-black);
 }
@@ -218,10 +255,9 @@ img {
   font-weight: 700;
   color:var(--basic-sg-black);
   text-decoration: underline;
-
 }
-.mailing-desc {
 
+.mailing-desc {
   color:var(--basic-wet-asphalt);
 }
 
@@ -232,6 +268,11 @@ img {
   border-radius: 16px;
 }
 
+.mailing-button {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight:700;
+}
 .subscribe-block {
    background-color: var(--pop-bg);
 }
@@ -266,13 +307,45 @@ img {
   border-bottom: 1px solid var(--link-bg);
 }
 
-.quick-view {
+/*section contacts*/
+
+.contact-list {
+  color: var(--basic-sg-black);
+}
+
+.contact-list dt {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contact-list dd {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.contact-list a {
   text-decoration: none;
+  color: var(--basic-sg-black);
+}
+
+.contact-list dd:last-child {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.feedback {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
 }
 
 /*footer*/
 
 .social-list-item {
+  width: 32px;
+  height: 32px;
   background-color:var(--social-bg);
 }
 
@@ -286,8 +359,61 @@ img {
   line-height: 18px;
 }
 
+/*catalog - filters*/
 
+.filters-item {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
 
+.radio-list,
+.checkbox-list {
+  list-style:none;
+}
 
+.radio-list li,
+.checkbox-list li {
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.filters-apply {
+ line-height: 22px;
+ font-weight: 500;
+ color: var(--basic-white);
+ background-color: var(--link-bg);
+ border: 2px solid var(--basic-white);
+ box-sizing: border-box;
+ border-radius: 20px;
+}
+
+.filters-apply:hover {
+  color: var(--basic-sg-black);
+  background-color: var(--basic-white);
+
+}
+
+.filters-apply:active {
+  color: var(--basic-sg-black);
+  background-color: var(--basic-white);
+  box-shadow: inset 0px 2px 1px #696969;
+  /* убрать обводку border */
+}
+
+.sorting {
+  font-size:inherit;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--basic-white);
+  background-color: var(--link-bg);
+  border-radius: 20px;
+}
+
+/* выпадающие option не сделала */
+
+.sorting:hover {
+  color: var(--basic-sg-black);
+}
 
 

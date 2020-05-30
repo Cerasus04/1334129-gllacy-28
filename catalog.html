@@ -53,7 +53,7 @@
         <div class="user-tooltip">
           <form action="https://echo.htmlacademy.ru" class="search" method="post">
             <label for="field-search" class="visually-hidden">Поиск</label>
-            <input type="search" id="field-search" name="search" placeholder="Что ищем?">
+            <input type="search" id="field-search" name="search" placeholder="Крем-брюле">
           </form>
         </div>
       </li>
@@ -64,7 +64,7 @@
         <div class="user-tooltip">
           <form action="https://echo.htmlacademy.ru" class="enter" method="post">
             <label for="login-email" class="visually-hidden">Почта</label>
-            <input type="email" id="login-email" name="email" placeholder="Электронная почта">
+            <input type="email" id="login-email" name="email" placeholder="email@example.com">
             <label for="enter-password" class="visually-hidden">Пароль</label>
             <input type="password" id="enter-password" name="password" placeholder="******">
             <button class="enter-button button">Войти</button>
@@ -119,8 +119,8 @@
     <h1 class="catalog">Сливочное мороженное</h1>
     <section class="filters">
       <form action="https://echo.htmlacademy.ru" method="get">
-        <label for="sorting">Сортировка</label>
-        <select name="sorting" id="sorting">
+        <label class="filters-item" for="sorting">Сортировка</label>
+        <select class="sorting" name="sorting" id="sorting">
           <option value="popularity" selected="selected">по популярности</option>
           <option value="inexpensive">сначала недорогие</option>
           <option value="expensive">сначала дорогие</option>
@@ -128,7 +128,7 @@
         </select>
         <div class="range-slider">
           <fieldset>
-            <legend>
+            <legend class="filters-item">
               Цена
               <label for="min-price" class="visually-hidden">от</label>
               <input type="text" name="min-price" id="min-price" value="100 руб. ">
@@ -144,8 +144,8 @@
           </fieldset>
         </div>
         <fieldset>
-          <legend>Жирность</legend>
-          <ul>
+          <legend class="filters-item">Жирность</legend>
+          <ul class="radio-list">
             <li>
               <input type="radio" name="fat-content" value="0" id="filter-fat-0">
               <label for="filter-fat-0">0%</label>
@@ -165,8 +165,8 @@
           </ul>
         </fieldset>
         <fieldset>
-          <legend>Наполнители</legend>
-          <ul>
+          <legend class="filters-item">Наполнители</legend>
+          <ul class="checkbox-list">
             <li>
               <input type="checkbox" name="chocolate" id="filter-chocolate">
               <label for="filter-chocolate">шоколадные</label>
