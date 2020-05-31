@@ -1,23 +1,24 @@
 :root {
-  --basic-white:#ffffff;
-  --basic-sg-black:#323232;
-  --basic-wet-asphalt:#5A5A5A;
-  --basic-text-dec:rgba(50, 50, 50, 0.2);
-  --basic-bg:#849D8F;
-  --basic-bg2:#8996A6;
-  --basic-bg3:#9D8B84;
-  --sub-bg:#FBDED7;
-  --sub-bg-act:#F6B5A5;
-  --mailing-bg:#F8F7F4;
-  --menu-actv:#D07058;
-  --link-bg:rgba(255, 255, 255, 0.2);
-  --link-hov:#FFBC9E;
-  --social-bg:rgba(255, 255, 255, 0.8);
-  --button-shadow:rgba(172, 16, 0, 0.64);
-  --button-bg-hov:#AC1000;
-  --button-bg-actv:#942718;
-  --button-text-shadow:rgba(160,32,11,0.76);
-  --price-text-shadow:rgba(49, 50, 53, 0.5);
+  --basic-white: #ffffff;
+  --basic-sg-black: #323232;
+  --basic-wet-asphalt: #5A5A5A;
+  --basic-text-dec: rgba(50, 50, 50, 0.2);
+  --basic-bg: #849D8F;
+  --basic-bg2: #8996A6;
+  --basic-bg3: #9D8B84;
+  --sub-bg: #FBDED7;
+  --sub-bg-act: #F6B5A5;
+  --mailing-bg: #F8F7F4;
+  --contact-bg: #FEFEFE;
+  --menu-actv: #D07058;
+  --link-bg: rgba(255, 255, 255, 0.2);
+  --link-hov: #FFBC9E;
+  --social-bg: rgba(255, 255, 255, 0.8);
+  --button-shadow: rgba(172, 16, 0, 0.64);
+  --button-bg-hov: #AC1000;
+  --button-bg-actv: #942718;
+  --button-text-shadow: rgba(160,32,11,0.76);
+  --price-text-shadow: rgba(49, 50, 53, 0.5);
 }
 
 body {
@@ -35,6 +36,19 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/*Grid*/
+
+.page {
+  height: 100%;
+}
+
+.page-grid {
+min-height: 100%;
+display: grid;
+grid-template-rows: min-content 1fr min-content;
+align-content: start;
 }
 
 .visually-hidden {
@@ -110,9 +124,65 @@ img {
 
 /*header*/
 
+.main-header {
+  margin-bottom: 20px;
+
+  outline: 5px solid red;
+  outline-offset: -5px;
+}
+
+.container {
+  width: 1200px;
+  margin:0 auto;
+  padding: 0 27px;
+
+  outline: 5px solid green;
+  outline-offset: -5px;
+}
+
+.main-header-wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+.main-nav {
+  outline: 5px solid blue;
+  outline-offset: -5px;
+
+  display: flex;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+.main-logo {
+  outline: 5px solid goldenrod;
+  outline-offset: -5px;
+
+  margin-right: 24px;
+  padding-top: 9px;
+}
+
 .site-navigation {
+  outline: 5px solid yellow;
+  outline-offset: -5px;
+
+  display: flex;
+  margin: 0;
+  margin-right: -32px;
+  padding: 0;
+  padding-top: 32px;
+
   line-height: 16px;
   font-weight: 700;
+}
+
+.site-navigation-item {
+  margin-right: 32px;
 }
 
 .nav-link:hover,
@@ -122,14 +192,18 @@ img {
   background-color: var(--basic-white);
 }
 
-.current {
+.nav-link.current,
+.sub-nav-link.current {
   background-color: var(--menu-actv);
 }
 
 .sub-menu {
+  /* display: none; проверяла расположение*/
   font-size: 14px;
   line-height: 16px;
   font-weight: normal;
+
+  padding: 0;
 }
 
 .sub-menu-item {
@@ -154,9 +228,27 @@ img {
 
 }
 .user-panel {
+  outline: 5px solid gray;
+  outline-offset: -5px;
+
+  display: flex;
+  margin: 0;
+  margin-right: -10px;
+  padding: 0;
+  padding-top: 32px;
+
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
+}
+
+.user-panel-item {
+  margin-right: 10px;
+}
+
+.work {
+  outline: 5px solid blueviolet;
+  outline-offset: -5px;
 }
 
 .work-time {
@@ -191,7 +283,38 @@ img {
   font-weight: 700;
 }
 
+.promo-wrapper-item {
+  min-width: 1200px;
+}
+
 /*section banners*/
+
+.banners-list {
+  display: flex;
+  margin: 0;
+  margin-right: -26px;
+  padding: 0;
+  padding-bottom: 40px;
+}
+
+.banners-list-item {
+  margin-right: 26px;
+
+}
+
+.banners-list-item:first-child {
+  background-image: url(../img/banner_1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 16px;
+}
+
+.banners-list-item:last-child {
+  background-image: url(../img/banner_2.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 16px;
+}
 
 .banners-list-item h3 {
   font-size: 35px;
@@ -209,13 +332,41 @@ img {
   line-height: 24px;
   font-weight: 700;
 }
-/*section hits*/
+/*section hits, страница каталога*/
+
+.breadcrumbs {
+  display: flex;
+  margin: 0;
+  margin-right: -22px;
+  padding: 0px;
+  padding-bottom: 9px;
+}
+
+.breadcrumbs-item {
+  margin-right: 22px;
+}
 
 .quick-view {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   text-decoration: none;
+}
+
+.products-list {
+  outline: 5px solid yellow;
+  outline-offset: -5px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 26px;
+  row-gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.product-image img{
+  border-radius: 50%;
 }
 
 /*section advantages*/
@@ -239,13 +390,30 @@ img {
 
 /*div content-row*/
 
-.blog-post {
+.content-row {
+  display: flex;
+  margin: 0;
+  margin-right: -26px;
+  margin-bottom: 58px;
+
+}
+
+.content-column {
+  width: 560px;
+  margin-right: 26px;
+}
+
+.blog-priview {
   background-image: url("../img/blog.jpg");
-  background-position: left;
   background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 16px;
+
 }
 
 .blog-post h3 {
+  font-size: 16px;
+  line-height: 22px;
   font-weight: 500;
   color: var(--basic-sg-black);
 }
@@ -275,7 +443,8 @@ img {
   font-weight: 700;
 }
 .subscribe-block {
-   background-color: var(--mailing-bg);
+  background-color: var(--mailing-bg);
+
 }
 
 .breadcrumbs-item link {
@@ -287,6 +456,10 @@ img {
   font-size: 35px;
   line-height: 41px;
   font-weight: 700;
+
+  margin: 0px;
+  padding: 0px;
+
 }
 
 .product-price {
@@ -309,10 +482,22 @@ img {
   border-bottom: 1px solid var(--link-bg);
 }
 
+/* .paginatior {
+
+}
+.paginatior .current {
+
+} я пока не могу стилизовать эти декоративные элементы(( */
+
 /*section contacts*/
 
 .contact-list {
   color: var(--basic-sg-black);
+  border-radius: 16px;
+}
+
+.contacts-form {
+  background-color: var(--contact-bg);
 }
 
 .contact-list dt {
@@ -345,10 +530,32 @@ img {
 
 /*footer*/
 
+.main-footer .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.social-list {
+  display: flex;
+
+  width: 164px;
+  height: 32px; /*чтобы увидеть блок*/
+  margin-right: -12px;
+  outline: 5px solid goldenrod;
+  outline-offset: -5px;
+}
+
 .social-list-item {
   width: 32px;
   height: 32px;
+  margin-right: 12px;
   background-color: var(--social-bg);
+}
+
+.footer-nav-list {
+display: flex;
+justify-self: center;
 }
 
 .footer-nav-list-item link {
@@ -416,4 +623,7 @@ img {
   color: var(--basic-sg-black);
 }
 
+.footer-credits {
+  justify-self: end;
+}
 
