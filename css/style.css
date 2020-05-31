@@ -8,7 +8,7 @@
   --basic-bg3:#9D8B84;
   --sub-bg:#FBDED7;
   --sub-bg-act:#F6B5A5;
-  --pop-bg:#F8F7F4;
+  --mailing-bg:#F8F7F4;
   --menu-actv:#D07058;
   --link-bg:rgba(255, 255, 255, 0.2);
   --link-hov:#FFBC9E;
@@ -55,7 +55,7 @@ img {
   text-shadow: 0px 2px 5px var(--button-text-shadow);
   vertical-align: middle;
   background-image: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-  border:none;
+  border: none;
   border-radius: 70px;
   box-shadow: 0px 2px 2px var(--button-shadow);
 }
@@ -91,7 +91,7 @@ img {
 
 .user-tooltip,
 .modal-block {
-  display:none;
+  display: none;
 }
 
 .link,
@@ -105,7 +105,7 @@ img {
 .link:hover,
 .link:active,
 .link:focus {
-  color:var(--link-hov);
+  color: var(--link-hov);
 }
 
 /*header*/
@@ -118,16 +118,17 @@ img {
 .nav-link:hover,
 .nav-link:active,
 .nav-link:focus {
-  color:var(--basic-sg-black);
+  color: var(--basic-sg-black);
   background-color: var(--basic-white);
 }
- /*.nav-link:что?,
- .sub-menu-item: {
-  background-color: var(--menu-actv); мне нужно чтоб она красилась, когда мы находимся на странице
-}*/
+
+.current {
+  background-color: var(--menu-actv);
+}
+
 .sub-menu {
   font-size: 14px;
-  line-height:16px;
+  line-height: 16px;
   font-weight: normal;
 }
 
@@ -149,7 +150,7 @@ img {
 }
 
 .user-link {
-  border-bottom:none;
+  border-bottom: none;
 
 }
 .user-panel {
@@ -229,36 +230,36 @@ img {
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
-  color:var(--basic-sg-black);
+  color: var(--basic-sg-black);
 }
 
 .advantages-list-item {
-  color:var(--basic-sg-black);
+  color: var(--basic-sg-black);
 }
 
 /*div content-row*/
 
 .blog-post {
   background-image: url("../img/blog.jpg");
-  background-position:left;
+  background-position: left;
   background-repeat: no-repeat;
 }
 
 .blog-post h3 {
   font-weight: 500;
-  color:var(--basic-sg-black);
+  color: var(--basic-sg-black);
 }
 
 .blog-post a {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
-  color:var(--basic-sg-black);
+  color: var(--basic-sg-black);
   text-decoration: underline;
 }
 
 .mailing-desc {
-  color:var(--basic-wet-asphalt);
+  color: var(--basic-wet-asphalt);
 }
 
 .mailing {
@@ -271,10 +272,10 @@ img {
 .mailing-button {
   font-size: 18px;
   line-height: 24px;
-  font-weight:700;
+  font-weight: 700;
 }
 .subscribe-block {
-   background-color: var(--pop-bg);
+   background-color: var(--mailing-bg);
 }
 
 .breadcrumbs-item link {
@@ -301,8 +302,9 @@ img {
 }
 
 .product-name h3 {
-  font-family:  'Roboto', Arial, sans-serif;
-
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
   font-weight: 500;
   border-bottom: 1px solid var(--link-bg);
 }
@@ -346,7 +348,7 @@ img {
 .social-list-item {
   width: 32px;
   height: 32px;
-  background-color:var(--social-bg);
+  background-color: var(--social-bg);
 }
 
 .footer-nav-list-item link {
@@ -369,7 +371,7 @@ img {
 
 .radio-list,
 .checkbox-list {
-  list-style:none;
+  list-style: none;
 }
 
 .radio-list li,
@@ -402,15 +404,13 @@ img {
 }
 
 .sorting {
-  font-size:inherit;
+  font-size: inherit;
   line-height: 18px;
   font-weight: 500;
   color: var(--basic-white);
   background-color: var(--link-bg);
   border-radius: 20px;
 }
-
-/* выпадающие option не сделала */
 
 .sorting:hover {
   color: var(--basic-sg-black);
