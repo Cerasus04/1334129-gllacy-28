@@ -44,11 +44,11 @@ img {
   height: 100%;
 }
 
-.page-grid {
+.page-body {
 min-height: 100%;
 display: grid;
 grid-template-rows: min-content 1fr min-content;
-align-content: start;
+align-content: flex-start;
 }
 
 .visually-hidden {
@@ -133,6 +133,7 @@ align-content: start;
 
 .container {
   width: 1200px;
+  box-sizing: border-box;
   margin:0 auto;
   padding: 0 27px;
 
@@ -142,8 +143,7 @@ align-content: start;
 
 .main-header-wrapper {
   display: flex;
-  justify-content: start;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .main-nav {
@@ -172,8 +172,8 @@ align-content: start;
   outline-offset: -5px;
 
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
-  margin-right: -32px;
   padding: 0;
   padding-top: 32px;
 
@@ -182,7 +182,7 @@ align-content: start;
 }
 
 .site-navigation-item {
-  margin-right: 32px;
+  margin-right: 5px;
 }
 
 .nav-link:hover,
@@ -233,7 +233,6 @@ align-content: start;
 
   display: flex;
   margin: 0;
-  margin-right: -10px;
   padding: 0;
   padding-top: 32px;
 
@@ -243,7 +242,7 @@ align-content: start;
 }
 
 .user-panel-item {
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .work {
@@ -287,28 +286,24 @@ align-content: start;
 
 .banners-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0;
-  margin-right: -26px;
   padding: 0;
   padding-bottom: 40px;
 }
 
-.banners-list-item {
-  margin-right: 26px;
-
-}
-
-.banners-list-item:first-child {
+.banners-list-item.jam {
+  width: 560px;
   background-image: url(../img/banner_1.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
   border-radius: 16px;
 }
 
-.banners-list-item:last-child {
+.banners-list-item.chocolate {
+  width: 560px;
   background-image: url(../img/banner_2.png);
   background-repeat: no-repeat;
-  background-size: 100%;
   border-radius: 16px;
 }
 
@@ -328,12 +323,12 @@ align-content: start;
   line-height: 24px;
   font-weight: 700;
 }
+
 /*section hits, страница каталога*/
 
 .breadcrumbs {
   display: flex;
   margin: 0;
-  margin-right: -22px;
   padding: 0px;
   padding-bottom: 9px;
 }
@@ -355,7 +350,6 @@ align-content: start;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 26px;
   row-gap: 40px;
   margin: 0;
   padding: 0;
@@ -388,23 +382,21 @@ align-content: start;
 
 .content-row {
   display: flex;
+  flex-wrap: wrap; /*не уверена, что он тут нужен*/
   margin: 0;
-  margin-right: -26px;
   margin-bottom: 58px;
-
 }
 
 .content-column {
   width: 560px;
-  margin-right: 26px;
 }
 
 .blog-priview {
   background-image: url("../img/blog.jpg");
+  margin-right: 26px;
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 16px;
-
 }
 
 .blog-post h3 {
@@ -438,9 +430,9 @@ align-content: start;
   line-height: 24px;
   font-weight: 700;
 }
+
 .subscribe-block {
   background-color: var(--mailing-bg);
-
 }
 
 .breadcrumbs-item link {
@@ -455,7 +447,6 @@ align-content: start;
 
   margin: 0px;
   padding: 0px;
-
 }
 
 .product-price {
@@ -487,12 +478,20 @@ align-content: start;
 
 /*section contacts*/
 
-.contact-list {
-  color: var(--basic-sg-black);
-  border-radius: 16px;
+.contacts {
+  min-width: 1200px;
+  min-height: 430px;
+  background-image: url(../img/address.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 35px;
 }
 
 .contacts-form {
+  width: 303px;
+
+  color: var(--basic-sg-black);
+  border-radius: 16px;
   background-color: var(--contact-bg);
 }
 
@@ -529,15 +528,17 @@ align-content: start;
 .main-footer .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-
 }
 
 .social-list {
   display: flex;
+  flex-wrap: wrap;
 
   width: 164px;
-  height: 32px; /*чтобы увидеть блок*/
-  margin-right: -12px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+
   outline: 5px solid goldenrod;
   outline-offset: -5px;
 }
@@ -545,7 +546,6 @@ align-content: start;
 .social-list-item {
   width: 32px;
   height: 32px;
-  margin-right: 12px;
   background-color: var(--social-bg);
 }
 
@@ -596,7 +596,6 @@ justify-self: center;
 .filters-apply:hover {
   color: var(--basic-sg-black);
   background-color: var(--basic-white);
-
 }
 
 .filters-apply:active {
@@ -620,6 +619,6 @@ justify-self: center;
 }
 
 .footer-credits {
-  justify-self: end;
+  justify-self: flex-end;
 }
 
