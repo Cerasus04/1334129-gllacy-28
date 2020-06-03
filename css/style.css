@@ -293,18 +293,18 @@ align-content: flex-start;
   padding-bottom: 40px;
 }
 
-.banners-list-item.jam {
+.banners-list-item {
   width: 560px;
-  background-image: url(../img/banner_1.jpg);
   background-repeat: no-repeat;
   border-radius: 16px;
 }
 
+.banners-list-item.jam {
+  background-image: url("../img/banner_1.jpg");
+}
+
 .banners-list-item.chocolate {
-  width: 560px;
-  background-image: url(../img/banner_2.png);
-  background-repeat: no-repeat;
-  border-radius: 16px;
+  background-image: url("../img/banner_2.png");
 }
 
 .banners-list-item h3 {
@@ -326,6 +326,10 @@ align-content: flex-start;
 
 /*section hits, страница каталога*/
 
+.hit::before {
+  content: url("../img/hit.svg");
+}
+
 .breadcrumbs {
   display: flex;
   margin: 0;
@@ -342,6 +346,10 @@ align-content: flex-start;
   line-height: 24px;
   font-weight: 700;
   text-decoration: none;
+}
+
+.products {
+  margin-bottom: 70px;
 }
 
 .products-list {
@@ -446,6 +454,7 @@ align-content: flex-start;
   font-weight: 700;
 
   margin: 0px;
+  margin-bottom: 25px;
   padding: 0px;
 }
 
@@ -469,23 +478,74 @@ align-content: flex-start;
   border-bottom: 1px solid var(--link-bg);
 }
 
-/* .paginatior {
+.paginator {
+  margin-bottom: 30px;
+  text-align: right;
+  min-width: 194px;
+}
+
+.paginator a {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 26px;
+  height: 26px;
+  padding: 7px;
+  border-radius: 50%;
+
+  text-align: center;
+  vertical-align: middle;
+  line-height: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--basic-white);
 
 }
-.paginatior .current {
 
-} я пока не могу стилизовать эти декоративные элементы(( */
+.paginator a:hover,
+.paginator a:focus {
+  background-color: var(--link-bg);
+  /* cursor: url("../img/stroke.png"); */
+
+}
+
+.paginator a:active{
+  background-color: var(--basic-white);
+  color: var(--basic-sg-black);
+}
+
+.paginator .prev {
+  margin: 0;
+  margin-right: 8px;
+  background-image: url("../img/icon-right-small.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(180deg);
+  text-indent: -10000px;
+}
+
+.paginator .next {
+  margin-left: 8px;
+  background-image: url("../img/icon-right-small.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -10000px;
+}
+
+.paginator .current {
+  background-color: var(--basic-white);
+  color: var(--basic-sg-black);
+}
 
 /*section contacts*/
 
 .contacts {
   min-width: 1200px;
   min-height: 430px;
-  background-image: url(../img/address.png);
+  background-image: url("./img/address.png");
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: 35px;
-}
+} /*console говорит, что изображение не найдено..ничего не менялось, очему могло пропасть?*/
 
 .contacts-form {
   width: 303px;
@@ -565,7 +625,14 @@ justify-self: center;
 }
 
 /*catalog - filters*/
+.filters {
+  margin-bottom: 40px;
+}
 
+.form-row {
+  display: flex;
+
+}
 .filters-item {
   font-size: 14px;
   line-height: 16px;
@@ -574,6 +641,8 @@ justify-self: center;
 
 .radio-list,
 .checkbox-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
 
