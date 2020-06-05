@@ -82,7 +82,9 @@ align-content: flex-start;
 }
 
 .button:active {
-  background-color: linear-gradient(0deg, rgba(0, 0, 0, 0.7),  rgba(0, 0, 0, 0.7)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  background-color:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.7),  rgba(0, 0, 0, 0.7)),
+    linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   box-shadow: inset 0px 2px 2px var(--button-bg-actv);
   border-radius: 50px;
   }
@@ -326,9 +328,15 @@ align-content: flex-start;
 
 /*section hits, страница каталога*/
 
+.hits {
+  margin-bottom: 40px;
+}
+
 .hit::before {
   content: url("../img/hit.svg");
 }
+
+
 
 .breadcrumbs {
   display: flex;
@@ -373,17 +381,68 @@ align-content: flex-start;
   background-image: url("../img/pattern.jpg");
   background-position: center;
   background-repeat: repeat;
+  border-radius: 16px;
+  margin-bottom: 40px;
 }
 
 .advantages h2 {
+  margin:0;
+  margin-left: 20px;
+  margin-bottom: 21px;
+  padding: 0;
+  padding-top: 24px;
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
   color: var(--basic-sg-black);
 }
 
+.advantages-list {
+  margin-top: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  margin-left: 20px;
+  padding: 0;
+  padding-bottom: 36px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 33px;
+  column-gap: 26px;
+}
+
 .advantages-list-item {
+  padding-left: 55px;
+  position:relative;
   color: var(--basic-sg-black);
+}
+.ice-cream::before,
+.cow::before,
+.eco::before,
+.thermometer::before {
+  position: absolute;
+  left: -4px;
+  top: -10px;
+}
+
+
+
+.ice-cream::before {
+  content: url("../img/ice-cream.svg");
+
+}
+
+.cow::before {
+  content: url("../img/cow.svg");
+
+}
+
+.eco::before {
+  content: url("../img/eco.svg");
+}
+
+
+.thermometer::before {
+  content: url("../img/thermometer.svg");
 }
 
 /*div content-row*/
@@ -489,7 +548,7 @@ align-content: flex-start;
   box-sizing: border-box;
   width: 26px;
   height: 26px;
-  padding: 7px;
+  padding: 4px;
   border-radius: 50%;
 
   text-align: center;
@@ -498,14 +557,12 @@ align-content: flex-start;
   font-weight: 500;
   text-decoration: none;
   color: var(--basic-white);
-
 }
 
 .paginator a:hover,
 .paginator a:focus {
   background-color: var(--link-bg);
   /* cursor: url("../img/stroke.png"); */
-
 }
 
 .paginator a:active{
@@ -541,7 +598,7 @@ align-content: flex-start;
 .contacts {
   min-width: 1200px;
   min-height: 430px;
-  background-image: url("./img/address.png");
+  background-image: url("../img/map.png");
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: 35px;

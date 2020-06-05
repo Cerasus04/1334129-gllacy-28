@@ -51,8 +51,8 @@
         <div class="user-info">
           <ul class="user-panel">
             <li class="user-panel-item">
-              <a class="user-link nav-link" href="blank.html" aria-label="Перейти на страницу поиска"></span><img
-                  src="img/loupe.svg" width="16" height="16" alt="Лупа"><span class="user-link-icon"></a>
+              <a class="user-link nav-link" href="blank.html" aria-label="Перейти на страницу поиска"><span
+                  class="user-link-icon"><img src="img/loupe.svg" width="16" height="16" alt="Лупа"></span></a>
               <div class="user-tooltip">
                 <form action="https://echo.htmlacademy.ru" class="search" method="post">
                   <label for="field-search" class="visually-hidden">Поиск</label>
@@ -62,9 +62,8 @@
             </li>
             <li class="user-panel-item">
               <a class="user-link nav-link" href="blank.html"
-                aria-label="Перейти на страницу логина или показать окно логина"><span
-                  class="user-link-icon"></span><img src="img/entrance.svg" width="20" height="19"
-                  alt="Значек входа">Вход</a>
+                aria-label="Перейти на страницу логина или показать окно логина"><span class="user-link-icon"><img
+                    src="img/entrance.svg" width="20" height="19" alt="Значек входа"></span>Вход</a>
               <div class="user-tooltip">
                 <form action="https://echo.htmlacademy.ru" class="enter" method="post">
                   <label for="login-email" class="visually-hidden">Почта</label>
@@ -81,9 +80,8 @@
             </li>
             <li class="user-panel-item">
               <a class="user-link nav-link" href="blank.html"
-                aria-label="Перейти на страницу корзины или показать окно корзины"><span
-                  class="user-link-icon"></span><img src="img/basket-red.svg" width="21" height="20"
-                  alt="Значек корзины с товаром">2 товара</a>
+                aria-label="Перейти на страницу корзины или показать окно корзины"><span class="user-link-icon"><img
+                    src="img/basket-red.svg" width="21" height="20" alt="Значек корзины с товаром">2 товара</span></a>
               <div class="user-tooltip">
                 <table>
                   <tr>
@@ -131,15 +129,18 @@
     </ul>
     <h1 class="catalog">Сливочное мороженное</h1>
     <section class="filters">
+      <h2 class="visually-hidden">Пользовательский фильтр</h2>
       <form action="https://echo.htmlacademy.ru" method="get">
         <div class="form-row">
-          <label class="filters-item" for="sorting">Сортировка</label>
-          <select class="sorting" name="sorting" id="sorting">
-            <option value="popularity" selected="selected">по популярности</option>
-            <option value="inexpensive">сначала недорогие</option>
-            <option value="expensive">сначала дорогие</option>
-            <option value="fat-cont">по жирности</option>
-          </select>
+          <fieldset>
+            <label class="filters-item" for="sorting">Сортировка</label>
+            <select class="sorting" name="sorting" id="sorting">
+              <option value="popularity" selected="selected">по популярности</option>
+              <option value="inexpensive">сначала недорогие</option>
+              <option value="expensive">сначала дорогие</option>
+              <option value="fat-cont">по жирности</option>
+            </select>
+          </fieldset>
           <div class="range-slider">
             <fieldset>
               <legend class="filters-item">
@@ -157,7 +158,6 @@
               </div>
             </fieldset>
           </div>
-
           <fieldset>
             <legend class="filters-item">Жирность</legend>
             <ul class="radio-list">
@@ -353,16 +353,16 @@
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social-list">
           <li class="social-list-item">
-            <a class="fb" href="#" arial-label="Facebook" target="_blank"></a>
+            <a class="fb" href="#" aria-label="Facebook" target="_blank"></a>
           </li>
           <li class="social-list-item">
-            <a class="vk" href="#" arial-label="Вконтакте" target="_blank"></a>
+            <a class="vk" href="#" aria-label="Вконтакте" target="_blank"></a>
           </li>
           <li class="social-list-item">
-            <a class="inst" href="#" arial-label="Instagram" target="_blank"></a>
+            <a class="inst" href="#" aria-label="Instagram" target="_blank"></a>
           </li>
           <li class="social-list-item">
-            <a class="twit" href="#" arial-label="Twitter" target="_blank"></a>
+            <a class="twit" href="#" aria-label="Twitter" target="_blank"></a>
           </li>
         </ul>
       </section>
