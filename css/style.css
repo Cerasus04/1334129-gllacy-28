@@ -424,22 +424,17 @@ align-content: flex-start;
   top: -10px;
 }
 
-
-
 .ice-cream::before {
   content: url("../img/ice-cream.svg");
-
 }
 
 .cow::before {
   content: url("../img/cow.svg");
-
 }
 
 .eco::before {
   content: url("../img/eco.svg");
 }
-
 
 .thermometer::before {
   content: url("../img/thermometer.svg");
@@ -565,7 +560,7 @@ align-content: flex-start;
   /* cursor: url("../img/stroke.png"); */
 }
 
-.paginator a:active{
+.paginator a:active {
   background-color: var(--basic-white);
   color: var(--basic-sg-black);
 }
