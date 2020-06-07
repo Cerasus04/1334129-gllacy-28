@@ -24,9 +24,9 @@
             <ul class="site-navigation">
               <li class="site-navigation-item">
                 <a class="nav-link" href="#"><span class="nav-text">Каталог</span></a>
-                <ul class="sub-menu">
+                <ul class="sub-menu user-tooltip">
                   <li class="sub-menu-item">
-                    <a class="sub-nav-link" href="#">Новинки</a>
+                    <a class="sub-nav-link new" href="#">Новинки</a>
                   </li>
                   <li class="sub-menu-item">
                     <a class="sub-nav-link" href="catalog.html">Сливочное</a>
@@ -53,35 +53,38 @@
           <div class="user-info">
             <ul class="user-panel">
               <li class="user-panel-item">
-                <a class="user-link nav-link" href="blank.html" aria-label="Перейти на страницу поиска"><span
-                    class="user-link-icon"><img src="img/loupe.svg" width="16" height="16" alt="Лупа"></span></a>
-                <div class="user-tooltip">
-                  <form action="https://echo.htmlacademy.ru" class="search" method="post">
+                <a class="user-link nav-link" href="#" aria-label="Перейти на страницу поиска"><span
+                    class="user-link-icon"><img class="loupe" src="img/loupe.svg" width="16" height="16"
+                      alt="Лупа"></span></a>
+                <div class="user-tooltip search">
+                  <form action="https://echo.htmlacademy.ru" method="post">
                     <label for="field-search" class="visually-hidden">Поиск</label>
                     <input type="search" id="field-search" name="search" placeholder="Крем-брюле">
                   </form>
                 </div>
               </li>
               <li class="user-panel-item">
-                <a class="user-link nav-link" href="blank.html"
-                  aria-label="Перейти на страницу логина или показать окно логина"><span class="user-link-icon"><img
-                      src="img/entrance_index.svg" width="20" height="19" alt="Значек входа"></span>Вход</a>
-                <div class="user-tooltip">
-                  <form action="https://echo.htmlacademy.ru" class="enter" method="post">
+                <a class="user-link nav-link" href="#"
+                  aria-label="Перейти на страницу логина или показать окно логина"><span class="user-link-icon">
+                    <img src="img/entrance_index.svg" width="20" height="19" alt="Значек входа"></span>Вход</a>
+                <div class="user-tooltip enter">
+                  <form action="https://echo.htmlacademy.ru" method="post">
                     <label for="login-email" class="visually-hidden">Почта</label>
                     <input type="email" id="login-email" name="email" placeholder="email@example.com">
                     <label for="enter-password" class="visually-hidden">Пароль</label>
                     <input type="password" id="enter-password" name="password" placeholder="******">
-                    <button class="button enter-button">Войти</button>
-                    <div class="enter-help">
-                      <a href="#">Забыли пароль?</a>
-                      <a href="#">Новая регистрация</a>
+                    <div class="enter-wrapper">
+                      <button class="button enter-button">Войти</button>
+                      <div class="enter-help">
+                        <a href="#"><span class="enter-text">Забыли пароль?</span></a>
+                        <a href="#"><span class="enter-text"> Новая регистрация</span></a>
+                      </div>
                     </div>
                   </form>
                 </div>
               </li>
               <li class="user-panel-item">
-                <a class="user-link nav-link" href="blank.html"
+                <a class="user-link nav-link" href="#"
                   aria-label="Перейти на страницу корзины или показать окно корзины"><span class="user-link-icon"><img
                       src="img/basket.svg" width="21" height="20" alt="Значек корзины"></span>Пусто</a>
               </li>
@@ -275,16 +278,20 @@
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="social-list">
             <li class="social-list-item">
-              <a class="fb" href="#" aria-label="Facebook" target="_blank"></a>
+              <a class="fb" href="#" aria-label="Facebook" target="_blank"><img src="img/fb.svg" width="32" height="32"
+                  alt=""></a>
             </li>
             <li class="social-list-item">
-              <a class="vk" href="#" aria-label="Вконтакте" target="_blank"></a>
+              <a class="vk" href="#" aria-label="Вконтакте" target="_blank"><img src="img/vk.svg" width="32" height="32"
+                  alt=""></a>
             </li>
             <li class="social-list-item">
-              <a class="inst" href="#" aria-label="Instagram" target="_blank"></a>
+              <a class="inst" href="#" aria-label="Instagram" target="_blank"><img src="img/instagram.svg" width="32"
+                  height="32" alt=""></a>
             </li>
             <li class="social-list-item">
-              <a class="twit" href="#" aria-label="Twitter" target="_blank"></a>
+              <a class="twit" href="#" aria-label="Twitter" target="_blank"><img src="img/twitter.svg" width="32"
+                  height="32" alt=""></a>
             </li>
           </ul>
         </section>

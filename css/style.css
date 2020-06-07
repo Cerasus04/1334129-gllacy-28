@@ -149,8 +149,8 @@ img {
   margin:0 auto;
   padding: 0 27px;
   position: relative;
-  outline: 5px solid green;
-  outline-offset: -5px;
+  /* outline: 5px solid green;
+  outline-offset: -5px; */
 }
 
 .main-header-wrapper {
@@ -169,9 +169,6 @@ img {
 }
 
 .site-navigation {
-  outline: 5px solid yellow;
-  outline-offset: -5px;
-
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -226,32 +223,65 @@ img {
   border-color: transparent;
 }
 
-.sub-menu {
-  position: absolute;
+.user-tooltip {
+  background-color: var(--basic-white);
+  border-radius: 4px;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  z-index: 1;
   margin: 0;
   padding: 0;
+  position: absolute;
+}
+
+
+.sub-menu {
+  display: none;
+  width: 143px;
+  box-sizing: border-box;
+  top: 32px;
 
   font-size: 14px;
   line-height: 16px;
   font-weight: normal;
+  border-radius: 4px;
 }
 
-.sub-menu-item {
-  background-color: var(--basic-white);
-  padding-top: 13px;
-  padding-left: 21px;
-  width: 143px;
+.site-navigation-item:hover .sub-menu {
+  display:block;
 }
 
 .sub-nav-link {
   display: block;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 15px;
   color: var(--basic-sg-black);
+}
+
+.sub-menu-item .new {
+  font-weight: 700;
+  padding-top: 13px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--basic-text-dec);
 }
 
 .sub-menu-item:hover,
 .sub-menu-item:focus {
   background-color: var(--sub-bg);
 }
+
+.sub-menu-item:first-child:hover,
+.sub-menu-item:first-child:focus {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.sub-menu-item:last-child:hover,
+.sub-menu-item:last-child:focus {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
 
 .sub-menu-item:active {
   background-color: var(--sub-bg-act);
@@ -264,9 +294,6 @@ img {
 }
 
 .user-panel {
-  outline: 5px solid gray;
-  outline-offset: -5px;
-
   display: flex;
   margin: 0;
   padding: 0;
@@ -280,10 +307,107 @@ img {
 .user-panel-item {
   margin-left: 10px;
   margin-bottom: 10px;
+  position: relative;
 }
 
 .user-link {
   background-color: var(--link-bg);
+} /*нужно отцентрировать слова*/
+
+.user-panel-item img:not(.loupe) {
+  padding-right: 8px;
+}
+
+.user-panel-item:first-child .nav-link {
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.nav-link:hover img,
+.nav-link:focus img,
+.nav-link:active img {
+  filter: invert(1);
+}
+
+.user-panel-item:hover .user-tooltip,
+.user-panel-item:focus .user-tooltip,
+.user-panel-item:active .user-tooltip {
+  display: block;
+} /* сделать, чтобы не пряталось, когда мышка убегает*/
+
+.search {
+  width: 347px;
+  top: 38px;
+  left: -309px;
+}
+.user-tooltip input,
+.subscribe-block input {
+  box-sizing: border-box;
+  padding: 15px;
+
+  color: #999999;
+  border: 1px solid #D3D3D2;
+  border-radius: 4px;
+}
+
+.search input {
+  width: 311px;
+  margin: 20px 15px;
+}
+
+.search input:focus,
+.enter input:focus {
+  border: 2px solid rgba(46, 136, 288, 0.52); /*не видно из-за стандартной обводки, как убрать?*/
+  color: var(--basic-sg-black);
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.enter {
+  width: 277px;
+  top: 36px;
+  left: -190px;
+}
+
+.enter input {
+  width: 241px;
+  margin-top: 20px;
+  margin-left: 18px;
+  margin-right: 18px;
+}
+
+.enter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 18px;
+  margin-right: 16px;
+  margin-bottom: 22px;
+}
+
+.enter-help {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.enter-help a {
+  font-size: 13px;
+  line-height: 15px;
+  text-decoration: none;
+  color: var(--basic-sg-black);
+  padding-bottom: 9px;
+}
+
+.enter-help .enter-text {
+  border-bottom: 1px solid var(--basic-sg-black);
+}
+.enter-button {
+  padding: 15px 26px;
+
+  font-size: 18px;
+  line-height: 16px;
+  font-weight: 700;
 }
 
 .work {
@@ -370,7 +494,11 @@ img {
   border: 2px solid var(--basic-white);
   border-radius: 50%;
   cursor: pointer;
+}
 
+.control:hover,
+.control:focus {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 /*section banners*/
 
@@ -420,9 +548,16 @@ img {
   line-height: 24px;
   font-weight: 700;
   padding: 15px 22px;
-/*прижать к правому краю*/
+  /*прижать к правому краю*/
 }
 
+.jam .banners-button {
+  margin-left: 374px;
+}
+
+.chocolate .banners-button {
+  margin-left: 347px;
+}
 /*section hits*/
 
 .hits {
@@ -456,8 +591,7 @@ img {
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
-  border-bottom: 1px solid var(--link-bg);
-
+  /*сделать подчеркивание*/
   width: 265px;
   text-align: center;
   margin-top: 16px;
@@ -612,6 +746,12 @@ img {
   margin: 5px;
 }
 
+.subscribe-block input {
+  width: 368px;
+  margin-left: 20px;
+  margin-right: 10px;
+  margin-bottom: 35px;
+}
 .mailing-desc {
   color: var(--basic-wet-asphalt);
   margin: 0;
@@ -653,7 +793,9 @@ img {
   background-color: var(--contact-bg);
 }
 
-
+.contact-list {
+  margin: 0;
+}
 .contact-list dt {
   font-size: 14px;
   line-height: 20px;
@@ -703,36 +845,29 @@ img {
   display: flex;
   height: 32px;
   margin: 0;
-  margin-right: 256px;
+  margin-right: 234px;
   padding: 0;
-
-  outline: 5px solid goldenrod;
-  outline-offset: -5px;
 }
 
 .social-list-item {
   width: 32px;
   height: 32px;
-  border: 1px solid var(--link-bg);
+   border: 1px solid var(--link-bg);
   border-radius: 50%;
   margin-right: 12px;
-background-image: url("../img/vk.svg");
-  background-repeat: no-repeat;
-  background-color: rgba(255, 255, 255, 0.8);
+  }
 
-}
-
-.social-list-item a {
-
+.social-list-item {
+  filter: opacity(0.8);
 }
 
 .footer-nav-list {
   font-size: 13px;
   line-height: 18px;
-  width: 327px;
+  width: 312px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 11px;
+  grid-template-columns: 1fr max-content;
+  row-gap: 8px;
   padding: 0;
   position: relative;
   margin: 0;
@@ -759,8 +894,88 @@ background-image: url("../img/vk.svg");
   line-height: 18px;
 }
 
+.footer-credits {
+  justify-self: flex-end;
+}
 /*CATALOG*/
 
+/* .nav-link:hover img,
+.nav-link:focus img,
+.nav-link:active img {
+  filter: invert(1);
+} для корзины с тоарами не должно применяться это свойство*/
+
+.basket { /*всю таблицу по pixel perfect нужно подбирать*/
+  position: absolute;
+  top: 36px;
+  left: -425px;
+  width: 539px;
+}
+
+.basket table {
+  color: var(--basic-sg-black);
+  margin-top: 20px;
+  margin-right: 0;
+  margin-left: 20px;
+
+  border-bottom: 1px solid #CACAC7;
+  border-collapse: collapse;
+}
+
+.basket td {
+  font-size: 13px;
+  font-weight: 400;
+
+  padding-bottom: 20px;
+}
+
+td .selected-item {
+  display: block;
+  width: 216px;
+  text-decoration: none;
+  color: var(--basic-sg-black);
+}
+
+td .close-button {
+ /*нужно еще подумать, как стилизовать*/
+}
+
+.basket td:nth-child(4) {
+  padding-left: 30px;
+}
+
+.basket td:nth-child(5) {
+  padding-left: 25px;
+}
+
+td .price-calc {
+  color: #ABABAB;
+}
+
+.order-wrapper {
+  width: 172px;
+  margin:0;
+  margin-right: 14px;
+  margin-bottom: 21px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.order-wrapper .total {
+  font-weight: 700;
+  color: var(--basic-sg-black);
+  text-align: right;
+}
+
+.order-wrapper .checkout {
+  padding: 13px 15px;
+  font-size: 18px;
+  line-height: 16px;
+  font-weight: 700;
+
+}
 .breadcrumbs {
   display: flex;
   margin: 0;
@@ -777,18 +992,19 @@ background-image: url("../img/vk.svg");
 .products {
   margin-bottom: 70px;
 }
-.filters {
+.filters-wrapper {
   margin-bottom: 40px;
 }
 
 .form-row {
   display: flex;
-
 }
+
 .filters-item {
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
+  margin-bottom: 7px;
 }
 
 .radio-list,
@@ -839,11 +1055,57 @@ background-image: url("../img/vk.svg");
   color: var(--basic-sg-black);
 }
 
-.footer-credits {
-  justify-self: flex-end;
+.filter {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  border: none;
+  margin-right: 15px;
 }
 
+.filter .additive {
+  margin-bottom: 0;
+}
+.filters .classification {
+  width: 196px;
+}
 
+.sorting {
+  padding-top: 13px;
+  padding-right: 13px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+}
+
+.filters .range-slider {
+  width: 217px;
+}
+
+.filters .fat {
+  width: 425px;
+}
+
+.filters .additive {
+  width: 711px;
+  margin-bottom: 0;
+}
+
+.filter .radio-list,
+.filter .checkbox-list {
+  margin: 0;
+  padding: 0;
+  background-color: var(--link-bg);
+  border-radius: 20px;
+}
+/*
+.filter-wrapper label {
+  border: 1px solid red;
+  padding-top: 13px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+} */
+/*хлебные крошки*/
 .breadcrumbs-item link {
   font-size: 14px;
   line-height: 16px;
@@ -858,6 +1120,8 @@ background-image: url("../img/vk.svg");
   margin-bottom: 25px;
   padding: 0px;
 }
+
+/*переключатель страниц*/
 
 .paginator {
   margin-bottom: 30px;

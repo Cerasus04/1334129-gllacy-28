@@ -22,14 +22,14 @@
           <ul class="site-navigation">
             <li class="site-navigation-item">
               <a class="nav-link current" href="#"><span class="nav-text">Каталог</span></a>
-              <ul class="sub-menu">
+              <ul class="sub-menu user-tooltip">
                 <li class="sub-menu-item">
-                  <a class="sub-nav-link" href="#"><span>Новинки</span></a>
+                  <a class="sub-nav-link new" href="#">Новинки</a>
                 </li>
                 <li class="sub-menu-item">
                   <a class="sub-nav-link current">Сливочное</a>
                 </li>
-                <li class=" sub-menu-item">
+                <li class="sub-menu-item">
                   <a class="sub-nav-link" href="#">Щербеты</a>
                 </li>
                 <li class="sub-menu-item">
@@ -51,56 +51,63 @@
         <div class="user-info">
           <ul class="user-panel">
             <li class="user-panel-item">
-              <a class="user-link nav-link" href="blank.html" aria-label="Перейти на страницу поиска"><span
-                  class="user-link-icon"><img src="img/loupe.svg" width="16" height="16" alt="Лупа"></span></a>
-              <div class="user-tooltip">
-                <form action="https://echo.htmlacademy.ru" class="search" method="post">
+              <a class="user-link nav-link" href="#" aria-label="Перейти на страницу поиска"><span
+                  class="user-link-icon"><img class="loupe" src="img/loupe.svg" width="16" height="16"
+                    alt="Лупа"></span></a>
+              <div class="user-tooltip search">
+                <form action="https://echo.htmlacademy.ru" method="post">
                   <label for="field-search" class="visually-hidden">Поиск</label>
                   <input type="search" id="field-search" name="search" placeholder="Крем-брюле">
                 </form>
               </div>
             </li>
             <li class="user-panel-item">
-              <a class="user-link nav-link" href="blank.html"
+              <a class="user-link nav-link" href="#"
                 aria-label="Перейти на страницу логина или показать окно логина"><span class="user-link-icon"><img
-                    src="img/entrance.svg" width="20" height="19" alt="Значек входа"></span>Вход</a>
-              <div class="user-tooltip">
-                <form action="https://echo.htmlacademy.ru" class="enter" method="post">
+                    src="img/entrance_index.svg" width="20" height="19" alt="Значек входа"></span>Вход</a>
+              <div class="user-tooltip enter">
+                <form action="https://echo.htmlacademy.ru" method="post">
                   <label for="login-email" class="visually-hidden">Почта</label>
                   <input type="email" id="login-email" name="email" placeholder="email@example.com">
                   <label for="enter-password" class="visually-hidden">Пароль</label>
                   <input type="password" id="enter-password" name="password" placeholder="******">
-                  <button class="enter-button button">Войти</button>
-                  <div class="enter-help">
-                    <a href="#">Забыли пароль?</a>
-                    <a href="#">Новая регистрация</a>
+                  <div class="enter-wrapper">
+                    <button class="enter-button button">Войти</button>
+                    <div class="enter-help">
+                      <a href="#"><span class="enter-text">Забыли пароль?</span></a>
+                      <a href="#"><span class="enter-text">Новая регистрация</span></a>
+                    </div>
                   </div>
                 </form>
               </div>
             </li>
             <li class="user-panel-item">
-              <a class="user-link nav-link" href="blank.html"
+              <a class="user-link nav-link" href="#"
                 aria-label="Перейти на страницу корзины или показать окно корзины"><span class="user-link-icon"><img
                     src="img/basket-red.svg" width="21" height="20" alt="Значек корзины с товаром">2 товара</span></a>
-              <div class="user-tooltip">
+              <div class="user-tooltip basket">
                 <table>
                   <tr>
-                    <td><button class="close-button">Закрыть</button></td>
+                    <td><button class="close-button" aria-label="Закрыть"><img src="img/cross-small.svg" alt="">
+                      </button></td>
                     <td><a href="#"><img src="img/choice1.jpg" width="33" height="33" alt="Мороженное"></a></td>
-                    <td><a href="#">Пломбир с апельсиновым джемом</a></td>
+                    <td><a class="selected-item" href="#">Пломбир с апельсиновым джемом</a></td>
                     <td>1,5 кг × <span class="price-calc">200 руб.</span></td>
                     <td>300 руб.</td>
                   </tr>
                   <tr>
-                    <td><button class="close-button">Закрыть</button></td>
+                    <td><button class="close-button" aria-label="Закрыть"><img src="img/cross-small.svg"
+                          alt=""></button></td>
                     <td><a href="#"><img src="img/choice2.jpg" width="33" height="33" alt="Мороженное"></a></td>
-                    <td><a href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
+                    <td><a class="selected-item" href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
                     <td>1,5 кг × <span class="price-calc">300 руб.</span></td>
                     <td>450 руб.</td>
                   </tr>
                 </table>
-                <p class="total">Итого: 750 руб.</p>
-                <a class="checkout button" href="#">Оформить заказ</a>
+                <div class="order-wrapper">
+                  <p class="total">Итого: 750 руб.</p>
+                  <a class="checkout button" href="#">Оформить заказ</a>
+                </div>
               </div>
             </li>
           </ul>
@@ -128,12 +135,13 @@
       </li>
     </ul>
     <h1 class="catalog">Сливочное мороженное</h1>
-    <section class="filters">
+    <section class="filters-wrapper">
       <h2 class="visually-hidden">Пользовательский фильтр</h2>
-      <form action="https://echo.htmlacademy.ru" method="get">
+      <form class="filters" action="https://echo.htmlacademy.ru" method="get">
         <div class="form-row">
-          <fieldset>
-            <label class="filters-item" for="sorting">Сортировка</label>
+          <fieldset class="filter classification">
+            <legend class="filters-item">Сортировка</legend>
+            <label for="sorting"></label>
             <select class="sorting" name="sorting" id="sorting">
               <option value="popularity" selected="selected">по популярности</option>
               <option value="inexpensive">сначала недорогие</option>
@@ -142,7 +150,7 @@
             </select>
           </fieldset>
           <div class="range-slider">
-            <fieldset>
+            <fieldset class="filter range">
               <legend class="filters-item">
                 Цена
                 <label for="min-price" class="visually-hidden">от</label>
@@ -158,22 +166,22 @@
               </div>
             </fieldset>
           </div>
-          <fieldset>
+          <fieldset class="filter fat">
             <legend class="filters-item">Жирность</legend>
             <ul class="radio-list">
-              <li>
+              <li class="fiter-wrapper">
                 <input type="radio" name="fat-content" value="0" id="filter-fat-0">
                 <label for="filter-fat-0">0%</label>
               </li>
-              <li>
+              <li class="fiter-wrapper">
                 <input type="radio" name="fat-content" value="max10" id="filter-fat-max10" checked="checked">
                 <label for="filter-fat-max10">до 10%</label>
               </li>
-              <li>
+              <li class="fiter-wrapper">
                 <input type="radio" name="fat-content" value="max30" id="filter-fat-max30">
                 <label for="filter-fat-max30">до 30%</label>
               </li>
-              <li>
+              <li class="fiter-wrapper">
                 <input type="radio" name="fat-content" value="min30" id="filter-fat-min30">
                 <label for="filter-fat-min30">выше 30%</label>
               </li>
@@ -181,26 +189,26 @@
           </fieldset>
         </div>
         <div class="form-row">
-          <fieldset>
+          <fieldset class="filter additive">
             <legend class="filters-item">Наполнители</legend>
             <ul class="checkbox-list">
-              <li>
+              <li class="fiter-wrapper">
                 <input type="checkbox" name="chocolate" id="filter-chocolate">
                 <label for="filter-chocolate">шоколадные</label>
               </li>
-              <li>
+              <li class="fiter-wrapper">
                 <input type="checkbox" name="sugar" id="filter-sugar" checked="checked">
                 <label for="filter-sugar">сахарные присыпки</label>
               </li>
-              <li>
+              <li class="fiter-wrapper">
                 <input type="checkbox" name="fruits" id="filter-fruits">
                 <label for="filter-fruits">фрукты</label>
               </li>
-              <li>
+              <li class="fiter-wrapper">
                 <input type="checkbox" name="syrups" id="filter-syrups">
                 <label for="filter-syrups">сиропы</label>
               </li>
-              <li>
+              <li class="fiter-wrapper">
                 <input type="checkbox" name="jams" id="filter-jams">
                 <label for="filter-jams">джемы</label>
               </li>
@@ -353,16 +361,20 @@
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social-list">
           <li class="social-list-item">
-            <a class="fb" href="#" aria-label="Facebook" target="_blank"></a>
+            <a class="fb" href="#" aria-label="Facebook" target="_blank"><img src="img/fb.svg" width="32" height="32"
+                alt=""></a>
           </li>
           <li class="social-list-item">
-            <a class="vk" href="#" aria-label="Вконтакте" target="_blank"></a>
+            <a class="vk" href="#" aria-label="Вконтакте" target="_blank"><img src="img/vk.svg" width="32" height="32"
+                alt=""></a>
           </li>
           <li class="social-list-item">
-            <a class="inst" href="#" aria-label="Instagram" target="_blank"></a>
+            <a class="inst" href="#" aria-label="Instagram" target="_blank"><img src="img/instagram.svg" width="32"
+                height="32" alt=""></a>
           </li>
           <li class="social-list-item">
-            <a class="twit" href="#" aria-label="Twitter" target="_blank"></a>
+            <a class="twit" href="#" aria-label="Twitter" target="_blank"><img src="img/twitter.svg" width="32"
+                height="32" alt=""></a>
           </li>
         </ul>
       </section>
