@@ -69,7 +69,9 @@ img {
   align-content: flex-start;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
   padding: 0;
@@ -164,7 +166,7 @@ img {
 }
 
 .main-logo {
-  margin-right: 24px;
+  margin-right: 9px;
   padding-top: 9px;
 }
 
@@ -173,9 +175,8 @@ img {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  padding-top: 32px;
+  padding-top: 23px;
   list-style: none;
-
   line-height: 16px;
   font-weight: 700;
 }
@@ -183,22 +184,18 @@ img {
 .site-navigation-item {
   position: relative;
   margin-top: 0;
-  margin-right: 5px;
+  margin-right: 3px;
   margin-bottom: 10px;
-  margin-left: 5px;
 }
 
 .nav-link {
-  display: inline-block;
-  vertical-align: top;
-  padding-top: 6px;
-  padding-right: 14px;
-  padding-bottom: 6px;
-  padding-left: 14px;
+  display: flex;
+  align-items: center;
+  padding: 6px 15px;
   border-radius: 16px;
 }
 
-.nav-link .nav-text {
+.nav-text {
   border-bottom: 1px solid var(--link-bg);
 }
 
@@ -297,27 +294,29 @@ img {
   display: flex;
   margin: 0;
   padding: 0;
-  padding-top: 32px;
-
+  padding-top: 23px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
 }
 
 .user-panel-item {
-  margin-left: 10px;
-  margin-bottom: 10px;
+  margin-left: 12px;
+  margin-bottom: 17px;
   position: relative;
 }
 
 .user-link {
   background-color: var(--link-bg);
-} /*нужно отцентрировать слова*/
+}
 
 .user-panel-item img:not(.loupe) {
   padding-right: 8px;
 }
 
+.loupe {
+  display: block;
+}
 .user-panel-item:first-child .nav-link {
   padding: 8px;
   border-radius: 50%;
@@ -357,10 +356,10 @@ img {
 
 .search input:focus,
 .enter input:focus {
-  border: 2px solid rgba(46, 136, 288, 0.52); /*не видно из-за стандартной обводки, как убрать?*/
+  outline: none;
+  border-color: rgba(46, 136, 288, 0.52);
   color: var(--basic-sg-black);
   font-weight: 700;
-  line-height: 20px;
 }
 
 .enter {
@@ -475,12 +474,11 @@ img {
 .controls-wrapper {
   padding: 0;
   position: absolute;
-  bottom: 0;
+  top: 423px;
   left: 0;
   z-index: 20;
   display: flex;
-  width: 79px;
-  justify-content: space-between;
+  min-width: 79px;
 }
 
 .controls-wrapper-item .current {
@@ -488,6 +486,7 @@ img {
 }
 .control {
   padding: 0;
+  margin-right: 8px;
   width: 21px;
   height: 21px;
   background-color: transparent;
@@ -504,26 +503,25 @@ img {
 
 .banners-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  padding-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .banners-list-item {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 16px 22px 16px 17px;
   width: 560px;
-  height: 229px;
+  min-height: 229px;
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border-radius: 16px;
-}
 
-.banners-list-item.jam {
-  background-image: url("../img/banner_1.jpg");
-}
-
-.banners-list-item.chocolate {
-  background-image: url("../img/banner_2.png");
 }
 
 .banners-list-item h3 {
@@ -531,43 +529,49 @@ img {
   line-height: 41px;
   font-weight: 700;
   margin: 0px;
-  padding: 16px;
+
 }
 
 .banners-list-item p {
   font-size: 18px;
   font-weight: 700;
-  margin: 0px;
-  padding-left: 16px;
-  padding-right: 30px;
-  padding-bottom: 42px;
+  padding: 0;
+  padding-top: 16px;
+  margin: 0;
+  margin-bottom: 39px;
 }
 
 .banners-button {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
-  padding: 15px 22px;
-  /*прижать к правому краю*/
+  align-self: flex-end;
+  padding: 14px 22px 15px;
+
 }
 
-.jam .banners-button {
-  margin-left: 374px;
+.banners-list-item.jam {
+  background-color: pink;
+  background-image: url("../img/banner_1.jpg");
 }
 
-.chocolate .banners-button {
-  margin-left: 347px;
+.banners-list-item.chocolate {
+  background-color: brown;
+  background-image: url("../img/banner_2.png");
 }
+
+
 /*section hits*/
 
 .hits {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .products-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  row-gap: 40px;
+  row-gap: 27px;
+  column-gap: 28px;
   margin: 0;
   padding: 0;
 }
@@ -578,7 +582,7 @@ img {
   font-weight: 700;
   text-shadow: 0px 1px 3px var(--price-text-shadow);
   position: absolute;
-  top: 165px;
+  top: 163px;
 }
 
 .product-price .unit {
@@ -591,17 +595,15 @@ img {
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
-  /*сделать подчеркивание*/
   width: 265px;
   text-align: center;
-  margin-top: 16px;
+  margin-top: 8px;
   margin-bottom: 11px;
 }
 
 .products-list-item {
   position: relative;
   margin: 0 auto;
-
 }
 
 .product-image img{
@@ -636,7 +638,7 @@ img {
 .advantages h2 {
   margin:0;
   margin-left: 20px;
-  margin-bottom: 21px;
+  margin-bottom: 16px;
   padding: 0;
   padding-top: 24px;
   font-size: 24px;
@@ -651,10 +653,10 @@ img {
   margin-bottom: 0;
   margin-left: 20px;
   padding: 0;
-  padding-bottom: 36px;
+  padding-bottom: 32px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 33px;
+  row-gap: 22px;
   column-gap: 26px;
 }
 
@@ -668,7 +670,7 @@ img {
 .eco::before,
 .thermometer::before {
   position: absolute;
-  left: -4px;
+  left: -1px;
   top: -10px;
 }
 
@@ -692,28 +694,28 @@ img {
 
 .content-row {
   display: flex;
-  flex-wrap: wrap; /*не уверена, что он тут нужен*/
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0;
-  margin-bottom: 58px;
+  padding: 0;
+  margin-bottom: 40px;
 }
 
 .content-column {
-  width: 560px;
-  height: 100%;
-}
+  display: flex;
+  justify-content: column;
+  box-sizing: border-box;
 
-.blog-priview {
-  background-image: url("../img/blog.jpg");
-  margin-right: 26px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 16px;
 }
 
 .blog-post {
-  width: 287px;
-  margin-left: 20px;
-  padding-bottom: 94px;
+  background-image: url("../img/blog.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+  padding-left: 20px;
+  width: 560px;
+  box-sizing: border-box;
 }
 
 .blog-post h3 {
@@ -722,16 +724,21 @@ img {
   font-weight: 500;
   color: var(--basic-sg-black);
   margin: 0;
-  padding-top: 23px;
-  padding-bottom: 15px;
+  padding: 16px 253px 2px 0;
 }
 
-.blog-post a {
+.blog-post .blog-link {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
   color: var(--basic-sg-black);
-  text-decoration: underline; /* доделать, не как в макете*/
+  text-decoration: none;
+
+  width: 287px;
+  display: block;
+  text-decoration: underline;
+  padding-bottom: 89px;
+
 }
 
 .mailing {
@@ -742,31 +749,34 @@ img {
 }
 
 .subscribe-block {
+  display: flex;
+  flex-direction: column;
+  width: 548px;
   background-color: var(--mailing-bg);
+  border-radius: 16px;
   margin: 5px;
 }
 
 .subscribe-block input {
   width: 368px;
-  margin-left: 20px;
-  margin-right: 10px;
-  margin-bottom: 35px;
 }
+
 .mailing-desc {
   color: var(--basic-wet-asphalt);
   margin: 0;
-  padding-top: 29px;
-  padding-right: 16px;
-  padding-bottom: 47px;
-  padding-left: 20px;
+  padding: 22px 10px 39px 20px;
 }
 
+.mailing-form {
+  display:flex;
+  padding-left: 18px;
+}
 .mailing-button {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   padding: 13px 19px;
-  margin-bottom: 36px;
+  margin-left: 5px;
 }
 
 /*section contacts*/
@@ -777,17 +787,19 @@ img {
   background-image: url("../img/map.png");
   background-repeat: no-repeat;
   background-position: center;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
   border-top: 1px solid transparent;
 }
 
 .contacts-form {
   width: 303px;
+  box-sizing: border-box;
   margin-left: auto;
   margin-top: 60px;
-  padding-left: 25px;
   padding-top: 32px;
+  padding-right: 10px;
   padding-bottom: 32px;
+  padding-left: 25px;
   color: var(--basic-sg-black);
   border-radius: 16px;
   background-color: var(--contact-bg);
@@ -808,7 +820,7 @@ img {
   line-height: 24px;
   font-weight: 700;
   margin: 0;
-  padding-bottom: 30px;
+  padding-bottom: 21px;
 }
 
 .contact-list .last {
@@ -824,14 +836,15 @@ img {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
+
 }
 
 .feedback {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
-  margin-top: 0;
-  padding: 13px 28px;
+  margin-top: 6px;
+  padding: 10px 28px;
 }
 
 /*footer*/
@@ -845,33 +858,36 @@ img {
   display: flex;
   height: 32px;
   margin: 0;
-  margin-right: 234px;
   padding: 0;
 }
 
 .social-list-item {
   width: 32px;
   height: 32px;
-   border: 1px solid var(--link-bg);
+  border: 1px solid var(--link-bg);
   border-radius: 50%;
-  margin-right: 12px;
-  }
+  margin-right: 10px;
+}
 
 .social-list-item {
   filter: opacity(0.8);
 }
 
+.footer-social {
+  margin-right: 245px;
+}
 .footer-nav-list {
+  position: relative;
   font-size: 13px;
   line-height: 18px;
-  width: 312px;
+  width: 304px;
   display: grid;
   grid-template-columns: 1fr max-content;
   row-gap: 8px;
   padding: 0;
   position: relative;
   margin: 0;
-  margin-right: 185px;
+  margin-right: 230px;
 }
 
 .footer-nav-list-item link {
@@ -879,24 +895,29 @@ img {
   line-height: 18px;
 }
 
- .heart {
+ .heart::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 2px;
   width: 15px;
   height: 13px;
   background-image: url("../img/heart.svg");
   background-repeat: no-repeat;
-  position: absolute;
-  left: -20px;
-  top: 2px;
 
 }
 .copyright{
   font-size: 12px;
   line-height: 18px;
+  margin: 0;
 }
 
 .footer-credits {
   justify-self: flex-end;
+  margin-top: -15px;
 }
+
+
 /*CATALOG*/
 
 /* .nav-link:hover img,
@@ -1124,7 +1145,7 @@ td .price-calc {
 /*переключатель страниц*/
 
 .paginator {
-  margin-bottom: 30px;
+  margin-bottom: 55px;
   text-align: right;
   min-width: 194px;
 }
@@ -1177,4 +1198,24 @@ td .price-calc {
 .paginator .current {
   background-color: var(--basic-white);
   color: var(--basic-sg-black);
+}
+
+.site-wrapper {
+  position: relative;
+}
+
+.feedback-form {
+  position: absolute;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+}
+.feadback-form  {
+  box-sizing: border-box;
+  padding: 15px;
+
+  color: #999999;
+  border: 1px solid #D3D3D2;
+  border-radius: 4px;
 }
