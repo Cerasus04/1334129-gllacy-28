@@ -342,7 +342,7 @@ input[type="radio"].visually-hidden {
 .user-tooltip input,
 .subscribe-block input {
   box-sizing: border-box;
-  padding: 15px;
+  padding: 13px;
 
   color: #999999;
   border: 1px solid #D3D3D2;
@@ -434,7 +434,7 @@ input[type="radio"].visually-hidden {
 
 .promo {
   position: relative;
-  padding-top: 275px;
+  padding-top: 272px;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -481,13 +481,15 @@ input[type="radio"].visually-hidden {
   min-width: 79px;
 }
 
+.controls-wrapper-item {
+  margin-right: 8px;
+}
 .controls-wrapper-item .current {
   background-color: var(--basic-white);
 }
 .control {
   padding: 0;
-  margin-right: 8px;
-  width: 21px;
+   width: 21px;
   height: 21px;
   background-color: transparent;
   border: 2px solid var(--basic-white);
@@ -640,7 +642,7 @@ input[type="radio"].visually-hidden {
   margin-left: 20px;
   margin-bottom: 16px;
   padding: 0;
-  padding-top: 24px;
+  padding-top: 23px;
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
@@ -653,7 +655,7 @@ input[type="radio"].visually-hidden {
   margin-bottom: 0;
   margin-left: 20px;
   padding: 0;
-  padding-bottom: 32px;
+  padding-bottom: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 22px;
@@ -698,24 +700,25 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 
 .content-column {
   display: flex;
-  justify-content: column;
-  box-sizing: border-box;
+  flex-direction: column;
+  width: 560px;
+  /* box-sizing: border-box; */
 
 }
 
 .blog-post {
+  flex-grow: 1;
   background-image: url("../img/blog.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: right center;
   border-radius: 16px;
-  padding-left: 20px;
-  width: 560px;
-  box-sizing: border-box;
+  padding: 18px 20px 69px;
 }
 
 .blog-post h3 {
@@ -724,7 +727,8 @@ input[type="radio"].visually-hidden {
   font-weight: 500;
   color: var(--basic-sg-black);
   margin: 0;
-  padding: 16px 253px 2px 0;
+  max-width: 200px;
+
 }
 
 .blog-post .blog-link {
@@ -734,11 +738,10 @@ input[type="radio"].visually-hidden {
   color: var(--basic-sg-black);
   text-decoration: none;
 
-  width: 287px;
+  max-width: 290px;
+  margin: 1px 0 20px;
   display: block;
   text-decoration: underline;
-  padding-bottom: 89px;
-
 }
 
 .mailing {
@@ -752,9 +755,13 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
   width: 548px;
+  box-sizing: border-box;
   background-color: var(--mailing-bg);
   border-radius: 16px;
   margin: 5px;
+  color: var(--basic-wet-asphalt);
+  padding: 23px 10px 30px 20px;
+
 }
 
 .subscribe-block input {
@@ -762,21 +769,20 @@ input[type="radio"].visually-hidden {
 }
 
 .mailing-desc {
-  color: var(--basic-wet-asphalt);
   margin: 0;
-  padding: 22px 10px 39px 20px;
+  padding-bottom: 40px;
 }
 
 .mailing-form {
   display:flex;
-  padding-left: 18px;
 }
+
 .mailing-button {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
-  padding: 13px 19px;
-  margin-left: 5px;
+  padding: 12px 19px 10px;
+  margin: 0 10px;
 }
 
 /*section contacts*/
@@ -876,6 +882,11 @@ input[type="radio"].visually-hidden {
 .footer-social {
   margin-right: 245px;
 }
+
+.footer-navigation {
+  margin-right: 230px;
+}
+
 .footer-nav-list {
   position: relative;
   font-size: 13px;
@@ -883,11 +894,10 @@ input[type="radio"].visually-hidden {
   width: 304px;
   display: grid;
   grid-template-columns: 1fr max-content;
-  row-gap: 8px;
+  row-gap: 5px;
   padding: 0;
   position: relative;
   margin: 0;
-  margin-right: 230px;
 }
 
 .footer-nav-list-item link {
@@ -1011,7 +1021,7 @@ td .price-calc {
 /*catalog - filters*/
 
 .products {
-  margin-bottom: 70px;
+  margin-bottom: 66px;
 }
 .filters-wrapper {
   margin-bottom: 40px;
@@ -1145,7 +1155,7 @@ td .price-calc {
 /*переключатель страниц*/
 
 .paginator {
-  margin-bottom: 55px;
+  margin-bottom: 63px;
   text-align: right;
   min-width: 194px;
 }
