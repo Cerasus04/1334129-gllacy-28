@@ -39,6 +39,7 @@ img {
 }
 
 .site-wrapper {
+  position: relative;
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -158,6 +159,7 @@ input[type="radio"].visually-hidden {
 .main-header-wrapper {
   display: flex;
   align-items: flex-start;
+  margin-top: 6px;
 }
 
 .main-nav {
@@ -167,7 +169,7 @@ input[type="radio"].visually-hidden {
 
 .main-logo {
   margin-right: 9px;
-  padding-top: 9px;
+
 }
 
 .site-navigation {
@@ -175,7 +177,7 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  padding-top: 23px;
+  padding-top: 15px;
   list-style: none;
   line-height: 16px;
   font-weight: 700;
@@ -184,14 +186,13 @@ input[type="radio"].visually-hidden {
 .site-navigation-item {
   position: relative;
   margin-top: 0;
-  margin-right: 3px;
   margin-bottom: 10px;
 }
 
 .nav-link {
   display: flex;
   align-items: center;
-  padding: 6px 15px;
+  padding: 6px 16px;
   border-radius: 16px;
 }
 
@@ -232,10 +233,12 @@ input[type="radio"].visually-hidden {
 
 
 .sub-menu {
-  display: none;
+  display: block;
   width: 143px;
   box-sizing: border-box;
-  top: 32px;
+  top: 36px;
+  left: -6px;
+
 
   font-size: 14px;
   line-height: 16px;
@@ -243,23 +246,28 @@ input[type="radio"].visually-hidden {
   border-radius: 4px;
 }
 
-.site-navigation-item:hover .sub-menu {
+/* .site-navigation-item:hover .sub-menu {
   display:block;
-}
+} */
 
+.sub-menu-item {
+  padding: 10px 20px;
+
+}
 .sub-nav-link {
   display: block;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-left: 15px;
   color: var(--basic-sg-black);
+  /* padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 15px; */
+
 }
 
 .sub-menu-item .new {
   font-weight: 700;
-  padding-top: 13px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid var(--basic-text-dec);
+  /* /* padding-top: 13px;
+  padding-bottom: 15px; */
+  border: 1px solid red/*var(--basic-text-dec); */
 }
 
 .sub-menu-item:hover,
@@ -294,7 +302,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   margin: 0;
   padding: 0;
-  padding-top: 23px;
+  padding-top: 13px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -308,14 +316,19 @@ input[type="radio"].visually-hidden {
 
 .user-link {
   background-color: var(--link-bg);
+  padding: 5px 16px 4px;
+  margin-bottom: 2px;
 }
 
 .user-panel-item img:not(.loupe) {
-  padding-right: 8px;
+  padding-right: 7px;
+  padding-top: 2px;
 }
 
 .loupe {
   display: block;
+  padding-top: 2px;
+  padding-left: 1px;
 }
 .user-panel-item:first-child .nav-link {
   padding: 8px;
@@ -332,17 +345,17 @@ input[type="radio"].visually-hidden {
 .user-panel-item:focus .user-tooltip,
 .user-panel-item:active .user-tooltip {
   display: block;
-} /* сделать, чтобы не пряталось, когда мышка убегает*/
+}
+/* сделать, чтобы не пряталось, когда мышка убегает*/
 
 .search {
-  width: 347px;
+  width: 341px;
   top: 38px;
-  left: -309px;
+  left: -307px;
 }
-.user-tooltip input,
-.subscribe-block input {
+.user-tooltip input {
   box-sizing: border-box;
-  padding: 13px;
+  padding: 12px 10px 13px 14px;
 
   color: #999999;
   border: 1px solid #D3D3D2;
@@ -365,13 +378,13 @@ input[type="radio"].visually-hidden {
 .enter {
   width: 277px;
   top: 36px;
-  left: -190px;
+  left: -186px;
 }
 
 .enter input {
   width: 241px;
-  margin-top: 20px;
-  margin-left: 18px;
+  margin-top: 21px;
+  margin-left: 19px;
   margin-right: 18px;
 }
 
@@ -381,7 +394,7 @@ input[type="radio"].visually-hidden {
   margin-top: 20px;
   margin-left: 18px;
   margin-right: 16px;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .enter-help {
@@ -395,7 +408,9 @@ input[type="radio"].visually-hidden {
   line-height: 15px;
   text-decoration: none;
   color: var(--basic-sg-black);
-  padding-bottom: 9px;
+  padding-top: 5px;
+  margin-bottom: 1px;
+
 }
 
 .enter-help .enter-text {
@@ -418,7 +433,7 @@ input[type="radio"].visually-hidden {
   line-height: 16px;
   font-weight: 700; margin: 0;
   padding: 0;
-  padding-bottom: 8px;
+  padding-bottom: 9px;
 }
 
 .tel-header {
@@ -434,7 +449,7 @@ input[type="radio"].visually-hidden {
 
 .promo {
   position: relative;
-  padding-top: 272px;
+  padding-top: 273px;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -455,7 +470,7 @@ input[type="radio"].visually-hidden {
 .text-promo {
   width: 700px;
   margin: 0 auto;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
   font-size: 60px;
   line-height: 60px;
   font-weight: 700;
@@ -474,7 +489,7 @@ input[type="radio"].visually-hidden {
 .controls-wrapper {
   padding: 0;
   position: absolute;
-  top: 423px;
+  top: 422px;
   left: 0;
   z-index: 20;
   display: flex;
@@ -489,7 +504,7 @@ input[type="radio"].visually-hidden {
 }
 .control {
   padding: 0;
-   width: 21px;
+  width: 21px;
   height: 21px;
   background-color: transparent;
   border: 2px solid var(--basic-white);
@@ -516,14 +531,13 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 16px 22px 16px 17px;
+  padding: 15px 22px 14px 16px;
   width: 560px;
   min-height: 229px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   border-radius: 16px;
-
 }
 
 .banners-list-item h3 {
@@ -531,16 +545,15 @@ input[type="radio"].visually-hidden {
   line-height: 41px;
   font-weight: 700;
   margin: 0px;
-
 }
 
 .banners-list-item p {
   font-size: 18px;
   font-weight: 700;
   padding: 0;
-  padding-top: 16px;
+  padding-top: 17px;
   margin: 0;
-  margin-bottom: 39px;
+  margin-bottom: 42px;
 }
 
 .banners-button {
@@ -548,7 +561,7 @@ input[type="radio"].visually-hidden {
   line-height: 24px;
   font-weight: 700;
   align-self: flex-end;
-  padding: 14px 22px 15px;
+  padding: 13px 23px 11px;
 
 }
 
@@ -573,7 +586,7 @@ input[type="radio"].visually-hidden {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   row-gap: 27px;
-  column-gap: 28px;
+  column-gap: 27px;
   margin: 0;
   padding: 0;
 }
@@ -584,7 +597,7 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   text-shadow: 0px 1px 3px var(--price-text-shadow);
   position: absolute;
-  top: 163px;
+  top: 164px;
 }
 
 .product-price .unit {
@@ -599,7 +612,8 @@ input[type="radio"].visually-hidden {
   font-weight: 500;
   width: 265px;
   text-align: center;
-  margin-top: 8px;
+  margin-top: 7px;
+  margin-left: 1px;
   margin-bottom: 11px;
 }
 
@@ -640,7 +654,7 @@ input[type="radio"].visually-hidden {
 .advantages h2 {
   margin:0;
   margin-left: 20px;
-  margin-bottom: 16px;
+  margin-bottom: 17px;
   padding: 0;
   padding-top: 23px;
   font-size: 24px;
@@ -655,10 +669,10 @@ input[type="radio"].visually-hidden {
   margin-bottom: 0;
   margin-left: 20px;
   padding: 0;
-  padding-bottom: 30px;
+  padding-bottom: 31px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 22px;
+  row-gap: 21px;
   column-gap: 26px;
 }
 
@@ -673,7 +687,7 @@ input[type="radio"].visually-hidden {
 .thermometer::before {
   position: absolute;
   left: -1px;
-  top: -10px;
+  top: -8px;
 }
 
 .ice-cream::before {
@@ -718,7 +732,7 @@ input[type="radio"].visually-hidden {
   background-size: cover;
   background-position: right center;
   border-radius: 16px;
-  padding: 18px 20px 69px;
+  padding: 17px 20px 68px;
 }
 
 .blog-post h3 {
@@ -739,7 +753,7 @@ input[type="radio"].visually-hidden {
   text-decoration: none;
 
   max-width: 290px;
-  margin: 1px 0 20px;
+  margin: 3px 0 20px;
   display: block;
   text-decoration: underline;
 }
@@ -760,17 +774,22 @@ input[type="radio"].visually-hidden {
   border-radius: 16px;
   margin: 5px;
   color: var(--basic-wet-asphalt);
-  padding: 23px 10px 30px 20px;
+  padding: 23px 10px 34px 21px;
 
 }
 
 .subscribe-block input {
   width: 368px;
+  padding: 13px;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  box-sizing: border-box;
+  border-radius: 6px;
+
 }
 
 .mailing-desc {
   margin: 0;
-  padding-bottom: 40px;
+  padding-bottom: 41px;
 }
 
 .mailing-form {
@@ -781,7 +800,7 @@ input[type="radio"].visually-hidden {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
-  padding: 12px 19px 10px;
+  padding: 8px 19px 9px 20px;
   margin: 0 10px;
 }
 
@@ -801,10 +820,10 @@ input[type="radio"].visually-hidden {
   width: 303px;
   box-sizing: border-box;
   margin-left: auto;
-  margin-top: 60px;
-  padding-top: 32px;
+  margin-top: 62px;
+  padding-top: 29px;
   padding-right: 10px;
-  padding-bottom: 32px;
+  padding-bottom: 30px;
   padding-left: 25px;
   color: var(--basic-sg-black);
   border-radius: 16px;
@@ -831,6 +850,7 @@ input[type="radio"].visually-hidden {
 
 .contact-list .last {
   padding: 0;
+  padding-top: 2px;
 }
 
 .contact-list a {
@@ -842,14 +862,13 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
-
 }
 
 .feedback {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
-  margin-top: 6px;
+  margin-top: 7px;
   padding: 10px 28px;
 }
 
@@ -864,7 +883,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   height: 32px;
   margin: 0;
-  padding: 0;
+  padding: 2px 0 0 1px;
 }
 
 .social-list-item {
@@ -908,7 +927,7 @@ input[type="radio"].visually-hidden {
  .heart::before {
   content: "";
   position: absolute;
-  left: -20px;
+  left: -22px;
   top: 2px;
   width: 15px;
   height: 13px;
@@ -924,7 +943,86 @@ input[type="radio"].visually-hidden {
 
 .footer-credits {
   justify-self: flex-end;
-  margin-top: -15px;
+  margin-top: -13px;
+}
+
+.feedback:target .modal-block{ /*не работает*/
+
+
+
+}
+.modal-block {
+  /* display: block; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  color: var(--basic-wet-asphalt);
+}
+
+.feedback-form {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-width: 477px;
+  background-color: var(--mailing-bg);
+  border-radius: 6px;
+  margin:
+}
+
+.feedback-header {
+  position: relative;
+}
+
+.modal-button {
+  position: absolute;
+  margin: auto;
+  top: 13px;
+  right: 10px;
+
+}
+.feedback-form p {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  color: var(--basic-sg-black);
+  margin: 0;
+  padding: 17px 23px 19px;
+}
+
+.modal-block input {
+  font-size: 16px;
+  line-height: 20px;
+  color: #999999;
+  border: 1px solid #D3D3D2;
+  border-radius: 4px;
+  margin: 0px 187px 20px 23px;
+  padding: 12px;
+  padding-bottom: 10px;
+}
+
+.modal-block textarea {
+  font-size: 16px;
+  line-height: 20px;
+  color: #999999;
+  border: 1px solid #D3D3D2;
+  border-radius: 4px;
+  padding: 12px 14px 20px;
+  margin: 0 26px 24px 23px;
+}
+
+.review-button {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-top: 0;
+ margin-right: 25px;
+ margin-left: auto;
+ margin-bottom: 27px;
+ padding: 13px 26px 9px;
 }
 
 
@@ -1212,20 +1310,4 @@ td .price-calc {
 
 .site-wrapper {
   position: relative;
-}
-
-.feedback-form {
-  position: absolute;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-
-}
-.feadback-form  {
-  box-sizing: border-box;
-  padding: 15px;
-
-  color: #999999;
-  border: 1px solid #D3D3D2;
-  border-radius: 4px;
 }

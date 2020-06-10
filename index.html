@@ -72,7 +72,7 @@
                     <label for="login-email" class="visually-hidden">Почта</label>
                     <input type="email" id="login-email" name="email" placeholder="email@example.com">
                     <label for="enter-password" class="visually-hidden">Пароль</label>
-                    <input type="password" id="enter-password" name="password" placeholder="******">
+                    <input type="password" id="enter-password" name="password" placeholder="......">
                     <div class="enter-wrapper">
                       <button class="button enter-button">Войти</button>
                       <div class="enter-help">
@@ -326,13 +326,16 @@
     </footer>
     <div class="modal-block modal">
       <form action="https://echo.htmlacademy.ru" class="feedback-form" method="post">
-        <p>Мы обязательно Вам ответим!</p>
+        <div class="feedback-header">
+          <p>Мы обязательно вам ответим!</p>
+          <button class="modal-button " aria-label="Закрыть"><img src="img/cross-big.svg" alt=""></button>
+        </div>
         <label for="name-feedback" class="visually-hidden">Имя</label>
         <input type="text" id="name-feedback" name="name" placeholder="Имя Фамилия">
         <label for="email-feedback" class="visually-hidden">Электронная почта</label>
         <input type="email" id="email-feedback" name="email" placeholder="email@example.com">
         <label for="review" class="visually-hidden">Оставьте комментарий</label>
-        <textarea id="review" name="comments" cols="30" rows="4">Напишите что-нибудь</textarea>
+        <textarea id="review" name="comments" cols="30" rows="6">В свободной форме</textarea>
         <button class="review-button button">Отправить</button>
       </form>
     </div>
