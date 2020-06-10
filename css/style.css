@@ -159,16 +159,17 @@ input[type="radio"].visually-hidden {
 .main-header-wrapper {
   display: flex;
   align-items: flex-start;
-  margin-top: 6px;
 }
 
 .main-nav {
   display: flex;
   flex-wrap: wrap;
+
 }
 
 .main-logo {
   margin-right: 9px;
+  padding-top: 6px;
 
 }
 
@@ -177,7 +178,7 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  padding-top: 15px;
+  padding-top: 21px;
   list-style: none;
   line-height: 16px;
   font-weight: 700;
@@ -233,41 +234,36 @@ input[type="radio"].visually-hidden {
 
 
 .sub-menu {
-  display: block;
+  display: none;
   width: 143px;
   box-sizing: border-box;
-  top: 36px;
+  top: 35px;
   left: -6px;
-
-
   font-size: 14px;
   line-height: 16px;
   font-weight: normal;
   border-radius: 4px;
 }
 
-/* .site-navigation-item:hover .sub-menu {
+.site-navigation-item:hover .sub-menu {
   display:block;
-} */
-
-.sub-menu-item {
-  padding: 10px 20px;
-
 }
+
 .sub-nav-link {
   display: block;
   color: var(--basic-sg-black);
-  /* padding-top: 7px;
-  padding-bottom: 7px;
-  padding-left: 15px; */
-
-}
+  padding: 10px 19px 5px 21px;
+} /* при наведении не совпадает размер подсвечиваемого окна, исправлю завтра*/
 
 .sub-menu-item .new {
   font-weight: 700;
-  /* /* padding-top: 13px;
-  padding-bottom: 15px; */
-  border: 1px solid red/*var(--basic-text-dec); */
+  padding: 10px 21px 11px 21px;
+  padding-bottom: 11px;
+  border-bottom: 2px solid var(--basic-text-dec)
+}
+
+.sub-menu-item:last-child {
+  padding-bottom: 11px;
 }
 
 .sub-menu-item:hover,
@@ -296,6 +292,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
   margin-left: auto;
+  padding-top: 6px;
 }
 
 .user-panel {
@@ -775,7 +772,6 @@ input[type="radio"].visually-hidden {
   margin: 5px;
   color: var(--basic-wet-asphalt);
   padding: 23px 10px 34px 21px;
-
 }
 
 .subscribe-block input {
@@ -784,7 +780,6 @@ input[type="radio"].visually-hidden {
   border: 1px solid rgba(178, 178, 178, 0.52);
   box-sizing: border-box;
   border-radius: 6px;
-
 }
 
 .mailing-desc {
@@ -816,7 +811,7 @@ input[type="radio"].visually-hidden {
   border-top: 1px solid transparent;
 }
 
-.contacts-form {
+.contacts-form {/*что-то нужно поменять в этом блоке, чтобы на минимальной ширине сайта не убегала форма, но я не знаю как, проблема скорее всего, что она одна лежит в container*/
   width: 303px;
   box-sizing: border-box;
   margin-left: auto;
@@ -933,8 +928,8 @@ input[type="radio"].visually-hidden {
   height: 13px;
   background-image: url("../img/heart.svg");
   background-repeat: no-repeat;
-
 }
+
 .copyright{
   font-size: 12px;
   line-height: 18px;
@@ -946,14 +941,12 @@ input[type="radio"].visually-hidden {
   margin-top: -13px;
 }
 
-.feedback:target .modal-block{ /*не работает*/
-
-
-
+.feedback:target .modal-block{ /*не работает, нужно сделать, чтобы появлялось при нажатии*/
 }
+
 .modal-block {
   /* display: block; */
-  position: absolute;
+  position: absolute; /*не знаю пока, как разместить его посредине, порою еще материал*/
   top: 0;
   right: 0;
   bottom: 0;
@@ -1019,10 +1012,10 @@ input[type="radio"].visually-hidden {
   line-height: 24px;
   font-weight: 700;
   margin-top: 0;
- margin-right: 25px;
- margin-left: auto;
- margin-bottom: 27px;
- padding: 13px 26px 9px;
+  margin-right: 25px;
+  margin-left: auto;
+  margin-bottom: 27px;
+  padding: 13px 26px 9px;
 }
 
 
@@ -1032,7 +1025,7 @@ input[type="radio"].visually-hidden {
 .nav-link:focus img,
 .nav-link:active img {
   filter: invert(1);
-} для корзины с тоарами не должно применяться это свойство*/
+} для корзины с товарами не должно применяться это свойство*/
 
 .basket { /*всю таблицу по pixel perfect нужно подбирать*/
   position: absolute;
