@@ -126,8 +126,7 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-.user-tooltip
-
+.user-tooltip,
 .modal-block {
   display: none;
 }
