@@ -126,7 +126,8 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-.user-tooltip,
+.user-tooltip
+
 .modal-block {
   display: none;
 }
@@ -337,11 +338,13 @@ input[type="radio"].visually-hidden {
 .search {
   width: 341px;
   top: 38px;
+  padding: 20px 15px;
+  box-sizing: border-box;
 }
 
 .user-tooltip input {
   box-sizing: border-box;
-  padding: 12px 10px 13px 14px;
+  padding: 14px 10px 13px 14px;
 
   color: #999999;
   border: 1px solid #D3D3D2;
@@ -350,7 +353,6 @@ input[type="radio"].visually-hidden {
 
 .search input {
   width: 311px;
-  margin: 20px 15px;
 }
 
 .search input:focus,
@@ -363,28 +365,25 @@ input[type="radio"].visually-hidden {
 
 .enter {
   width: 277px;
+  padding: 21px 16px 20px 19px;
+  box-sizing: border-box;
 }
 
 .enter input {
   width: 241px;
-  margin-top: 21px;
-  margin-left: 19px;
-  margin-right: 18px;
+  margin-bottom: 20px;
 }
 
 .enter-wrapper {
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  margin-left: 18px;
-  margin-right: 16px;
-  margin-bottom: 20px;
+  justify-content: flex-start;
 }
 
 .enter-help {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  padding-top: 2px;
 }
 
 .enter-help a {
@@ -392,16 +391,15 @@ input[type="radio"].visually-hidden {
   line-height: 15px;
   text-decoration: none;
   color: var(--basic-sg-black);
-  padding-top: 5px;
-  margin-bottom: 1px;
+  padding-bottom: 6px;
 }
 
 .enter-help .enter-text {
   border-bottom: 1px solid var(--basic-sg-black);
 }
 .enter-button {
-  padding: 15px 26px;
-
+  padding: 13px 25px;
+  margin-right: 21px;
   font-size: 18px;
   line-height: 16px;
   font-weight: 700;
@@ -928,6 +926,7 @@ input[type="radio"].visually-hidden {
 
 .modal-block {
   /* display: block; когда этот блок должен появляться? при наведении на ссылку форма обратной связи?*/
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
