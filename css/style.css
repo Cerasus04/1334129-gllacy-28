@@ -152,8 +152,6 @@ input[type="radio"].visually-hidden {
   margin:0 auto;
   padding: 0 27px;
   position: relative;
-  /* outline: 5px solid green;
-  outline-offset: -5px; */
 }
 
 .main-header-wrapper {
@@ -164,13 +162,11 @@ input[type="radio"].visually-hidden {
 .main-nav {
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .main-logo {
   margin-right: 9px;
-  padding-top: 6px;
-
+  padding-top: 9px;
 }
 
 .site-navigation {
@@ -178,7 +174,7 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  padding-top: 21px;
+  padding-top: 24px;
   list-style: none;
   line-height: 16px;
   font-weight: 700;
@@ -230,8 +226,9 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
   position: absolute;
+  top: 36px;
+  right: 0;
 }
-
 
 .sub-menu {
   display: none;
@@ -292,23 +289,21 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
   margin-left: auto;
-  padding-top: 6px;
+  padding-top: 21px;
 }
 
 .user-panel {
   display: flex;
   margin: 0;
   padding: 0;
-  padding-top: 13px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
 }
 
 .user-panel-item {
-  margin-left: 12px;
-  margin-bottom: 17px;
   position: relative;
+  padding: 0 0 17px 11px;
 }
 
 .user-link {
@@ -317,7 +312,7 @@ input[type="radio"].visually-hidden {
   margin-bottom: 2px;
 }
 
-.user-panel-item img:not(.loupe) {
+.user-panel-item svg:not(.loupe) {
   padding-right: 7px;
   padding-top: 2px;
 }
@@ -327,15 +322,10 @@ input[type="radio"].visually-hidden {
   padding-top: 2px;
   padding-left: 1px;
 }
+
 .user-panel-item:first-child .nav-link {
   padding: 8px;
   border-radius: 50%;
-}
-
-.nav-link:hover img,
-.nav-link:focus img,
-.nav-link:active img {
-  filter: invert(1);
 }
 
 .user-panel-item:hover .user-tooltip,
@@ -343,13 +333,12 @@ input[type="radio"].visually-hidden {
 .user-panel-item:active .user-tooltip {
   display: block;
 }
-/* сделать, чтобы не пряталось, когда мышка убегает*/
 
 .search {
   width: 341px;
   top: 38px;
-  left: -307px;
 }
+
 .user-tooltip input {
   box-sizing: border-box;
   padding: 12px 10px 13px 14px;
@@ -374,8 +363,6 @@ input[type="radio"].visually-hidden {
 
 .enter {
   width: 277px;
-  top: 36px;
-  left: -186px;
 }
 
 .enter input {
@@ -407,7 +394,6 @@ input[type="radio"].visually-hidden {
   color: var(--basic-sg-black);
   padding-top: 5px;
   margin-bottom: 1px;
-
 }
 
 .enter-help .enter-text {
@@ -448,7 +434,7 @@ input[type="radio"].visually-hidden {
   position: relative;
   padding-top: 273px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 41px;
 }
 
 .promo-wrapper {
@@ -467,7 +453,7 @@ input[type="radio"].visually-hidden {
 .text-promo {
   width: 700px;
   margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
   font-size: 60px;
   line-height: 60px;
   font-weight: 700;
@@ -521,14 +507,14 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 }
 
 .banners-list-item {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 15px 22px 14px 16px;
+  padding: 14px 22px 14px 16px;
   width: 560px;
   min-height: 229px;
   background-repeat: no-repeat;
@@ -576,7 +562,7 @@ input[type="radio"].visually-hidden {
 /*section hits*/
 
 .hits {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .products-list {
@@ -609,9 +595,8 @@ input[type="radio"].visually-hidden {
   font-weight: 500;
   width: 265px;
   text-align: center;
-  margin-top: 7px;
-  margin-left: 1px;
-  margin-bottom: 11px;
+  margin: 0;
+  padding-top: 8px;
 }
 
 .products-list-item {
@@ -669,7 +654,7 @@ input[type="radio"].visually-hidden {
   padding-bottom: 31px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 21px;
+  row-gap: 22px;
   column-gap: 26px;
 }
 
@@ -832,7 +817,7 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 20px;
   margin: 0;
-  width: 172px;
+  width: 173px;
 }
 
 .contact-list dd {
@@ -898,14 +883,14 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-navigation {
-  margin-right: 230px;
+  margin-right: 229px;
 }
 
 .footer-nav-list {
   position: relative;
   font-size: 13px;
   line-height: 18px;
-  width: 304px;
+  width: 305px;
   display: grid;
   grid-template-columns: 1fr max-content;
   row-gap: 5px;
@@ -938,33 +923,28 @@ input[type="radio"].visually-hidden {
 
 .footer-credits {
   justify-self: flex-end;
-  margin-top: -13px;
-}
-
-.feedback:target .modal-block{ /*не работает, нужно сделать, чтобы появлялось при нажатии*/
+  margin-top: -15px;
 }
 
 .modal-block {
-  /* display: block; */
-  position: absolute; /*не знаю пока, как разместить его посредине, порою еще материал*/
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  /* display: block; когда этот блок должен появляться? при наведении на ссылку форма обратной связи?*/
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin: auto;
   color: var(--basic-wet-asphalt);
 }
 
+
 .feedback-form {
-  position: absolute;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   min-width: 477px;
   background-color: var(--mailing-bg);
   border-radius: 6px;
-  margin:
-}
+ }
 
 .feedback-header {
   position: relative;
