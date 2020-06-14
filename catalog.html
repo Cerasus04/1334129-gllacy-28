@@ -92,38 +92,50 @@
             </li>
             <li class="user-panel-item">
               <a class="user-link nav-link" href="#"
-                aria-label="Перейти на страницу корзины или показать окно корзины"><span class="user-link-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
-                    <path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z" />
-                    <circle fill="#343434" cx="6.984" cy="18" r="2" />
-                    <circle fill="#343434" cx="15.984" cy="18" r="2" />
-                    <path fill="#343434"
-                      d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z" />
-                  </svg>
-                  2 товара</span></a>
+                aria-label="Перейти на страницу корзины или показать окно корзины"><span class="user-link-icon"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
+                  <path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z" />
+                  <circle fill="#343434" cx="6.984" cy="18" r="2" />
+                  <circle fill="#343434" cx="15.984" cy="18" r="2" />
+                  <path fill="#343434"
+                    d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z" />
+                </svg>
+                2 товара</a>
               <div class="user-tooltip basket">
-                <table>
-                  <tr>
-                    <td><button class="close-button" aria-label="Закрыть"><img src="img/cross-small.svg" alt="">
+                <table class="product-selected">
+                  <tr class="row">
+                    <td class="cell cell-btn"><button class="close-button" aria-label="Закрыть"><svg
+                          xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
+                          <path fill="#231F20"
+                            d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z">
+                          </path>
+                        </svg>
                       </button></td>
-                    <td><a href="#"><img src="img/choice1.jpg" width="33" height="33" alt="Мороженное"></a></td>
-                    <td><a class="selected-item" href="#">Пломбир с апельсиновым джемом</a></td>
-                    <td>1,5 кг × <span class="price-calc">200 руб.</span></td>
-                    <td>300 руб.</td>
+                    <td class="cell cell-img"><a href="#"><img src="img/choice1.jpg" width="33" height="33"
+                          alt="Мороженное"></a></td>
+                    <td class="cell cell-item"><a class="selected-item" href="#">Пломбир с апельсиновым джемом</a></td>
+                    <td class="cell cell-weight">1,5 кг × <span class="price-calc">200 руб.</span></td>
+                    <td class="cell cell-total">300 руб.</td>
                   </tr>
-                  <tr>
-                    <td><button class="close-button" aria-label="Закрыть"><img src="img/cross-small.svg"
-                          alt=""></button></td>
-                    <td><a href="#"><img src="img/choice2.jpg" width="33" height="33" alt="Мороженное"></a></td>
-                    <td><a class="selected-item" href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
-                    <td>1,5 кг × <span class="price-calc">300 руб.</span></td>
-                    <td>450 руб.</td>
+                  <tr class="row">
+                    <td class="cell cell-btn"><button class="close-button" aria-label="Закрыть"><svg
+                          xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
+                          <path fill="#231F20"
+                            d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z">
+                          </path>
+                        </svg></button></td>
+                    <td class="cell cell-img"><a href="#"><img src="img/choice2.jpg" width="33" height="33"
+                          alt="Мороженное"></a></td>
+                    <td class="cell cell-item"><a class="selected-item" href="#">Клубничный пломбир с присыпкой из
+                        белого шоколада</a></td>
+                    <td class="cell cell-weight">1,5 кг × <span class="price-calc">300 руб.</span></td>
+                    <td class="cell cell-total">450 руб.</td>
+                  </tr>
+                  <tr class="row">
+                    <td class="cell cell-check" colspan="6">Итого: 750 руб.</td>
                   </tr>
                 </table>
-                <div class="order-wrapper">
-                  <p class="total">Итого: 750 руб.</p>
-                  <a class="checkout button" href="#">Оформить заказ</a>
-                </div>
+                <a class="checkout button" href="#">Оформить заказ</a>
               </div>
             </li>
           </ul>
@@ -147,91 +159,98 @@
         <a class="link" href="#">Каталог</a>
       </li>
       <li class="breadcrumbs-item">
-        <a>Сливочное</a>
+        <a class="link">Сливочное</a>
       </li>
     </ul>
     <h1 class="catalog">Сливочное мороженное</h1>
     <section class="filters-wrapper">
       <h2 class="visually-hidden">Пользовательский фильтр</h2>
       <form class="filters" action="https://echo.htmlacademy.ru" method="get">
-        <div class="form-row">
-          <fieldset class="filter classification">
-            <legend class="filters-item">Сортировка</legend>
-            <label for="sorting"></label>
-            <select class="sorting" name="sorting" id="sorting">
-              <option value="popularity" selected="selected">по популярности</option>
-              <option value="inexpensive">сначала недорогие</option>
-              <option value="expensive">сначала дорогие</option>
-              <option value="fat-cont">по жирности</option>
-            </select>
-          </fieldset>
-          <div class="range-slider">
-            <fieldset class="filter range">
-              <legend class="filters-item">
-                Цена
-                <label for="min-price" class="visually-hidden">от</label>
-                <input type="text" name="min-price" id="min-price" value="100 руб. ">
-                <span>-</span>
-                <label for="max-price" class="visually-hidden">до</label>
-                <input type="text" name="max-price" id="max-price" value="500 руб.">
-              </legend>
-              <div class="range-slider-progress">
-                <div class="rang-slider-bar"></div>
-                <button class="range-slider-toggle" type="button" aria-label="set min value">min</button>
-                <button class="range-slider-toggle" type="button" aria-label="set max value">max</button>
+        <fieldset class="filter classification">
+          <legend class="filters-item">Сортировка</legend>
+          <label for="sorting"></label>
+          <select class="sorting" name="sorting" id="sorting">
+            <option value="popularity" selected="selected">по популярности</option>
+            <option value="inexpensive">сначала недорогие</option>
+            <option value="expensive">сначала дорогие</option>
+            <option value="fat-cont">по жирности</option>
+          </select>
+        </fieldset>
+        <div class="range-slider">
+          <fieldset class="filter range">
+            <legend class="filters-item">
+              Цена:
+              <label for="min-price" class="visually-hidden">от</label>
+              <input type="text" name="min-price" id="min-price" value="100 ₽">
+              <span>-</span>
+              <label for="max-price" class="visually-hidden">до</label>
+              <input type="text" name="max-price" id="max-price" value="500 ₽">
+            </legend>
+            <div class="range-slider-progress">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="rang-slider-bar"></div>
+                </div>
+                <button class="range-slider-toggle toggle-min" tabindex="0" style="left:18%" type="button"
+                  aria-label="set min value"></button>
+                <button class="range-slider-toggle toggle-max" tabindex="0" style="left:68%" type="button"
+                  aria-label="set max value"></button>
               </div>
-            </fieldset>
-          </div>
-          <fieldset class="filter fat">
-            <legend class="filters-item">Жирность</legend>
-            <ul class="radio-list">
-              <li class="fiter-wrapper">
-                <input type="radio" name="fat-content" value="0" id="filter-fat-0">
-                <label for="filter-fat-0">0%</label>
-              </li>
-              <li class="fiter-wrapper">
-                <input type="radio" name="fat-content" value="max10" id="filter-fat-max10" checked="checked">
-                <label for="filter-fat-max10">до 10%</label>
-              </li>
-              <li class="fiter-wrapper">
-                <input type="radio" name="fat-content" value="max30" id="filter-fat-max30">
-                <label for="filter-fat-max30">до 30%</label>
-              </li>
-              <li class="fiter-wrapper">
-                <input type="radio" name="fat-content" value="min30" id="filter-fat-min30">
-                <label for="filter-fat-min30">выше 30%</label>
-              </li>
-            </ul>
           </fieldset>
         </div>
-        <div class="form-row">
-          <fieldset class="filter additive">
-            <legend class="filters-item">Наполнители</legend>
-            <ul class="checkbox-list">
-              <li class="fiter-wrapper">
-                <input type="checkbox" name="chocolate" id="filter-chocolate">
-                <label for="filter-chocolate">шоколадные</label>
-              </li>
-              <li class="fiter-wrapper">
-                <input type="checkbox" name="sugar" id="filter-sugar" checked="checked">
-                <label for="filter-sugar">сахарные присыпки</label>
-              </li>
-              <li class="fiter-wrapper">
-                <input type="checkbox" name="fruits" id="filter-fruits">
-                <label for="filter-fruits">фрукты</label>
-              </li>
-              <li class="fiter-wrapper">
-                <input type="checkbox" name="syrups" id="filter-syrups">
-                <label for="filter-syrups">сиропы</label>
-              </li>
-              <li class="fiter-wrapper">
-                <input type="checkbox" name="jams" id="filter-jams">
-                <label for="filter-jams">джемы</label>
-              </li>
-            </ul>
-          </fieldset>
-          <button class="filters-apply">Применить</button>
-        </div>
+        <fieldset class="filter fat">
+          <legend class="filters-item">Жирность</legend>
+          <ul class="radio-list">
+            <li class="radio-list-item">
+              <input class="visually-hidden filter-input-radio" type="radio" name="fat-content" value="0"
+                id="filter-fat-0">
+              <label for="filter-fat-0">0%</label>
+            </li>
+            <li class="radio-list-item">
+              <input class="visually-hidden filter-input-radio" type="radio" name="fat-content" value="max10"
+                id="filter-fat-max10" checked="checked">
+              <label for="filter-fat-max10">до 10%</label>
+            </li>
+            <li class="radio-list-item">
+              <input class="visually-hidden filter-input-radio" type="radio" name="fat-content" value="max30"
+                id="filter-fat-max30">
+              <label for="filter-fat-max30">до 30%</label>
+            </li>
+            <li class="radio-list-item">
+              <input class="visually-hidden filter-input-radio" type="radio" name="fat-content" value="min30"
+                id="filter-fat-min30">
+              <label for="filter-fat-min30">выше 30%</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter additive">
+          <legend class="filters-item">Наполнители</legend>
+          <ul class="checkbox-list">
+            <li class="checkbox-list-item">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="chocolate"
+                id="filter-chocolate">
+              <label for="filter-chocolate">шоколадные</label>
+            </li>
+            <li class="checkbox-list-item">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="sugar" id="filter-sugar"
+                checked="checked">
+              <label for="filter-sugar">сахарные присыпки</label>
+            </li>
+            <li class="checkbox-list-item">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="fruits" id="filter-fruits">
+              <label for="filter-fruits">фрукты</label>
+            </li>
+            <li class="checkbox-list-item">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="syrups" id="filter-syrups">
+              <label for="filter-syrups">сиропы</label>
+            </li>
+            <li class="checkbox-list-item">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="jams" id="filter-jams">
+              <label for="filter-jams">джемы</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="filters-apply">Применить</button>
       </form>
     </section>
     <section class="products">
@@ -246,7 +265,8 @@
           <a class="product-name link" href="#">
             <h3><span class="nav-text">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></h3>
           </a>
-          <a class="quick-view button" href="#">Быстрый просмотр</a>
+          <div class="products-item-wrapper"> <a class="quick-view button" href="#">Быстрый просмотр</a>
+          </div>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -256,7 +276,8 @@
           <a class="product-name link" href="#">
             <h3><span class="nav-text">Сливочно-кофейное с кусочками шоколада</span></h3>
           </a>
-          <a class="quick-view button" href="#">Быстрый просмотр</a>
+          <div class="products-item-wrapper"> <a class="quick-view button" href="#">Быстрый просмотр</a>
+          </div>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -266,7 +287,8 @@
           <a class="product-name link" href="#">
             <h3><span class="nav-text">Сливочно-клубничное с присыпкой из белого шоколада</span></h3>
           </a>
-          <a class="quick-view button" href="#">Быстрый просмотр</a>
+          <div class="products-item-wrapper"> <a class="quick-view button" href="#">Быстрый просмотр</a>
+          </div>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -276,7 +298,8 @@
           <a class="product-name link" href="#">
             <h3><span class="nav-text">Сливочное крем-брюле с&nbsp;карамельной подливкой</span></h3>
           </a>
-          <a class="quick-view button" href="#">Быстрый просмотр</a>
+          <div class="products-item-wrapper"> <a class="quick-view button" href="#">Быстрый просмотр</a>
+          </div>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -286,7 +309,8 @@
           <a class="product-name link" href="#">
             <h3><span class="nav-text">Сливочное с брусничным джемом</span></h3>
           </a>
-          <a class="quick-view button" href="#">Быстрый просмотр</a>
+          <div class="products-item-wrapper"> <a class="quick-view button" href="#">Быстрый просмотр</a>
+          </div>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -296,7 +320,8 @@
           <a class="product-name link" href="#">
             <h3><span class="nav-text">Сливочно-черничное с цельными ягодами черники</span></h3>
           </a>
-          <a class="quick-view button" href="#">Быстрый просмотр</a>
+          <div class="products-item-wrapper"> <a class="quick-view button" href="#">Быстрый просмотр</a>
+          </div>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -306,7 +331,8 @@
           <a class="product-name link" href="#">
             <h3><span class="nav-text">Сливочно-лимонное с карамельной присыпкой</span></h3>
           </a>
-          <a class="quick-view button" href="#">Быстрый просмотр</a>
+          <div class="products-item-wrapper"> <a class="quick-view button" href="#">Быстрый просмотр</a>
+          </div>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -316,7 +342,8 @@
           <a class="product-name link" href="#">
             <h3><span class="nav-text">Сливочное с шоколадной стружкой</span></h3>
           </a>
-          <a class="quick-view button" href="#">Быстрый просмотр</a>
+          <div class="products-item-wrapper"> <a class="quick-view button" href="#">Быстрый просмотр</a>
+          </div>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -327,7 +354,8 @@
           <a class="product-name link" href="#">
             <h3><span class="nav-text">Сливочно-ванильное с&nbsp;кусочками&nbsp;шоколада</span></h3>
           </a>
-          <a class="quick-view button" href="#">Быстрый просмотр</a>
+          <div class="products-item-wrapper"> <a class="quick-view button" href="#">Быстрый просмотр</a>
+          </div>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -337,7 +365,8 @@
           <a class="product-name link" href="#">
             <h3><span class="nav-text">Сливочноe с ментоловым сиропом</span></h3>
           </a>
-          <a class="quick-view button" href="#">Быстрый просмотр</a>
+          <div class="products-item-wrapper"> <a class="quick-view button" href="#">Быстрый просмотр</a>
+          </div>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -347,7 +376,8 @@
           <a class="product-name link" href="#">
             <h3><span class="nav-text">Сливочное с кусочками черного шоколада</span></h3>
           </a>
-          <a class="quick-view button" href="#">Быстрый просмотр</a>
+          <div class="products-item-wrapper"> <a class="quick-view button" href="#">Быстрый просмотр</a>
+          </div>
         </li>
         <li class="products-list-item">
           <a class="product-image" href="#">
@@ -357,19 +387,46 @@
           <a class="product-name link" href="#">
             <h3><span class="nav-text">Сливочное с мятным сиропом</span></h3>
           </a>
-          <a class="quick-view button" href="#">Быстрый просмотр</a>
+          <div class="products-item-wrapper"> <a class="quick-view button" href="#">Быстрый просмотр</a>
+          </div>
         </li>
       </ul>
     </section>
-    <div class="paginator">
-      <a class="prev disabled" href="#prev">Назад</a>
-      <a class="current" href="#1">1</a>
-      <a href="#2">2</a>
-      <a href="#3">3</a>
-      <a href="#4">4</a>
-      <a href="#5">5</a>
-      <a class="next" href="#next">Вперёд</a>
-    </div>
+    <ul class="paginator">
+      <li class="paginator-item">
+        <a class="prev disabled" href="#prev"><span class="visually-hidden">Назад</span>
+          <svg class="previous" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
+            <path fill="#C1C6CE"
+              d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z">
+            </path>
+          </svg>
+        </a>
+      </li>
+      <li class="paginator-item">
+        <a class="current" href="#1">1</a>
+      </li>
+      <li class="paginator-item">
+        <a href="#2">2</a>
+      </li>
+      <li class="paginator-item">
+        <a href="#3">3</a>
+      </li>
+      <li class="paginator-item">
+        <a href="#4">4</a>
+      </li>
+      <li class="paginator-item">
+        <a href="#5">5</a>
+      </li>
+      <li class="paginator-item">
+        <a class="next" href="#next"><span class="visually-hidden">Вперед</span>
+          <svg class="last-page" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
+            <path class="symbol--black" fill="#fff"
+              d="M7.237 5.642L1.729.133a.506.506 0 1 0-.716.716L6.163 6l-5.151 5.15a.507.507 0 0 0 .716.717l5.509-5.509a.504.504 0 0 0 0-.716z">
+            </path>
+          </svg>
+        </a>
+      </li>
+    </ul>
   </main>
   <footer class="main-footer">
     <div class="container">

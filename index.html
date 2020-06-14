@@ -26,7 +26,7 @@
                 <a class="nav-link" href="#"><span class="nav-text">Каталог</span></a>
                 <ul class="sub-menu user-tooltip">
                   <li class="sub-menu-item">
-                    <a class="sub-nav-link new" href="#"><span class="decoration-bottom">Новинки</span></a>
+                    <a class="sub-nav-link" href="#">Новинки</a>
                   </li>
                   <li class="sub-menu-item">
                     <a class="sub-nav-link" href="catalog.html">Сливочное</a>
@@ -183,7 +183,8 @@
               <a class="product-name link" href="#">
                 <h3><span class="nav-text">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></h3>
               </a>
-              <a class="quick-view button" href="#">Быстрый просмотр</a>
+              <div class="products-item-wrapper"> <a class="quick-view button" href="#">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="products-list-item">
               <a class="product-image hit" href="#">
@@ -193,7 +194,8 @@
               <a class="product-name link" href="#">
                 <h3><span class="nav-text">Сливочно-кофейное с кусочками шоколада</span></h3>
               </a>
-              <a class="quick-view button" href="#">Быстрый просмотр</a>
+              <div class="products-item-wrapper"> <a class="quick-view button" href="#">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="products-list-item">
               <a class="product-image hit" href="#">
@@ -204,7 +206,8 @@
               <a class="product-name link" href="#">
                 <h3><span class="nav-text">Сливочно-клубничное с&nbsp;присыпкой из белого шоколада</span></h3>
               </a>
-              <a class="quick-view button" href="#">Быстрый просмотр</a>
+              <div class="products-item-wrapper"> <a class="quick-view button" href="#">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="products-list-item">
               <a class="product-image hit" href="#">
@@ -214,7 +217,8 @@
               <a class="product-name link" href="#">
                 <h3><span class="nav-text">Сливочное крем-брюле с&nbsp;карамельной подливкой</span></h3>
               </a>
-              <a class="quick-view button" href="#">Быстрый просмотр</a>
+              <div class="products-item-wrapper"> <a class="quick-view button" href="#">Быстрый просмотр</a>
+              </div>
             </li>
           </ul>
         </section>
@@ -287,7 +291,7 @@
               <dt class="visually-hidden">Время работы</dt>
               <dd>(с 10 до 20 ежедневно)</dd>
             </dl>
-            <a class="feedback button" href="#">Форма обратной связи</a>
+            <button class="feedback button" type="button" href="#">Форма обратной связи</button>
           </div>
         </div>
       </section>
@@ -368,11 +372,15 @@
       <!--container-->
     </footer>
     <div class="modal-block modal">
+      <button class="modal-button " aria-label="Закрыть"><svg width="18" height="17" viewBox="0 0 18 17" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M18 1.4175L16.4885 0L8.99468 7.07747L1.50089 0L0 1.4175L7.49379 8.49497L0 15.5724L1.50089 17L8.99468 9.92253L16.4885 17L18 15.5724L10.5062 8.49497L18 1.4175Z"
+            fill="#231F20" />
+        </svg>
+      </button>
       <form action="https://echo.htmlacademy.ru" class="feedback-form" method="post">
-        <div class="feedback-header">
-          <p>Мы обязательно вам ответим!</p>
-          <button class="modal-button " aria-label="Закрыть"><img src="img/cross-big.svg" alt=""></button>
-        </div>
+        <p>Мы обязательно вам ответим!</p>
         <label for="name-feedback" class="visually-hidden">Имя</label>
         <input type="text" id="name-feedback" name="name" placeholder="Имя Фамилия">
         <label for="email-feedback" class="visually-hidden">Электронная почта</label>

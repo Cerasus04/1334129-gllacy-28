@@ -1,5 +1,5 @@
 :root {
-  --basic-white: #ffffff;
+  --basic-white: #FFFFFF;
   --basic-sg-black: #323232;
   --basic-wet-asphalt: #5A5A5A;
   --basic-text-dec: rgba(50, 50, 50, 0.2);
@@ -122,7 +122,8 @@ input[type="radio"].visually-hidden {
 .footer-nav-list-item,
 .breadcrumbs-item,
 .radio-list,
-.checkbox-list {
+.checkbox-list,
+.paginator-item {
   list-style: none;
 }
 
@@ -190,7 +191,7 @@ input[type="radio"].visually-hidden {
 .nav-link {
   display: flex;
   align-items: center;
-  padding: 5px 14px;
+  padding: 7px 14px;
   border-radius: 16px;
 }
 
@@ -227,19 +228,28 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 36px;
+  top: 40px;
   right: 0;
 }
 
 .sub-menu {
-  width: 143px;
-  box-sizing: border-box;
   top: 35px;
   left: -6px;
+  margin: 0;
+  padding: 0 0 3px;
+  width: 143px;
+  background-color: var(--basic-white);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  overflow: hidden;
+ }
+
+.sub-menu-item {
+  margin-bottom: 4px;
   font-size: 14px;
   line-height: 16px;
-  font-weight: normal;
-  border-radius: 4px;
+  font-weight: 400;
+
 }
 
 .site-navigation-item:hover .sub-menu {
@@ -249,55 +259,50 @@ input[type="radio"].visually-hidden {
 .sub-nav-link {
   display: block;
   color: var(--basic-sg-black);
-  padding: 7px 19px 8px 21px;
+  padding: 10px 20px 6px 21px;
 }
 
-.sub-menu-item .new {
-  font-weight: 700;
-  padding: 0;
-  padding-left: 6px;
-  padding-top: 10px;
-  padding-right: 9px;
-  margin-bottom: 4px;
-  box-sizing: border-box;
+.sub-menu-item:first-child {
+  margin-bottom: 0px;
+  position: relative;
 }
 
-.decoration-bottom {
-  width: 128px;
-  box-sizing: border-box;
-  padding: 0;
-  padding-bottom: 12px;
-  padding-left: 15px;
-  padding-right: 10px;
-  display: block;
-  margin: 0px;
+.sub-menu-item:first-child .sub-nav-link {
+  padding: 13px 20px 15px 21px;
+}
+
+.sub-menu-item:first-child::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 6px;
+  right: 9px;
   border-bottom: 1px solid var(--basic-text-dec);
 }
-/*может ли существовать такой способ сделать это декоративное подчеркивание???*/
+
 
 .sub-menu-item:last-child {
-  margin-bottom: 4px;
+  margin-bottom: 7px;
 }
 
-.sub-menu-item:hover,
-.sub-menu-item:focus {
+.sub-nav-link:hover,
+.sub-nav-link:focus {
   background-color: var(--sub-bg);
 }
 
-.sub-menu-item:first-child:hover,
-.sub-menu-item:first-child:focus {
+.sub-nav-link:first-child:hover,
+.sub-nav-link:first-child:focus {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
 
-.sub-menu-item:last-child:hover,
-.sub-menu-item:last-child:focus {
+.sub-nav-link:last-child:hover,
+.sub-nav-link:last-child:focus {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
 
-
-.sub-menu-item:active {
+.sub-nav-link:active {
   background-color: var(--sub-bg-act);
 }
 
@@ -319,12 +324,12 @@ input[type="radio"].visually-hidden {
 
 .user-panel-item {
   position: relative;
-  padding: 0 0 17px 10px;
+  margin: 0 0 10px 12px;
 }
 
 .user-link {
   background-color: var(--link-bg);
-  padding: 5px 16px 5px;
+  padding: 8px 16px 4px;
  }
 
 .user-panel-item svg:not(.loupe) {
@@ -346,7 +351,7 @@ input[type="radio"].visually-hidden {
 .user-panel-item:hover .user-tooltip,
 .user-panel-item:focus .user-tooltip,
 .user-panel-item:active .user-tooltip {
-  display: block;
+  display: flex;
 }
 
 .search {
@@ -570,7 +575,6 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/banner_2.png");
 }
 
-
 /*section hits*/
 
 .hits {
@@ -618,7 +622,7 @@ input[type="radio"].visually-hidden {
 
 .product-image img{
   border-radius: 50%;
-}
+ }
 
 .hit::before {
   content: url("../img/hit.svg");
@@ -626,13 +630,34 @@ input[type="radio"].visually-hidden {
 }
 
 .quick-view {
-  display: none;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   text-decoration: none;
+  z-index: 2;
   padding: 12px 16px;
-  margin-left: 34px;
+  align-self: flex-end;
+  margin-bottom: 21px;
+  border-radius: 40px/50px;
+}
+
+.products-list-item:hover .products-item-wrapper {
+  visibility: visible;
+}
+.products-item-wrapper {
+  z-index: 1;
+  position: absolute;
+  top: -5px;
+  left: -12px;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 293px;
+  height: 405px;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0,0,0,0.4);
 }
 
 /*section advantages*/
@@ -808,7 +833,7 @@ input[type="radio"].visually-hidden {
   border-top: 1px solid transparent;
 }
 
-.contacts-form {/*что-то нужно поменять в этом блоке, чтобы на минимальной ширине сайта не убегала форма, но я не знаю как, проблема скорее всего, что она одна лежит в container*/
+.contacts-form {
   width: 303px;
   box-sizing: border-box;
   margin-left: auto;
@@ -825,11 +850,12 @@ input[type="radio"].visually-hidden {
 .contact-list {
   margin: 0;
 }
+
 .contact-list dt {
   font-size: 14px;
   line-height: 20px;
   margin: 0;
-  width: 173px;
+  width: 176px;
 }
 
 .contact-list dd {
@@ -868,7 +894,6 @@ input[type="radio"].visually-hidden {
 
 .main-footer .container {
   display: flex;
-
 }
 
 .social-list {
@@ -939,8 +964,8 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-block {
-  /* display: block; когда этот блок должен появляться? при наведении на ссылку форма обратной связи?*/
-  display: none;
+  position: relative;
+  /* display: block; */
   position: fixed;
   top: 50%;
   left: 50%;
@@ -948,7 +973,6 @@ input[type="radio"].visually-hidden {
   margin: auto;
   color: var(--basic-wet-asphalt);
 }
-
 
 .feedback-form {
   display: flex;
@@ -968,8 +992,12 @@ input[type="radio"].visually-hidden {
   margin: auto;
   top: 13px;
   right: 10px;
-
+  font-size: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
 }
+
 .feedback-form p {
   font-size: 24px;
   line-height: 28px;
@@ -1014,83 +1042,78 @@ input[type="radio"].visually-hidden {
 
 /*CATALOG*/
 
-/* .nav-link:hover img,
-.nav-link:focus img,
-.nav-link:active img {
-  filter: invert(1);
-} для корзины с товарами не должно применяться это свойство*/
-
-.basket { /*всю таблицу по pixel perfect нужно подбирать*/
-  position: absolute;
-  top: 36px;
-  left: -425px;
-  width: 539px;
+.basket {
+	z-index: 10;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 16px 12px 19px 16px;
+	min-width: 512px;
+	font-size: 13px;
+	line-height: 16px;
+	font-weight: 400;
+	color: var(--basic-sg-black);
+	background-color: var(--mailing-bg);
 }
 
-.basket table {
-  color: var(--basic-sg-black);
-  margin-top: 20px;
-  margin-right: 0;
-  margin-left: 20px;
-
-  border-bottom: 1px solid #CACAC7;
-  border-collapse: collapse;
+.product-selected {
+    margin-bottom: 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+.product-selected .cell {
+	padding: 3px 0 14px;
 }
 
-.basket td {
+.product-selected .close-button {
+    font-size: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.product-selected .cell-item {
+  padding-left: 15px;
+  padding-right: 28px;
+  width: 218px;
+  text-align: left;
+}
+
+.product-selected .selected-item {
+  list-style: none;
+  text-decoration:none;
   font-size: 13px;
+  line-height: 16px;
   font-weight: 400;
-
-  padding-bottom: 20px;
-}
-
-td .selected-item {
-  display: block;
-  width: 216px;
-  text-decoration: none;
   color: var(--basic-sg-black);
 }
 
-td .close-button {
- /*нужно еще подумать, как стилизовать*/
-}
-
-.basket td:nth-child(4) {
-  padding-left: 30px;
-}
-
-.basket td:nth-child(5) {
-  padding-left: 25px;
-}
-
-td .price-calc {
+.cell-weight .price-calc {
   color: #ABABAB;
 }
 
-.order-wrapper {
-  width: 172px;
-  margin:0;
-  margin-right: 14px;
-  margin-bottom: 21px;
-  margin-left: auto;
-  display: flex;
-  flex-direction: column;
-
+.product-selected .cell-total {
+  padding-right: 17px;
 }
 
-.order-wrapper .total {
+.product-selected .cell-check {
+  border-top: 1px solid #CACAC7;
+  padding-top: 13px;
+  font-size: 15px;
+  line-height: 18px;
   font-weight: 700;
-  color: var(--basic-sg-black);
   text-align: right;
 }
 
-.order-wrapper .checkout {
+.basket .checkout {
+  align-self: flex-end;
   padding: 13px 15px;
   font-size: 18px;
   line-height: 16px;
   font-weight: 700;
-
 }
+
+ /*хлебные крошки*/
+
 .breadcrumbs {
   display: flex;
   margin: 0;
@@ -1099,131 +1122,21 @@ td .price-calc {
 }
 
 .breadcrumbs-item {
-  margin-right: 22px;
+  margin-right: 10px;
 }
 
-/*catalog - filters*/
-
-.products {
-  margin-bottom: 66px;
-}
-.filters-wrapper {
-  margin-bottom: 40px;
-}
-
-.form-row {
-  display: flex;
-}
-
-.filters-item {
+.breadcrumbs-item .link {
   font-size: 14px;
   line-height: 16px;
-  font-weight: 500;
-  margin-bottom: 7px;
 }
 
-.radio-list,
-.checkbox-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
+.breadcrumbs-item:not(:last-child) {
+	border-bottom: 1px solid var(--link-bg);
 }
-
-.radio-list li,
-.checkbox-list li {
-  line-height: 18px;
-  font-weight: 500;
-}
-
-.filters-apply {
- line-height: 22px;
- font-weight: 500;
- color: var(--basic-white);
- background-color: var(--link-bg);
- border: 2px solid var(--basic-white);
- box-sizing: border-box;
- border-radius: 20px;
-}
-
-.filters-apply:hover {
-  color: var(--basic-sg-black);
-  background-color: var(--basic-white);
-}
-
-.filters-apply:active {
-  color: var(--basic-sg-black);
-  background-color: var(--basic-white);
-  box-shadow: inset 0px 2px 1px #696969;
-  /* убрать обводку border */
-}
-
-.sorting {
-  font-size: inherit;
-  line-height: 18px;
-  font-weight: 500;
-  color: var(--basic-white);
-  background-color: var(--link-bg);
-  border-radius: 20px;
-}
-
-.sorting:hover {
-  color: var(--basic-sg-black);
-}
-
-.filter {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 30px;
-  border: none;
-  margin-right: 15px;
-}
-
-.filter .additive {
-  margin-bottom: 0;
-}
-.filters .classification {
-  width: 196px;
-}
-
-.sorting {
-  padding-top: 13px;
-  padding-right: 13px;
-  padding-bottom: 10px;
-  padding-left: 16px;
-}
-
-.filters .range-slider {
-  width: 217px;
-}
-
-.filters .fat {
-  width: 425px;
-}
-
-.filters .additive {
-  width: 711px;
-  margin-bottom: 0;
-}
-
-.filter .radio-list,
-.filter .checkbox-list {
-  margin: 0;
-  padding: 0;
-  background-color: var(--link-bg);
-  border-radius: 20px;
-}
-/*
-.filter-wrapper label {
-  border: 1px solid red;
-  padding-top: 13px;
-  padding-right: 20px;
-  padding-bottom: 10px;
-  padding-left: 16px;
-} */
-/*хлебные крошки*/
-.breadcrumbs-item link {
-  font-size: 14px;
-  line-height: 16px;
+.breadcrumbs-item:not(:last-child)::after { /*Юля, нужно ли вставлять в разметку в span этот элемент, чтобы он не был подчеркнутым??*/
+	content:"\00BB";
+	position: relative;
+	right: -3px;
 }
 
 .catalog {
@@ -1236,26 +1149,274 @@ td .price-calc {
   padding: 0px;
 }
 
+.products {
+  margin-bottom: 66px;
+}
+
+/*catalog - filters*/
+.filters-wrapper { /*оБКРТКА секции с фильтрами*/
+  margin-bottom: 40px;
+}
+
+.filters {/*оБКРТКА формы с фильтром*/
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  }
+.filters-item {/*название блоков в каждом фильтре legend*/
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+.filters-apply {/*кнопка применить*/
+ min-width: 144px;
+ height: 36px;
+ align-self: center;
+ margin-top: 10px;
+ line-height: 22px;
+ font-weight: 500;
+ color: var(--basic-white);
+ background-color: var(--link-bg);
+ border: 2px solid var(--basic-white);
+ box-sizing: border-box;
+ border-radius: 20px;
+
+}
+
+.filters-apply:hover {/*наведение на кнопку*/
+  color: var(--basic-sg-black);
+  background-color: var(--basic-white);
+}
+
+.filters-apply:active {/*активация кнопки*/
+  color: var(--basic-sg-black);
+  background-color: var(--basic-white);
+  box-shadow: inset 0px 2px 1px #696969;
+  /* убрать обводку border */
+}
+
+.sorting {/*класс селекта для сортировки по попульрности..*/
+  font-size: inherit;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--basic-white);
+  background-color: var(--link-bg);
+  border-radius: 20px;
+}
+
+.sorting:hover {/*наведение на селект*/
+  color: var(--basic-sg-black);
+}
+
+.filter {/*есть еще.range который может убрать, это fieldset для тоглов, жирности и наполнителей*/
+  padding: 0;
+  margin: 0;
+  margin-bottom: 14px;
+  border: none;
+  margin-right: 15px;
+}
+.filters .classification {/*обертка для  <fieldset class="filter classification"> сортировка по*/
+  min-width: 196px;
+}
+
+.classification .sorting {/*<label for="sorting"></label>*/
+  padding-top: 8px;
+  padding-right: 13px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+}
+
+.filters .range-slider {/*тоглы не буду трогать*/
+  min-width: 217px;
+}
+.range input {/*поля ввода суммы от и до в тоглах*/
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #FFFFFF;
+  width: 40px;
+  height: 13px;
+  background-color:inherit;
+  border: none;
+}
+.range-slider-progress {/**/
+	width: 218px;
+}
+
+.range-controls {/**/
+  position: relative;
+  height: 18px;
+  padding-top: 18px;
+  padding-right: 21px;
+  padding-left: 21px;
+  background-color: var(--link-bg);
+  border-radius: 25px;
+}
+
+.range-controls .scale {/**/
+  width:176px;
+  height: 1px;
+  background-color: rgba(248, 247, 244, 0.5);
+}
+
+.range-controls .rang-slider-bar {
+  width: 60%;/**/
+  height: 2px;
+  background: #F8F7F4;
+  margin-left: 21px;
+}
+
+.range-controls .range-slider-toggle {/**/
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 8px solid #FFFFFF;
+  background-color: #ababab;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.toggle-min {/**/
+  left: 42px;
+}
+
+.toggle-max {/**/
+  left: 140px;
+}
+
+.fat .radio-list,
+.additive .checkbox-list {/*общие стили для радио и чекс*/
+  margin: 0;
+  background-color: var(--link-bg);
+  border-radius: 20px;
+  padding: 9px 17px 9px 12px;
+  display: flex;
+flex-wrap:wrap;
+  line-height: 18px;
+  font-weight: 500;
+}
+.checkbox-list label,
+.radio-list label {/*общие стили для радио и чекс*/
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+}
+
+.filters .fat {/*оБКРТКА для жирности*/
+  min-width: 425px;
+}
+
+.fat label {
+	padding-left: 33px;
+	margin-right: 19px;
+}
+
+.radio-list-item:last-child label {
+	margin-right: 0;
+}
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: -2px;
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100%;
+}
+
+.filter-input-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: -2px;
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/radio-on.svg");
+   background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100%;
+}
+
+.filters .additive {/*оБКРТКА fieldset class="filter additive для наполнителей*/
+   min-width: 711px;
+}
+.additive label {
+	padding-left: 33px;
+	margin-right: 19px;
+}
+
+.checkbox-list-item:last-child label {
+	margin-right: 0;
+}
+.filter-input-checkbox + label::before {
+  content: " ";
+  position: absolute;
+  left: 0px;
+  top: -2px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100%;
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: " ";
+  position: absolute;
+  left: 0px;
+  top: -2px;
+  width: 24px;
+  height: 20px;
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100%;
+}
+
+
 /*переключатель страниц*/
 
 .paginator {
-  margin-bottom: 63px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0 -8px 33px 0;
   text-align: right;
-  min-width: 194px;
+}
+
+.paginator .disabled {
+  color: var(--basic-white);
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
+}
+
+.paginator .disabled svg {
+  transform: rotate(180deg);
 }
 
 .paginator a {
-  display: inline-block;
-  box-sizing: border-box;
-  width: 26px;
-  height: 26px;
-  padding: 4px;
-  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 26px;
+  min-height: 26px;
+  margin-left: 5px;
 
-  text-align: center;
-  vertical-align: middle;
   line-height: 18px;
   font-weight: 500;
+  border-radius: 50%;
   text-decoration: none;
   color: var(--basic-white);
 }
@@ -1263,7 +1424,8 @@ td .price-calc {
 .paginator a:hover,
 .paginator a:focus {
   background-color: var(--link-bg);
-  /* cursor: url("../img/stroke.png"); */
+  color: var(--basic-white);
+  cursor: url("../img/stroke.png");
 }
 
 .paginator a:active {
@@ -1271,29 +1433,8 @@ td .price-calc {
   color: var(--basic-sg-black);
 }
 
-.paginator .prev {
-  margin: 0;
-  margin-right: 8px;
-  background-image: url("../img/icon-right-small.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  transform: rotate(180deg);
-  text-indent: -10000px;
-}
-
-.paginator .next {
-  margin-left: 8px;
-  background-image: url("../img/icon-right-small.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  text-indent: -10000px;
-}
-
 .paginator .current {
   background-color: var(--basic-white);
   color: var(--basic-sg-black);
 }
 
-.site-wrapper {
-  position: relative;
-}
