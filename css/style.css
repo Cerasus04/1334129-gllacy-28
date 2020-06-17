@@ -231,7 +231,7 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 40px;
+  top: 38px;
   right: 0;
 }
 
@@ -248,11 +248,9 @@ input[type="radio"].visually-hidden {
  }
 
 .sub-menu-item {
-
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
-
 }
 
 .site-navigation-item:hover .sub-menu {
@@ -395,7 +393,7 @@ input[type="radio"].visually-hidden {
 
 .enter {
   width: 277px;
-  padding: 21px 16px 20px 19px;
+  padding: 18px 16px 20px 19px;
   box-sizing: border-box;
 }
 
@@ -413,7 +411,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding-top: 2px;
+ font-weight: 400;
 }
 
 .enter-help a {
@@ -1092,11 +1090,10 @@ input[type="radio"].visually-hidden {
 
 /*CATALOG*/
 
-.basket {
-	z-index: 10;
-	flex-direction: column;
+.basket-fill {
+  flex-direction: column;
 	align-items: flex-start;
-	padding: 16px 12px 19px 16px;
+	padding: 13px 12px 19px 16px;
 	min-width: 512px;
 	font-size: 13px;
 	line-height: 16px;
@@ -1105,30 +1102,45 @@ input[type="radio"].visually-hidden {
 	background-color: var(--mailing-bg);
 }
 
-.product-selected {
-  margin-bottom: 0;
-  width: 100%;
-  border-collapse: collapse;
-}
-.product-selected .cell {
-	padding: 3px 0 14px;
+.basket-list {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+
+  width: 494px;
+  min-height: 92px;
+  margin: 0 0 26px 0;
+  padding: 0;
 }
 
-.product-selected .close-button {
-  font-size: 0;
-  border: 0;
-  background-color: transparent;
-  cursor: pointer;
+.basket-list-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 46px;
+  padding-left: 6px;
+  margin-bottom: 6px;
 }
 
-.product-selected .cell-item {
-  padding-left: 15px;
-  padding-right: 28px;
-  width: 218px;
-  text-align: left;
+.basket-list-item .icecream {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
 }
 
-.product-selected .selected-item {
+.basket-list-item img {
+  margin-right: 13px;
+}
+
+.basket-link {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: flex-start;
+
+  width: 216px;
+  margin-right: 31px;
+  padding: 15px 0 0 0;
+
   list-style: none;
   text-decoration:none;
   font-size: 13px;
@@ -1137,30 +1149,94 @@ input[type="radio"].visually-hidden {
   color: var(--basic-sg-black);
 }
 
-.cell-weight .price-calc {
-  color: #ABABAB;
+.basket-list-item .basket-link:hover {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--link-hov);
+  background-color: transparent;
 }
 
-.product-selected .cell-total {
-  padding-right: 17px;
+.cell-weight {
+  width: 95px;
+  margin-right: 26px;
 }
 
-.product-selected .cell-check {
-  border-top: 1px solid #CACAC7;
-  padding-top: 13px;
-  font-size: 15px;
-  line-height: 18px;
+.basket-fill::after {
+  content: "";
+  position: absolute;
+  top: 125px;
+  left: 15px;
+
+  width: 510px;
+  height: 1px;
+  background-color: #CACAC7;
+}
+
+.basket-bottom p {
+  margin: 0;
   font-weight: 700;
-  text-align: right;
+  font-size: 15px;
+  line-height: 16px;
+  color: var(--basic-sg-black);
 }
 
-.basket .checkout {
-  align-self: flex-end;
-  padding: 13px 15px;
+.cell-total {
+  color: #ABABAB;;
+}
+
+.basket-list-item>button {
+  margin-right: 9px;
+  padding: 0;
+  width: 11px;
+  min-height: 11px;
+
+  color: var(--basic-white);
+  text-shadow: 0px 2px 5px var(--button-text-shadow);
+  box-shadow: 0 0 0 transparent;
+  outline: none;
+  cursor: pointer;
+
+  background-color: var(--mailing-bg);
+  background-image: url("../img/cross-small.svg");
+  border: none;
+  border-radius: 0;
+}
+
+.basket-list-item>button:hover,
+.basket-list-item>button:focus,
+.basket-list-item>button:active {
+  outline: none;
+  cursor: pointer;
+}
+
+.basket-bottom>button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  width: 172px;
+  min-height: 44px;
+  padding: 9px 15px 11px;
+
+  font-weight: 700;
   font-size: 18px;
   line-height: 16px;
-  font-weight: 700;
 }
+
+.basket-bottom {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  text-align: right;
+  min-height: 75px;
+}
+
+.basket-bottom span {
+  margin-right: 3px;
+}
+
 
  /*хлебные крошки*/
 
@@ -1183,7 +1259,7 @@ input[type="radio"].visually-hidden {
 .breadcrumbs-item:not(:last-child) {
 	border-bottom: 1px solid var(--link-bg);
 }
-.breadcrumbs-item:not(:last-child)::after { /*Юля, нужно ли вставлять в разметку в span этот элемент, чтобы он не был подчеркнутым??*/
+.breadcrumbs-item:not(:last-child)::after {
 	content:"\00BB";
 	position: relative;
 	right: -3px;
@@ -1203,11 +1279,11 @@ input[type="radio"].visually-hidden {
 }
 
 /*catalog - filters*/
-.filters-wrapper { /*оБКРТКА секции с фильтрами*/
+.filters-wrapper { /*Обертка секции с фильтрами*/
   margin-bottom: 23px;
 }
 
-.filters {/*оБКРТКА формы с фильтром*/
+.filters {/*Обертка формы с фильтром*/
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -1232,7 +1308,6 @@ input[type="radio"].visually-hidden {
   border: 2px solid var(--basic-white);
   box-sizing: border-box;
   border-radius: 20px;
-
 }
 
 .filters-apply:hover {/*наведение на кнопку*/
@@ -1244,10 +1319,9 @@ input[type="radio"].visually-hidden {
   color: var(--basic-sg-black);
   background-color: var(--basic-white);
   box-shadow: inset 0px 2px 1px #696969;
-  /* убрать обводку border */
 }
 
-.sorting {/*класс селекта для сортировки по попульрности..*/
+.sorting {/*класс селекта для сортировки по популярности..*/
   font-size: inherit;
   line-height: 18px;
   font-weight: 500;
@@ -1260,7 +1334,7 @@ input[type="radio"].visually-hidden {
   color: var(--basic-sg-black);
 }
 
-.filter {/*есть еще.range который может убрать, это fieldset для тоглов, жирности и наполнителей*/
+.filter {
   padding: 0;
   margin: 0;
   margin-bottom: 10px;
@@ -1281,6 +1355,7 @@ input[type="radio"].visually-hidden {
 .filters .range-slider {/*тоглы не буду трогать*/
   min-width: 217px;
 }
+
 .range input {/*поля ввода суммы от и до в тоглах*/
   font-size: 14px;
   line-height: 16px;
@@ -1291,6 +1366,7 @@ input[type="radio"].visually-hidden {
   background-color:inherit;
   border: none;
 }
+
 .range-slider-progress {/**/
 	width: 218px;
 }
@@ -1330,7 +1406,6 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
   cursor: pointer;
 }
-
 
 .fat .radio-list,
 .additive .checkbox-list {/*общие стили для радио и чекс*/

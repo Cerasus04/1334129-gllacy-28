@@ -101,41 +101,34 @@
                     d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z" />
                 </svg>
                 2 товара</a>
-              <div class="user-tooltip basket">
-                <table class="product-selected">
-                  <tr class="row">
-                    <td class="cell cell-btn"><button class="close-button" aria-label="Закрыть"><svg
-                          xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
-                          <path fill="#231F20"
-                            d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z">
-                          </path>
-                        </svg>
-                      </button></td>
-                    <td class="cell cell-img"><a href="#"><img src="img/choice1.jpg" width="33" height="33"
-                          alt="Мороженное"></a></td>
-                    <td class="cell cell-item"><a class="selected-item" href="#">Пломбир с апельсиновым джемом</a></td>
-                    <td class="cell cell-weight">1,5 кг × <span class="price-calc">200 руб.</span></td>
-                    <td class="cell cell-total">300 руб.</td>
-                  </tr>
-                  <tr class="row">
-                    <td class="cell cell-btn"><button class="close-button" aria-label="Закрыть"><svg
-                          xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
-                          <path fill="#231F20"
-                            d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z">
-                          </path>
-                        </svg></button></td>
-                    <td class="cell cell-img"><a href="#"><img src="img/choice2.jpg" width="33" height="33"
-                          alt="Мороженное"></a></td>
-                    <td class="cell cell-item"><a class="selected-item" href="#">Клубничный пломбир с присыпкой из
-                        белого шоколада</a></td>
-                    <td class="cell cell-weight">1,5 кг × <span class="price-calc">300 руб.</span></td>
-                    <td class="cell cell-total">450 руб.</td>
-                  </tr>
-                  <tr class="row">
-                    <td class="cell cell-check" colspan="6">Итого: 750 руб.</td>
-                  </tr>
-                </table>
-                <a class="checkout button" href="#">Оформить заказ</a>
+              <div class="user-tooltip basket-fill">
+                <ul class="basket-list">
+                  <li class="basket-list-item">
+                    <button class="close-button" type="button" aria-label="убрать из корзины"></button>
+                    <img class="icecream" src="img/choice1.jpg" width="33" height="33"
+                      alt="Пломбир с апельсиновым джемом">
+                    <a class="basket-link" href="#">Пломбир с
+                      апельсиновым джемом
+                    </a>
+                    <div class="cell-weight">1,5 кг х <span class="cell-total">200 руб.</span></div>
+                    <div>300 руб.</div>
+                  </li>
+                  <li class="basket-list-item">
+                    <button class="close-button" type="button" aria-label="убрать из корзины"></button>
+                    <img class="icecream" src="img/choice2.jpg" width="33" height="33"
+                      alt="Клубничный пломбир с присыпкой из белого шоколада">
+                    <a class="basket-link" href="#">
+                      Клубничный пломбир с&nbsp;присыпкой
+                      из&nbsp;белого&nbsp;шоколада
+                    </a>
+                    <div class="cell-weight">1,5 кг х <span class="cell-total">300 руб.</span></div>
+                    <div>450 руб.</div>
+                  </li>
+                </ul>
+                <div class="basket-bottom">
+                  <p><span>Итого:</span> 750 руб.</p>
+                  <button class="checkout button" type="button">Оформить заказ</button>
+                </div>
               </div>
             </li>
           </ul>
