@@ -130,7 +130,7 @@ input[type="radio"].visually-hidden {
 }
 
 .user-tooltip,
-.modal-block {
+.modal-wrapper {
   display: none;
 }
 
@@ -200,7 +200,7 @@ input[type="radio"].visually-hidden {
 }
 
 .navigation {
-  padding: 5px 13px 6px 15px;
+  padding: 6px 13px 6px 15px;
 }
 
 .nav-text {
@@ -222,6 +222,12 @@ input[type="radio"].visually-hidden {
 .nav-link.current,
 .sub-nav-link.current {
   background-color: var(--menu-actv);
+  color: var(--basic-white);
+}
+
+.sub-nav-link.current:hover {
+  color: var(--basic-sg-black);
+  cursor: pointer;
 }
 
 .nav-link.current .nav-text {
@@ -230,7 +236,7 @@ input[type="radio"].visually-hidden {
 
 .user-tooltip {
   position: absolute;
-  top: 38px;
+  top: 36px;
   right: 0;
   z-index: 1;
 
@@ -244,7 +250,6 @@ input[type="radio"].visually-hidden {
 }
 
 .sub-menu {
-  top: 35px;
   left: -6px;
 
   width: 143px;
@@ -263,10 +268,17 @@ input[type="radio"].visually-hidden {
   font-weight: 400;
 }
 
-.site-navigation-item:hover .sub-menu,
-.site-navigation-item:active .sub-menu {
+.site-navigation-item:hover .sub-menu {
   display:block;
-} /*не срабатывает, при хождении с клавиатуры когда должно показаться подменю?*/
+}
+
+.nav-link:focus + .sub-menu {
+  display:block;
+}
+
+.sub-menu:focus-within {
+  display: block;
+} /*не работает*/
 
 .sub-nav-link {
   display: block;
@@ -361,8 +373,8 @@ input[type="radio"].visually-hidden {
 .loupe {
   display: block;
 
-  padding-top: 0px;
-  padding-left: 0px;
+  padding-top: 0;
+  padding-left: 0;
 }
 
 .user-panel-item:first-child .nav-link {
@@ -378,8 +390,6 @@ input[type="radio"].visually-hidden {
 }
 
 .search {
-  top: 38px;
-
   width: 341px;
   padding: 20px 15px;
 
@@ -402,22 +412,23 @@ input[type="radio"].visually-hidden {
 
 .user-tooltip input:focus,
 .mailing-form input:focus,
-.feedback-form input:focus {
+.feedback-form input:focus,
+.feedback-form textarea:focus {
   font-weight: bold;
   border-color: rgba(46, 136, 288, 0.52);
   color: var(--basic-sg-black);
-  outline: none;
- }
+}
 
  .user-tooltip input::placeholder,
  .mailing-form input::placeholder,
- .feedback-form input::placeholder{
+ .feedback-form input::placeholder,
+ .feedback-form textarea::placeholder {
   font-weight: 400;
  }
 
 .enter {
   width: 277px;
-  padding: 18px 16px 20px 19px;
+  padding: 19px 16px 20px 19px;
 }
 
 .enter input {
@@ -434,6 +445,8 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+
+  padding: 3px 0;
 
   font-weight: 400;
 }
@@ -568,7 +581,7 @@ input[type="radio"].visually-hidden {
 
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .banners-list-item {
@@ -588,7 +601,7 @@ input[type="radio"].visually-hidden {
 }
 
 .banners-list-item h3 {
-  margin: 0px;
+  margin: 0;
 
   font-size: 35px;
   line-height: 41px;
@@ -615,12 +628,12 @@ input[type="radio"].visually-hidden {
 }
 
 .banners-list-item.jam {
-  background-color: pink;
+  background-color: var(--menu-actv);
   background-image: url("../img/banner_1.jpg");
 }
 
 .banners-list-item.chocolate {
-  background-color: brown;
+  background-color: var(--button-bg-actv);
   background-image: url("../img/banner_2.png");
 }
 
@@ -633,7 +646,7 @@ input[type="radio"].visually-hidden {
 .products-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  row-gap: 9px;
+  row-gap: 3px;
 
   margin: 0;
   padding: 0;
@@ -648,7 +661,7 @@ input[type="radio"].visually-hidden {
 
 .products-item-wrapper {
   position: relative;
-  padding: 0px 13px 20px;
+  padding: 5px 13px 20px;
 }
 
 .products-item-wrapper::before {
@@ -682,7 +695,7 @@ input[type="radio"].visually-hidden {
 }
 
 .index-hit {
-  top: 164px;
+  top: 170px;
 }
 .product-price .unit {
   font-size: 30px;
@@ -733,12 +746,14 @@ input[type="radio"].visually-hidden {
 }
 
 .products-list-item:hover .products-item-wrapper,
-.products-list-item:focus .products-item-wrapper {
+.products-list-item:focus .products-item-wrapper,
+.products-list-item:focus-within .products-item-wrapper { /*при фокусе с клавиатуры не появляется обводка*/
   visibility: visible;
 }
 
 .products-item-wrapper:hover .quick-view,
-.products-item-wrapper:focus .quick-view {
+.products-item-wrapper:focus .quick-view,
+.products-list-item:focus-within .quick-view {
   opacity: 1;
   pointer-events: auto;
 }
@@ -789,7 +804,7 @@ input[type="radio"].visually-hidden {
 .thermometer::before {
   position: absolute;
   left: -1px;
-  top: -8px;
+  top: -10px;
 }
 
 .ice-cream::before {
@@ -969,7 +984,7 @@ input[type="radio"].visually-hidden {
 }
 
 .contact-list dd:last-child {
-  padding-bottom: 0px;
+  padding-bottom: 0;
   margin-bottom: 25px;
 
   font-size: 14px;
@@ -990,6 +1005,7 @@ input[type="radio"].visually-hidden {
 .main-footer .container {
   display: flex;
   flex-wrap: wrap;
+  min-height: 67px;
 }
 
 .footer-social {
@@ -1087,30 +1103,40 @@ input[type="radio"].visually-hidden {
   margin-left: auto;
 }
 
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: /*flex*/none;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
 .modal-block {
    /* display: block; */
   /*animation: bounce 0.5s; */
-  position: fixed;
-  top: 50%;
-  left: 50%;
+  position: relative;
 
+
+  width: 477px;
+  min-height: 441px;
+  box-sizing: border-box;
+  padding: 16px 25px 23px 24px;
   margin: auto;
+
   color: var(--basic-wet-asphalt);
-  transform: translate(-50%, -50%);
+  background-color: var(--mailing-bg);
+  border-radius: 6px;
 }
 
 .feedback-form {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
-
-  width: 477px;
-  min-height: 441px;
-  padding: 16px 25px 23px 24px;
-
-  background-color: var(--mailing-bg);
-  border-radius: 6px;
- }
+}
 
 .modal-button {
   position: absolute;
@@ -1182,7 +1208,6 @@ input[type="radio"].visually-hidden {
   line-height: 24px;
   font-weight: 700;
 
-  outline: none;
   cursor: pointer;
 }
 
@@ -1197,7 +1222,7 @@ input[type="radio"].visually-hidden {
   flex-direction: column;
   align-items: flex-start;
 
-  min-width: 512px;
+  min-width: 539px;
 	padding: 13px 12px 19px 16px;
 
 	font-size: 13px;
@@ -1211,10 +1236,10 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
   align-content: flex-start;
+  box-sizing: border-box;
 
-  width: 494px;
   min-height: 92px;
-  margin: 0 0 26px 0;
+  margin: 0 0 28px 0;
   padding: 0;
 }
 
@@ -1265,14 +1290,14 @@ input[type="radio"].visually-hidden {
 }
 
 .cell-weight {
-  width: 95px;
-  margin-right: 26px;
+  width: 100px;
+  margin-right: 21px;
 }
 
 .basket-fill::after {
   content: "";
   position: absolute;
-  top: 125px;
+  top: 130px;
   left: 15px;
 
   width: 510px;
@@ -1307,14 +1332,12 @@ input[type="radio"].visually-hidden {
   border-radius: 0;
   text-shadow: 0px 2px 5px var(--button-text-shadow);
   box-shadow: 0 0 0 transparent;
-  outline: none;
   cursor: pointer;
 }
 
 .basket-list-item>button:hover,
 .basket-list-item>button:focus,
 .basket-list-item>button:active {
-  outline: none;
   cursor: pointer;
 }
 
@@ -1353,7 +1376,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   margin: 0;
   margin-top: -30px;
-  padding: 0px;
+  padding: 0;
 }
 
 .breadcrumbs-item {
@@ -1375,9 +1398,9 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog {
-  margin: 0px;
+  margin: 0;
   margin-bottom: 25px;
-  padding: 0px;
+  padding: 0;
 
   font-size: 35px;
   line-height: 41px;
@@ -1385,7 +1408,7 @@ input[type="radio"].visually-hidden {
 }
 
 .products {
-  margin-bottom: 56px;
+  margin-bottom: 52px;
 }
 
 /*catalog - filters*/
@@ -1421,7 +1444,6 @@ input[type="radio"].visually-hidden {
   border: 2px solid var(--basic-white);
   box-sizing: border-box;
   border-radius: 20px;
-  outline: none;
 }
 
 .filters-apply:hover {
@@ -1438,6 +1460,7 @@ input[type="radio"].visually-hidden {
 .filters-apply:active {
   box-shadow: inset 0px 2px 1px #696969;
 }
+
 .sorting {
   position: relative;
 
@@ -1450,9 +1473,18 @@ input[type="radio"].visually-hidden {
   border-radius: 20px;
   -webkit-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   border: none;
+}
+
+.sorting option {
+  color: var(--basic-sg-black);
+}
+
+.classification .sorting:hover,
+.classification .sorting:focus {
+  color: var(--basic-sg-black);
+  background-color: var(--basic-white);
 }
 
 .arrow-select {
@@ -1463,10 +1495,6 @@ input[type="radio"].visually-hidden {
   width: 11px;
   height: 10px;
 } /*должно менять цвет*/
-
-.sorting:hover {
-  color: var(--basic-sg-black);
-}
 
 .filter {
   padding: 0;
@@ -1588,7 +1616,7 @@ input[type="radio"].visually-hidden {
 .filter-input-radio + label::before {
   content: "";
   position: absolute;
-  left: 0px;
+  left: 0;
   top: -2px;
 
   width: 22px;
@@ -1633,7 +1661,7 @@ input[type="radio"].visually-hidden {
 .filter-input-checkbox + label::before {
   content: " ";
   position: absolute;
-  left: 0px;
+  left: 0;
   top: -2px;
 
   width: 20px;
@@ -1649,7 +1677,7 @@ input[type="radio"].visually-hidden {
 .filter-input-checkbox:checked + label::after {
   content: " ";
   position: absolute;
-  left: 0px;
+  left: 0;
   top: -2px;
 
   width: 24px;
@@ -1665,7 +1693,6 @@ input[type="radio"].visually-hidden {
 .filter-input-radio:focus+label::before,
 .filter-input-radio:checked+label::before {
   opacity: 1;
-  outline: none;
   pointer-events: none;
 }
 
@@ -1678,7 +1705,6 @@ input[type="radio"].visually-hidden {
 .filter-input-checkbox:focus+label::before,
 .filter-input-checkbox:checked+label::before {
   opacity: 1;
-  outline: none;
   pointer-events: none;
 }
 
@@ -1688,13 +1714,13 @@ input[type="radio"].visually-hidden {
 
 .filter-input-checkbox:disabled+label::before {
   opacity: 0.4;
-  outline: none;
   pointer-events: none;
 }
 
 /*переключатель страниц*/
 
 .paginator {
+  position: relative;
   display: flex;
   justify-content: flex-end;
 
@@ -1747,3 +1773,13 @@ input[type="radio"].visually-hidden {
   color: var(--basic-sg-black);
 }
 
+.paginator::after {
+content: "";
+position: absolute;
+bottom: -30px;
+
+width: 1146px;
+height: 1px;
+margin: 0 auto;
+background-color: var(--link-bg);
+}
