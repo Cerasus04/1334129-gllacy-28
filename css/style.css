@@ -131,7 +131,7 @@ input[type="radio"].visually-hidden {
 
 .user-tooltip,
 .modal-wrapper {
-  display: none;
+  visibility: hidden;
 }
 
 .link,
@@ -180,7 +180,7 @@ input[type="radio"].visually-hidden {
 
   margin: 0;
   padding: 0;
-  padding-top: 25px;
+  padding-top: 24px;
   list-style: none;
   line-height: 16px;
   font-weight: 700;
@@ -200,7 +200,7 @@ input[type="radio"].visually-hidden {
 }
 
 .navigation {
-  padding: 6px 13px 6px 15px;
+  padding: 6px 14px;
 }
 
 .nav-text {
@@ -269,16 +269,19 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation-item:hover .sub-menu {
+  visibility: visible;
   display:block;
 }
 
 .nav-link:focus + .sub-menu {
+  visibility: visible;
   display:block;
 }
 
-.sub-menu:focus-within {
+.nav-link:focus + .sub-menu:focus-within {
+  visibility: visible;
   display: block;
-} /*не работает*/
+} /*что-то я не поняла, все сработало, пока я не убрала отсюда надпись, что оно не работает))))*/
 
 .sub-nav-link {
   display: block;
@@ -397,12 +400,14 @@ input[type="radio"].visually-hidden {
 }
 
 .user-tooltip input {
+
   box-sizing: border-box;
   padding: 14px 10px 13px 14px;
 
   color: #999999;
   border: 1px solid #D3D3D2;
   border-radius: 4px;
+  outline: none;
 }
 
 .search input {
@@ -413,16 +418,16 @@ input[type="radio"].visually-hidden {
 .user-tooltip input:focus,
 .mailing-form input:focus,
 .feedback-form input:focus,
-.feedback-form textarea:focus {
+.feedback-form textarea:focus{
   font-weight: bold;
   border-color: rgba(46, 136, 288, 0.52);
   color: var(--basic-sg-black);
 }
 
- .user-tooltip input::placeholder,
- .mailing-form input::placeholder,
- .feedback-form input::placeholder,
- .feedback-form textarea::placeholder {
+.user-tooltip input::placeholder,
+.mailing-form input::placeholder,
+.feedback-form input::placeholder,
+.feedback-form textarea::placeholder {
   font-weight: 400;
  }
 
@@ -646,7 +651,7 @@ input[type="radio"].visually-hidden {
 .products-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  row-gap: 3px;
+  row-gap: 6px;
 
   margin: 0;
   padding: 0;
@@ -680,7 +685,8 @@ input[type="radio"].visually-hidden {
   pointer-events: none;
 }
 
-.products-item-wrapper:hover::before {
+.products-item-wrapper:hover::before,
+.products-item-wrapper:focus::before {
   opacity: 1;
 }
 
@@ -707,7 +713,7 @@ input[type="radio"].visually-hidden {
   text-align: center;
   margin: 0;
 
-  padding: 8px 0 5px 1px;
+  padding: 7px 0 5px 2px;
 
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
@@ -746,8 +752,7 @@ input[type="radio"].visually-hidden {
 }
 
 .products-list-item:hover .products-item-wrapper,
-.products-list-item:focus .products-item-wrapper,
-.products-list-item:focus-within .products-item-wrapper { /*при фокусе с клавиатуры не появляется обводка*/
+.products-list-item:focus .products-item-wrapper {
   visibility: visible;
 }
 
@@ -784,7 +789,7 @@ input[type="radio"].visually-hidden {
 .advantages-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 21px;
+  row-gap: 22px;
   column-gap: 26px;
 
   padding: 0;
@@ -804,7 +809,7 @@ input[type="radio"].visually-hidden {
 .thermometer::before {
   position: absolute;
   left: -1px;
-  top: -10px;
+  top: -9px;
 }
 
 .ice-cream::before {
@@ -874,7 +879,11 @@ input[type="radio"].visually-hidden {
   line-height: 30px;
   font-weight: 700;
   color: var(--basic-sg-black);
-  text-decoration: underline;
+  text-decoration: none;
+}
+
+.blog-link .nav-text {
+  border-bottom: 2px solid var(--basic-sg-black);
 }
 
 .mailing {
@@ -904,6 +913,7 @@ input[type="radio"].visually-hidden {
 
   border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 6px;
+  outline: none;
 }
 
 .mailing-desc {
@@ -1104,20 +1114,21 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-wrapper {
+  visibility: hidden;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 
-  display: /*flex*/none;
+  display: flex;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 10;
 }
 
 .modal-block {
-   /* display: block; */
+  display: block;
   /*animation: bounce 0.5s; */
   position: relative;
 
@@ -1178,6 +1189,7 @@ input[type="radio"].visually-hidden {
   color: #999999;
   border: 1px solid #D3D3D2;
   border-radius: 4px;
+  outline: none;
  }
 
 .modal-block textarea {
@@ -1193,6 +1205,7 @@ input[type="radio"].visually-hidden {
   border: 1px solid #D3D3D2;
   border-radius: 4px;
   resize: none;
+  outline: none;
 }
 
 .review-button {
@@ -1388,9 +1401,10 @@ input[type="radio"].visually-hidden {
   line-height: 16px;
 }
 
-.breadcrumbs-item:not(:last-child) {
+.breadcrumbs-item:not(:last-child) .link {
 	border-bottom: 1px solid var(--link-bg);
 }
+
 .breadcrumbs-item:not(:last-child)::after {
 	content:"\00BB";
 	position: relative;
@@ -1400,7 +1414,7 @@ input[type="radio"].visually-hidden {
 .catalog {
   margin: 0;
   margin-bottom: 25px;
-  padding: 0;
+  padding-top: 2px;
 
   font-size: 35px;
   line-height: 41px;
@@ -1423,7 +1437,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filters-item {
-  margin-bottom: 8px;
+  margin-bottom: 7px;
   padding-left: 16px;
 
   font-size: 14px;
@@ -1489,12 +1503,19 @@ input[type="radio"].visually-hidden {
 
 .arrow-select {
   position: absolute;
-  right: 15px;
-  bottom: 14px;
+  right: 14px;
+  bottom: 15px;
 
   width: 11px;
   height: 10px;
-} /*должно менять цвет*/
+
+  fill: var(--basic-white);
+}
+
+.sorting:hover+label .arrow-select,
+.sorting:focus+label .arrow-select {
+  fill: var(--basic-sg-black);
+}
 
 .filter {
   padding: 0;
@@ -1510,7 +1531,7 @@ input[type="radio"].visually-hidden {
 
 .classification .sorting {
   width: 196px;
-  padding: 7px 13px 8px 15px;
+  padding: 7px 13px 8px 16px;
 }
 
 .filters .range-slider {
@@ -1590,7 +1611,7 @@ input[type="radio"].visually-hidden {
 }
 
 .checkbox-list label,
-.radio-list label {/*общие стили для радио и чекс*/
+.radio-list label {
   position: relative;
 
   display: block;
@@ -1600,12 +1621,12 @@ input[type="radio"].visually-hidden {
   text-align: center;
 }
 
-.filters .fat {/*оБКРТКА для жирности*/
+.filters .fat {
   min-width: 425px;
 }
 
 .fat label {
-	padding-left: 33px;
+	padding-left: 32px;
 	margin-right: 19px;
 }
 
@@ -1725,7 +1746,7 @@ input[type="radio"].visually-hidden {
   justify-content: flex-end;
 
   padding: 0;
-  margin: 0 -8px 64px 0;
+  margin: 0 -8px 62px 0;
   text-align: right;
 }
 
