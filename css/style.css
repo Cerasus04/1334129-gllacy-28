@@ -129,11 +129,6 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-.user-tooltip,
-.modal-wrapper {
-  visibility: hidden;
-}
-
 .link,
 .sub-nav-link,
 .nav-link {
@@ -235,6 +230,7 @@ input[type="radio"].visually-hidden {
 }
 
 .user-tooltip {
+  visibility: hidden;
   position: absolute;
   top: 36px;
   right: 0;
@@ -1115,8 +1111,17 @@ input[type="radio"].visually-hidden {
   margin-left: auto;
 }
 
+
+.modal-show {
+  display:block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
 .modal-wrapper {
-  visibility: hidden;
   position: fixed;
   top: 0;
   right: 0;
@@ -1129,11 +1134,16 @@ input[type="radio"].visually-hidden {
   z-index: 10;
 }
 
-.modal-block {
-  display: block;
-  /*animation: bounce 0.5s; */
-  position: relative;
+.overlay {
+  display: none;
+}
 
+.overlay-show {
+  display: block;
+}
+
+.modal-block {
+  position: relative;
 
   width: 477px;
   min-height: 441px;
@@ -1144,6 +1154,10 @@ input[type="radio"].visually-hidden {
   color: var(--basic-wet-asphalt);
   background-color: var(--mailing-bg);
   border-radius: 6px;
+}
+
+.modal-block-hide{
+  display: none;
 }
 
 .feedback-form {
@@ -1805,4 +1819,47 @@ width: 1146px;
 height: 1px;
 margin: 0 auto;
 background-color: var(--link-bg);
+}
+
+/*Animations*/
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+
 }

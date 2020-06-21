@@ -385,29 +385,30 @@
       </div>
       <!--container-->
     </footer>
-    <div class="modal-wrapper">
-      <div class="modal-block modal">
-        <button class="modal-button " aria-label="Закрыть"><svg width="18" height="17" viewBox="0 0 18 17" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M18 1.4175L16.4885 0L8.99468 7.07747L1.50089 0L0 1.4175L7.49379 8.49497L0 15.5724L1.50089 17L8.99468 9.92253L16.4885 17L18 15.5724L10.5062 8.49497L18 1.4175Z"
-              fill="#231F20" />
-          </svg>
-        </button>
-        <form action="https://echo.htmlacademy.ru" class="feedback-form" method="post">
-          <p>Мы обязательно вам ответим!</p>
-          <label for="name-feedback" class="visually-hidden">Имя</label>
-          <input type="text" id="name-feedback" name="name" placeholder="Имя Фамилия">
-          <label for="email-feedback" class="visually-hidden">Электронная почта</label>
-          <input type="email" id="email-feedback" name="email" placeholder="email@example.com">
-          <label for="review" class="visually-hidden">Оставьте комментарий</label>
-          <textarea id="review" name="comments" rows="5">В свободной форме</textarea>
-          <button class="review-button button">Отправить</button>
-        </form>
-      </div>
+    <div class="modal-wrapper overlay"></div>
+    <div class="modal-block modal-block-hide">
+      <button class="modal-button " aria-label="Закрыть"><svg width="18" height="17" viewBox="0 0 18 17" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M18 1.4175L16.4885 0L8.99468 7.07747L1.50089 0L0 1.4175L7.49379 8.49497L0 15.5724L1.50089 17L8.99468 9.92253L16.4885 17L18 15.5724L10.5062 8.49497L18 1.4175Z"
+            fill="#231F20" />
+        </svg>
+      </button>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>Мы обязательно вам ответим!</p>
+        <label for="name-feedback" class="visually-hidden">Имя</label>
+        <input class="login-icon-user" type="text" id="name-feedback" name="name" placeholder="Имя Фамилия">
+        <label for="email-feedback" class="visually-hidden">Электронная почта</label>
+        <input class="login-icon-password" type="email" id="email-feedback" name="email"
+          placeholder="email@example.com">
+        <label for="review" class="visually-hidden">Оставьте комментарий</label>
+        <textarea id="review" name="comments" rows="5">В свободной форме</textarea>
+        <button class="review-button button">Отправить</button>
+      </form>
     </div>
   </div>
   <!--site-wrapper глобальная обертка-->
+  <skript src="js/feedback.js"></skript>
 </body>
 
 </html>
