@@ -1,6 +1,5 @@
 var fBtn = document.querySelector(".feedback");
-var overlay = document.querySelector(".overlay")
-var fPopup = document.querySelector(".modal-block");
+var fPopup = document.querySelector(".modal-wrapper")
 var fClose = fPopup.querySelector(".modal-button");
 var loginForm = fPopup.querySelector(".feedback-form");
 var fLogin = fPopup.querySelector(".login-icon-user");
@@ -17,8 +16,7 @@ try {
 
 fBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
-  fPopup.classList.add("modal-show");
-  overlay.classList.add("overlay-show")
+  fPopup.classList.add("modal-show")
 
   if (storage) {
     fLogin.value = storage;
@@ -30,9 +28,8 @@ fBtn.addEventListener("click", function (evt) {
 
 fClose.addEventListener("click", function (evt) {
   evt.preventDefault();
-  fPopup.classList.remove("modal-show");
   fPopup.classList.remove("modal-error");
-  overlay.classList.remove("overlay-show");
+  fPopup.classList.remove("modal-show");
 });
 
 loginForm.addEventListener("submit", function (evt) {
@@ -52,9 +49,8 @@ window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     if (fPopup.classList.contains("modal-show")) {
       evt.preventDefault();
-      fPopup.classList.remove("modal-show");
       fPopup.classList.remove("modal-error");
-      overlay.classList.remove("overlay-show");
+      fPopup.classList.remove("modal-show");
     }
   }
 });
