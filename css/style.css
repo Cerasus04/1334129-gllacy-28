@@ -437,7 +437,9 @@ input[type="radio"].visually-hidden {
 .feedback-form input:hover,
 .feedback-form textarea:hover {
   border: 2px solid rgba(178, 178, 178, 0.52);
+  padding: 13px 9px 12px 13px;
 }
+
 
 .user-tooltip input:focus,
 .mailing-form input:focus,
@@ -941,6 +943,10 @@ input[type="radio"].visually-hidden {
   outline: none;
 }
 
+.mailing-form input:hover {
+  padding: 12px 17px 10px 11px;
+}
+
 .mailing-desc {
   margin: 0;
   padding-bottom: 41px;
@@ -1224,14 +1230,18 @@ input[type="radio"].visually-hidden {
 
 .modal-block input {
   width: 267px;
-  min-height: 44px;
+  min-height: 40px;
   box-sizing: border-box;
 
   margin: 0 0 20px;
-  padding: 0 0 0 14px;
+  padding: 2px 14px;
 
   font-size: 16px;
   line-height: 20px;
+ }
+
+ .modal-block input:hover {
+   padding:1px 13px;
  }
 
 .modal-block textarea {
@@ -1244,6 +1254,10 @@ input[type="radio"].visually-hidden {
   font-size: 16px;
   line-height: 20px;
   resize: none;
+}
+
+.modal-block textarea:hover {
+  padding: 10px 13px;
 }
 
 .modal-error {
