@@ -1560,7 +1560,7 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.basket-bottom>button {
+.basket-bottom>.checkout {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
