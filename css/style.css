@@ -72,16 +72,19 @@ img {
 
 .site-wrapper-1 {
   background-image: url("../img/slide_1.png");
+  background-repeat: no-repeat;
 }
 
 .site-wrapper-2 {
   background-color: var(--basic-bg2);
   background-image: url("../img/slide_2.png");
+  background-repeat: no-repeat;
 }
 
 .site-wrapper-3 {
   background-color: var(--basic-bg3);
   background-image: url("../img/slide_3.png");
+  background-repeat: no-repeat;
 }
 
 /*Grid*/
